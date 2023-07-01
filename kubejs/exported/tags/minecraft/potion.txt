@@ -1,0 +1,4 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 23, 2023, 2:04:34 PM
+
+#supplementaries:quiver_blacklist
+- supplementaries:overencumbered? (from supplementaries-1.19.2-2.3.4.jar)

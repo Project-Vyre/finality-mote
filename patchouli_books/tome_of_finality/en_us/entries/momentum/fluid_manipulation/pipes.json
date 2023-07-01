@@ -1,0 +1,16 @@
+{
+    "name": "Fluid Pipe",
+    "icon": "create:fluid_pipe",
+    "category": "patchouli:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:fluid_pipe",
+            "text": "Placeholder text for Create clutch."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains information as well as advice on the many methods of connectivity to Create's appliances and more. $(br2)As a general rule of thumb when it comes to using cogwheels you take into account what direction they are rotating to avoid future building headaches."
+        }
+    ]
+}

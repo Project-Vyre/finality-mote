@@ -1,0 +1,33 @@
+# folders
+mods/
+backups/
+profileImage/
+saves/
+crash-reports/
+downloads/
+DrippyMenuMusic/
+essential/
+movies/
+logs/
+resourcepacks/
+screenshots/
+schematics/
+scripts/
+shaderpacks/
+XaeroWaypoints/
+XaeroWaypoints_BACKUP032021/
+XaeroWorldMap/
+
+# files
+.curseclient
+.qmenu_opened.marker
+hotbar.nbt
+imgui.ini
+minecraftinstance.json
+ops.json
+servers.dat
+servers.dat_old
+servers.essential.dat
+usercache.json
+usernamecache.json
+whitelist.json

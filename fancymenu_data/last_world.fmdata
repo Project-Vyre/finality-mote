@@ -1,0 +1,7 @@
+type = last_world
+
+last_world {
+  is_server = false
+  world = E:/Minecraft Curseforge/Instances/Finality Mote (Forge) 1.19.2/saves/Create Sandbox 2
+}
+

@@ -1,0 +1,11 @@
+{
+  "name": "Source Gem",
+  "colors": [
+    "ca65fc",
+    "742d97"
+  ],
+  "ingredient": {
+    "item": "ars_nouveau:source_gem_block"
+  },
+  "materialCount": 16384
+}
