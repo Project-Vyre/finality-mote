@@ -2,13 +2,13 @@
 #General Config Section. See https://readme.firstdarkdev.xyz/simple-rpc/introduction/
 [general]
 	#The Application ID of the Discord App to use
-	applicationID = 762726289341677668
+	applicationID = 1124838254332612750
 	#Enable/Disable the mod
 	enabled = true
 	#Enable/Disable debugging mode. WARNING: MAY CAUSE LOG SPAM!
 	debugging = false
 	#Enable/Disable the in game config screen. ONLY AVAILABLE WHEN CLOTH CONFIG IS INSTALLED!
-	configScreen = true
+	configScreen = false
 	#Display the Icon and Pack Name in place of LargeImage from compatible launchers. DOES NOT WORK WITH CUSTOM APPS! ONLY THE DEFAULT ONE!
 	launcherIntegration = false
 	#Internal Version Number. NO TOUCHY!
@@ -23,15 +23,22 @@
 	#The second line of text under the app name
 	state = "Game Starting..."
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["loading"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[init.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[init.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Main Menu event
 [main_menu]
@@ -42,15 +49,22 @@
 	#The seconds line of text under the app name
 	state = "Chilling in the menu"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["menu"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[main_menu.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[main_menu.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Server List event
 [server_list]
@@ -61,15 +75,22 @@
 	#The second line of text under the app name
 	state = "Searching for friends"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["menu"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[server_list.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[server_list.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Realms Screen event
 [realms_list]
@@ -80,15 +101,22 @@
 	#The second line of text under the app name
 	state = "Browsing Realms"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["menu"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[realms_list.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[realms_list.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Join Game Event
 [join_game]
@@ -99,15 +127,22 @@
 	#The second line of text under the app name
 	state = "Joining Game"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["loading"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[join_game.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[join_game.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Single Player Event
 [single_player]
@@ -118,15 +153,22 @@
 	#The second line of text under the app name
 	state = "Playing lonely mode"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["%player%"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[single_player.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[single_player.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Multi Player Event
 [multi_player]
@@ -137,15 +179,22 @@
 	#The second line of text under the app name
 	state = "Playing online"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
-	smallImageKey = ["mclogo"]
+	smallImageKey = ["%player%"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[multi_player.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[multi_player.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #The Realms Game Event
 [realms]
@@ -156,15 +205,22 @@
 	#The second line of text under the app name
 	state = "Playing on a Realm"
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
 	smallImageText = "%realmdescription%"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[realms.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[realms.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #Fallback event for disabled events
 [generic]
@@ -173,15 +229,22 @@
 	#The second line of text under the app name
 	state = ""
 	#The Asset ID of the image to display as the large image
-	largeImageKey = ["mclogonew"]
+	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Pushing Create to its limits, with horror."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "Forge %mcver% - %mods% mods installed"
+
 	#The buttons to display on Discord
-	buttons = []
+	[[generic.buttons]]
+		label = "Get the modpack here!"
+		url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+	[[generic.buttons]]
+		label = "Modpack Wiki"
+		url = "https://project-vyre.github.io/finality-wiki/"
 
 #Custom Config Variables that you can use
 [custom]
@@ -193,7 +256,7 @@
 #Dimension Information Overrides
 [dimension_overrides]
 	#Allows you to override the displayed values for dimensions
-	enabled = false
+	enabled = true
 
 	#The Dimensions to override
 	[[dimension_overrides.dimensions]]
@@ -204,15 +267,22 @@
 		#The second line of text under the app name
 		state = ""
 		#The Asset ID of the image to display as the large image
-		largeImageKey = ["overworld"]
+		largeImageKey = ["logo"]
 		#The text that gets displayed when the large image is hovered
 		largeImageText = "In the Overworld"
 		#The Asset ID of the image to display as the small image
-		smallImageKey = ["mclogo"]
+		smallImageKey = ["overworld"]
 		#The text that gets displayed when the small image is hovered
-		smallImageText = "%mods% mods installed"
+		smallImageText = "Forge %mcver% - %mods% mods installed"
+
 		#The buttons to display on Discord
-		buttons = []
+		[[dimension_overrides.dimensions.buttons]]
+			label = "Get the modpack here!"
+			url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+		[[dimension_overrides.dimensions.buttons]]
+			label = "Modpack Wiki"
+			url = "https://project-vyre.github.io/finality-wiki/"
 
 	[[dimension_overrides.dimensions]]
 		#The name of the Dimension/Biome to override. FORMAT: modid:dimension or modid:biome
@@ -222,15 +292,22 @@
 		#The second line of text under the app name
 		state = ""
 		#The Asset ID of the image to display as the large image
-		largeImageKey = ["nether"]
+		largeImageKey = ["logo"]
 		#The text that gets displayed when the large image is hovered
 		largeImageText = "In the Nether"
 		#The Asset ID of the image to display as the small image
-		smallImageKey = ["mclogo"]
+		smallImageKey = ["the_nether"]
 		#The text that gets displayed when the small image is hovered
-		smallImageText = "%mods% mods installed"
+		smallImageText = "Forge %mcver% - %mods% mods installed"
+
 		#The buttons to display on Discord
-		buttons = []
+		[[dimension_overrides.dimensions.buttons]]
+			label = "Get the modpack here!"
+			url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+		[[dimension_overrides.dimensions.buttons]]
+			label = "Modpack Wiki"
+			url = "https://project-vyre.github.io/finality-wiki/"
 
 	[[dimension_overrides.dimensions]]
 		#The name of the Dimension/Biome to override. FORMAT: modid:dimension or modid:biome
@@ -240,13 +317,20 @@
 		#The second line of text under the app name
 		state = ""
 		#The Asset ID of the image to display as the large image
-		largeImageKey = ["end"]
+		largeImageKey = ["logo"]
 		#The text that gets displayed when the large image is hovered
 		largeImageText = "In the End"
 		#The Asset ID of the image to display as the small image
-		smallImageKey = ["mclogo"]
+		smallImageKey = ["the_end"]
 		#The text that gets displayed when the small image is hovered
-		smallImageText = "%mods% mods installed"
+		smallImageText = "Forge %mcver% - %mods% mods installed"
+
 		#The buttons to display on Discord
-		buttons = []
+		[[dimension_overrides.dimensions.buttons]]
+			label = "Get the modpack here!"
+			url = "https://curseforge.com/minecraft/modpacks/finality-mote"
+
+		[[dimension_overrides.dimensions.buttons]]
+			label = "Modpack Wiki"
+			url = "https://project-vyre.github.io/finality-wiki/"
 

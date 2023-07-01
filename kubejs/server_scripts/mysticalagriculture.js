@@ -42,7 +42,7 @@ const SUPRM = 'supremium'
 const FIRE = 'fire'
 const H20 = 'water'
 // requires kubejs create and mysticalagriculture
-onEvent('recipes', event => {
+ServerEvents.recipes(event => {
     // infusion crystals
     event.remove({id: 'mysticalagriculture:infusion_crystal'})
     event.remove({id: 'mysticalagriculture:master_infusion_crystal'})
@@ -87,7 +87,11 @@ onEvent('recipes', event => {
 
     // fire essences
     event.remove({id: 'mysticalagriculture:essence/minecraft/red_sand'}) // converted to mixing and mechanical crafting recipe exclusive
-    event.recipes.createMixing([Item.of(MC('red_sand'), 16)], [Item.of(MYST('dirt_essence'), 2), Item.of(MYST('fire_essence'), 2), MC('gold_nugget')]).id('finality:mysta_mix_red_sand')
+    event.recipes.createMixing([Item.of(MC('red_sand'), 16)], [
+        Item.of(MYST('dirt_essence'), 2), 
+        Item.of(MYST('fire_essence'), 2), 
+        MC('gold_nugget')
+    ]).id('finality:mysta_mix_red_sand')
     event.recipes.createMechanicalCrafting(Item.of(MC('red_sand'), 16), [
         'DF',
         'FG'
@@ -97,15 +101,13 @@ onEvent('recipes', event => {
         G: MC('gold_nugget')
     }).id('finality:mysta_mechanical_red_sand')
     event.remove({id: 'mysticalagriculture:essence/minecraft/sand'}) // converted to mixing and mechanical crafting recipe exclusive
-    event.recipes.createMixing([
-        Item.of(MC('sand'), 16)
-    ], [
-        Item.of(MYST('dirt_essence'), 2), 
-        Item.of(MYST('fire_essence'), 2)
+    event.recipes.createMixing(Item.of(MC('sand'), 16), [
+        MYST('dirt_essence'),
+        MYST('dirt_essence'),
+        MYST('fire_essence'),
+        MYST('fire_essence')
     ]).id('finality:mysta_mix_sand')
-    event.recipes.createMechanicalCrafting([
-        Item.of(MC('sand'), 16)
-    ], [
+    event.recipes.createMechanicalCrafting(Item.of(MC('sand'), 16), [
         'DF',
         'FD'
     ], {
@@ -114,7 +116,10 @@ onEvent('recipes', event => {
     }).id('finality:mysta_mechanical_sand')
 
     event.remove({id: 'mysticalagriculture:essence/minecraft/soul_sand'}) // converted to mixing and mechanical crafting recipe exclusive
-    event.recipes.createMixing(Item.of(MC('soul_sand'), 16), [Item.of(MYST('nether_essence'), 8), MYST('fire_essence')]).id('finality:mysta_mix_soul_sand')
+    event.recipes.createMixing(Item.of(MC('soul_sand'), 16), [
+        Item.of(MYST('nether_essence'), 8), 
+        MYST('fire_essence')
+    ]).id('finality:mysta_mix_soul_sand')
     event.recipes.createMechanicalCrafting(Item.of(MC('soul_sand'), 16), [
         'NNN',
         'NFN',
