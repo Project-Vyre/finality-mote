@@ -89,6 +89,11 @@ JEIEvents.hideItems(event => {
 	event.hide('createaddition:straw')
 	event.hide('createaddition:seed_oil_bucket')
 	event.hide('createaddition:bioethanol_bucket')
+	event.hide('createaddition:seed_oil')
+	event.hide('createaddition:bioethanol')
+	event.hide('createaddition:straw')
+	event.hide('createaddition:gold_rod')
+	event.hide('createaddition:brass_rod')
 })
 JEIEvents.information(event => {
 	event.add('mysticalagriculture:fertilized_essence', ['Can only be acquired from Mystical Agriculture crops upon harvesting.', 'Not a guaranteed drop!'])
