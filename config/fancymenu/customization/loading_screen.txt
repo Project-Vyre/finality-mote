@@ -1,0 +1,96 @@
+type = menu
+
+customization-meta {
+  identifier = de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  original_pos_size_calculation = true
+  x = 228
+  width = 504
+  action = deep_customization_element:drippy_overlay_logo
+  actionid = 8069c2fb-ccba-4450-a014-b0bc74ad47cc1688256444233
+  y = 189
+  height = 126
+}
+
+customization {
+  custom_color_hex = #536398
+  orientation = top-left
+  hidden = false
+  x = -1000000
+  width = 0
+  action = deep_customization_element:drippy_overlay_background
+  actionid = 9ed38a85-a5e5-419d-8b9b-4e9ce19c77ae1688256444236
+  y = -1000000
+  height = 0
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  original_pos_size_calculation = true
+  x = 228
+  width = 504
+  action = deep_customization_element:drippy_overlay_progress_bar
+  actionid = 7eb8d896-5cbe-444f-9cd0-743e78ea6a631688256444236
+  y = 415
+  height = 10
+}
+
+customization {
+  path = config/fancymenu/assets/loading_cube.png
+  orientation = mid-centered
+  x = -128
+  width = 256
+  action = addtexture
+  actionid = 73c7f97b-2e16-499e-9bd5-3cb17fb881a91688257401403
+  y = -128
+  height = 256
+}
+
+customization {
+  orientation = mid-centered
+  background_color = #000000
+  x = -250
+  width = 500
+  bar_color = #7594F0
+  action = custom_layout_element:drippy_custom_loading_bar
+  actionid = eb6720f9-5872-4e10-9979-b4baf098351d1688256788468
+  y = 150
+  progress_for_element_orientation = false
+  direction = right
+  height = 16
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = false
+  shadow = true
+  scale = 2.0
+  source = Loading interface...
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -136
+  width = 272
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 58afb2bc-266a-4fec-810c-6eb2e29bc5e91688257779820
+  y = 190
+  alignment = centered
+  base_color = #7594F0
+  height = 25
+}
+

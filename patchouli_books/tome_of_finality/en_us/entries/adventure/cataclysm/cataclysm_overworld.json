@@ -1,0 +1,37 @@
+{
+    "name": "Overworld",
+    "icon": "minecraft:grass_block",
+    "category": "patchouli:adventure/cataclysm",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Notice: Contains information on the following:$(li)Harbinger $(li)Leviathan"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Go to the next page. I am trying to keep the formatting consistent here..."
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:the_harbinger",
+            "scale": 0.75,
+            "text": "A very dangerous boss. Re-awaken with a Nether Star."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "High DPS output. It also doesn't help when the laser beam of death ignores most of your armor!"
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "minecraft:elder_guardian",
+            "scale": 0.75,
+            "text": "Currently the Leviathan boss is a work in progress."
+        },
+        {
+            "type": "patchouli:link",
+            "url": "https://youtu.be/ljgf0aPEm-c",
+            "link_text": "Leviathan Teaser",
+            "text": "L_Ender is currently working on this boss but has extensively released teasers, one of which I have linked below as a large button. Good luck on the underwater boss battle!"
+        }
+    ]
+}

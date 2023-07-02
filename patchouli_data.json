@@ -70,7 +70,12 @@
         "patchouli:momentum/appliances/pump",
         "patchouli:momentum/curiosities/copper_diving_boots",
         "patchouli:decoration/functional_decor/sconces",
-        "patchouli:genesis/modified_recipes"
+        "patchouli:genesis/modified_recipes",
+        "patchouli:technology/energy_introduction",
+        "patchouli:adventure/cataclysm/cataclysm_nether",
+        "patchouli:adventure/cataclysm/cataclysm_end",
+        "patchouli:adventure/cataclysm/cataclysm_overworld",
+        "patchouli:adventure/discovery_checklist"
       ],
       "bookmarks": [],
       "completedManualQuests": []

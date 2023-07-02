@@ -1,0 +1,48 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.SoundOptionsScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = element
+  shape = rectangle
+  color = #00000040
+  orientation_element = 8709cab8-b040-46ca-b87b-19a1612787e41688277006817
+  x = -7
+  width = 255
+  action = addshape
+  actionid = 0531a958-b7ad-437c-8b3e-4930e3a2eafd1688277075601
+  y = -10
+  height = 42
+}
+
+customization {
+  orientation = element
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Don't turn off the Music audio channel entirely!%n%Bosses have boss themes too! >.>
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  orientation_element = vanillabtn:345176
+  x = -255
+  width = 249
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 8709cab8-b040-46ca-b87b-19a1612787e41688277006817
+  y = -2
+  alignment = left
+  height = 26
+}
+

@@ -1,0 +1,332 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage_management"
+	group: "668E3EA3A7A91B79"
+	hide_quest_details_until_startable: true
+	icon: "minecraft:chest"
+	id: "32CC85BACCD9E454"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "35B4674E46E57316"
+			subtitle: "Just a regular barrel."
+			tasks: [{
+				id: "69D88EC6E66E3B09"
+				item: "minecraft:barrel"
+				type: "item"
+			}]
+			title: "Make a barrel."
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["You are free to utilize whatever storage methods you feel best suit your needs."]
+			hide: true
+			id: "1229F8883A381F07"
+			size: 1.5d
+			subtitle: "There are many options for storage. Sophisticated Storage, Backpacks, Iron Chests, etc."
+			tasks: [{
+				id: "6F00A5E440FE9504"
+				title: "Everything Storage checkmark"
+				type: "checkmark"
+			}]
+			title: "Introduction to Storage Management"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "6175DFE7CD3F470E"
+			subtitle: "Make a basic chest."
+			tasks: [{
+				id: "1BA6340D3FDD8082"
+				item: "minecraft:chest"
+				type: "item"
+			}]
+			title: "Make a chest."
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6175DFE7CD3F470E"]
+			id: "4DEB9CA0C44C7443"
+			subtitle: "Don't underestimate Functional Storage."
+			tasks: [{
+				id: "502F03E54151B126"
+				item: "functionalstorage:oak_1"
+				type: "item"
+			}]
+			title: "A basic drawer."
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			description: [
+				"The older Ender Storage mod had some issues when writing new recipes."
+				""
+				"To upgrade Ender Chest capacity, right click with either Ender Pearls or Ender Eyes."
+				""
+				"To bind Ender Chests or Ender Tanks, right click on them with a Diamond."
+			]
+			id: "537EBAE5E0065751"
+			subtitle: "These mods are made by shetiphian."
+			tasks: [{
+				id: "01F2D5DD6B7417BA"
+				item: "minecraft:ender_chest"
+				type: "item"
+			}]
+			title: "Introduction to EnderChests and EnderTanks"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4DEB9CA0C44C7443"]
+			id: "069FE13E68226DBC"
+			subtitle: "These are very special drawers."
+			tasks: [
+				{
+					id: "60E8E3E4BDDBD3D5"
+					item: "functionalstorage:compacting_drawer"
+					type: "item"
+				}
+				{
+					id: "77543B084A3B7C17"
+					item: "functionalstorage:simple_compacting_drawer"
+					type: "item"
+				}
+			]
+			title: "Compacting Drawers: Magical compacting!"
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["4DEB9CA0C44C7443"]
+			id: "4E05EE9F10CE5BA1"
+			tasks: [{
+				id: "3DE90A59364402BE"
+				item: "functionalstorage:copper_upgrade"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4E05EE9F10CE5BA1"]
+			id: "756DF593AAB6B979"
+			tasks: [{
+				id: "62FEA7E14925B9A6"
+				item: "functionalstorage:gold_upgrade"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["756DF593AAB6B979"]
+			id: "79CCD3538FB4A2CF"
+			tasks: [{
+				id: "00E431C719E58832"
+				item: "functionalstorage:diamond_upgrade"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["79CCD3538FB4A2CF"]
+			id: "0D131BC5457FA33F"
+			tasks: [{
+				id: "68C5742FBDDD8B80"
+				item: "functionalstorage:netherite_upgrade"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "124DCED733F1F423"
+			tasks: [{
+				id: "34EA586AB3034F06"
+				item: {
+					Count: 1b
+					id: "enderchests:ender_chest"
+					tag: {
+						code: "000"
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "42D2219C7161A185"
+			tasks: [{
+				id: "2DDDFDA5D66FF258"
+				item: {
+					Count: 1b
+					id: "endertanks:ender_tank"
+					tag: {
+						code: "000"
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["42D2219C7161A185"]
+			id: "2328A84037C87D9F"
+			tasks: [{
+				id: "4EEF4A44A98F2C6B"
+				item: {
+					Count: 1b
+					id: "endertanks:ender_bucket"
+					tag: {
+						code: "000"
+						mode: "normal"
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["7B6F4E63BE0885B6"]
+			id: "72664E72295EA82F"
+			tasks: [{
+				id: "24DAC654429C17A4"
+				item: {
+					Count: 1b
+					id: "enderchests:ender_bag"
+					tag: {
+						code: "000"
+						open: 0b
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["4DEB9CA0C44C7443"]
+			icon: "functionalstorage:framed_1"
+			id: "65EF71C70CF43E9B"
+			subtitle: "Same thing, but you can customize the appearance of the drawer."
+			tasks: [
+				{
+					id: "337DAFE915A3E7F4"
+					item: "functionalstorage:framed_1"
+					type: "item"
+				}
+				{
+					id: "47269219F72DDCB0"
+					item: "functionalstorage:compacting_framed_drawer"
+					type: "item"
+				}
+			]
+			title: "A customized drawer."
+			x: -3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "7B6F4E63BE0885B6"
+			tasks: [{
+				id: "1E2F4E2E6FFA5FD7"
+				item: {
+					Count: 1b
+					id: "enderchests:ender_pouch"
+					tag: {
+						open: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["069FE13E68226DBC"]
+			id: "6AFFD71C3366EA4E"
+			subtitle: "Condensed configuration. "
+			tasks: [
+				{
+					id: "0C6B4CA7839EBFEC"
+					item: {
+						Count: 1b
+						id: "functionalstorage:configuration_tool"
+						tag: {
+							Mode: "LOCKING"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6DAD39293048F0D6"
+					item: {
+						Count: 1b
+						id: "functionalstorage:linking_tool"
+						tag: {
+							Action: "ADD"
+							Mode: "SINGLE"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6AFFD71C3366EA4E"]
+			id: "407B062DED7EB26F"
+			tasks: [{
+				id: "1BAF5000C983F549"
+				item: "functionalstorage:storage_controller"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6AFFD71C3366EA4E"]
+			id: "73883BFFA5483EF9"
+			subtitle: "Instant item transportation, frequency configurable."
+			tasks: [{
+				id: "00F21E86061B9711"
+				item: "functionalstorage:ender_drawer"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["407B062DED7EB26F"]
+			id: "5798753B48C6807F"
+			tasks: [{
+				id: "5BE9AEF2BBDA6A93"
+				item: "functionalstorage:controller_extension"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.5d
+		}
+	]
+	subtitle: ["Organization is your best friend."]
+	title: "Storage Management"
+}
