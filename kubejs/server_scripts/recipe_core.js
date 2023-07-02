@@ -15,7 +15,6 @@ ServerEvents.recipes(event => {
 	event.remove({id: 'createaddition:rolling/gold_ingot'})
 	event.remove({id: 'createaddition:rolling/brass_ingot'})
 	event.remove({id: 'createaddition:rolling/straw'})
-	event.remove({id: 'createaddition:compacting/seed_oil'})
 	event.remove({id: 'createaddition:mixing/bioethanol'})
 	event.shaped(MC('bucket'), [
 		'I I',
