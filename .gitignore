@@ -17,6 +17,8 @@ shaderpacks/
 XaeroWaypoints/
 XaeroWaypoints_BACKUP032021/
 XaeroWorldMap/
+fancymenu_instance_data/
+fancymenu_data/
 
 # files
 .curseclient
@@ -31,3 +33,4 @@ servers.essential.dat
 usercache.json
 usernamecache.json
 whitelist.json
+patchouli_data.jsonknownkeys.txt
