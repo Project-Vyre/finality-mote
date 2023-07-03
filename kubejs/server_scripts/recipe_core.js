@@ -38,6 +38,17 @@ ServerEvents.recipes(event => {
 		I: C('iron_sheet'),
 		R: MC('redstone')
 	}).id('minecraft:compass')
+	event.recipes.createMixing('finality:omnipotent_alloy', [
+		EXT('the_ultimate_catalyst'),
+		EXT('crystaltine_catalyst'),
+		MC('netherite_ingot'),
+		C('rose_quartz'),
+		C('brass_ingot'),
+		C('andesite_alloy'),
+		MC('diamond'),
+		MC('amethyst_shard'),
+		Fluid.of('finality:condensed_universal_entropy', 500)
+	]).id('finality:mixing/omnipotent_alloy')
 	event.shaped('finality:final_helmet', [
 		'EEE',
 		'E E'

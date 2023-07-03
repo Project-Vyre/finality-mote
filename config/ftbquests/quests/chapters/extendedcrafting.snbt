@@ -91,17 +91,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["64107820104E0A51"]
-			id: "1AB2ABF73B22F41F"
-			tasks: [{
-				id: "7EE6D85DDABC86C8"
-				item: "upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot"
-				type: "item"
-			}]
-			x: 14.0d
-			y: 6.0d
-		}
-		{
 			dependencies: ["2CB2E91CC3F2E9ED"]
 			id: "7BCC25C5994A939B"
 			tasks: [{
@@ -289,21 +278,6 @@
 			}]
 			x: 10.0d
 			y: 6.0d
-		}
-		{
-			dependencies: [
-				"05990BE9403D64C5"
-				"1AB2ABF73B22F41F"
-			]
-			id: "2CAF0E63123AE0EE"
-			subtitle: "You probably don't have a life, do you?"
-			tasks: [{
-				id: "6DDC2B34DFA64A32"
-				item: "upgradednetherite_creative:creative_upgraded_netherite_ingot"
-				type: "item"
-			}]
-			x: 14.0d
-			y: 10.0d
 		}
 		{
 			dependencies: ["290F3137DCCABA89"]
@@ -1091,6 +1065,21 @@
 			}]
 			x: 12.0d
 			y: 14.0d
+		}
+		{
+			dependencies: [
+				"64107820104E0A51"
+				"05990BE9403D64C5"
+			]
+			id: "0D658D357E4D6ABE"
+			subtitle: "Nothing hurts as much anymore."
+			tasks: [{
+				id: "0737E792E488D09D"
+				item: "finality:omnipotent_alloy"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.0d
 		}
 	]
 	subtitle: [
