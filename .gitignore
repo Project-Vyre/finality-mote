@@ -9,6 +9,7 @@ DrippyMenuMusic/
 essential/
 movies/
 logs/
+local/
 resourcepacks/
 screenshots/
 schematics/
@@ -34,3 +35,6 @@ usercache.json
 usernamecache.json
 whitelist.json
 patchouli_data.jsonknownkeys.txt
+enigmatic_persistence.dat
+patchouli_data.json
+rhino.local.properties

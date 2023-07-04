@@ -1215,7 +1215,7 @@
 			shape: "hexagon"
 			subtitle: "The amount of Sail Frames required for a maximum strength Windmill..."
 			tasks: [{
-				count: 128L
+				count: 124L
 				id: "4FF0828AAFBBE7D7"
 				item: "create:white_sail"
 				type: "item"

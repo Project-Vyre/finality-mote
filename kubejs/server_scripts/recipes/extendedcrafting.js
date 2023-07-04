@@ -21,14 +21,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'unusualend:end_crystal_via_chiseled_glass'})
     event.remove({id: 'tconstruct:common/glass/vanilla/end_crystal'})
     event.remove({id: 'extendedcrafting:black_iron_ingot'})
-    event.remove({id: 'extendedcrafting:handheld_table'})
-    event.shaped('extendedcrafting:handheld_table', [
-        ' C',
-        'S '
-    ], {
-        C: '#forge:workbenches',
-        S: '#forge:rods/wooden'
-    }).id('finality:handheld_crafting_table_compat')
     event.shapeless('extendedcrafting:black_iron_ingot', ['minecraft:iron_ingot', 'minecraft:black_dye', 'create:powdered_obsidian']).id('finality:ext_black_iron_ingot')
     event.shaped('minecraft:beacon',[
         'GGG',

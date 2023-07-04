@@ -15,31 +15,31 @@
 ["Weapon Cooldown"]
 	#Bulwark of the Flame's Cooldown
 	#Range: 0 ~ 1000000
-	BulwarkOfTheFlameCooldown = 80
+	BulwarkOfTheFlameCooldown = 60
 	#Gauntlet of Bulwark's Cooldown
 	#Range: 0 ~ 1000000
-	GauntletOfBulwarkCooldown = 80
+	GauntletOfBulwarkCooldown = 60
 	#Infernal Forge's Cooldown
 	#Range: 0 ~ 1000000
-	InfernalForgeCooldown = 80
+	InfernalForgeCooldown = 30
 	#Void Forge's Cooldown
 	#Range: 0 ~ 1000000
-	VoidForgeCooldown = 120
+	VoidForgeCooldown = 30
 	#The Incinerator's Cooldown
 	#Range: 0 ~ 1000000
-	TheIncineratorCooldown = 400
+	TheIncineratorCooldown = 60
 	#Wither Assault Shoulder Weapon's Missile Cooldown
 	#Range: 0 ~ 1000000
-	WASWMissileCooldown = 40
+	WASWMissileCooldown = 30
 	#Wither Assault Shoulder Weapon's Howitzer Cooldown
 	#Range: 0 ~ 1000000
-	WASWHowitzerCooldown = 100
+	WASWHowitzerCooldown = 90
 	#Void Assault Shoulder Weapon's Cooldown
 	#Range: 0 ~ 1000000
-	VASWCooldown = 120
+	VASWCooldown = 60
 	#Void Core's Cooldown
 	#Range: 0 ~ 1000000
-	VoidCoreCooldown = 160
+	VoidCoreCooldown = 60
 
 ["Entity damage"]
 	#Void Rune's Damage
