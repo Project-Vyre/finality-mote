@@ -1081,6 +1081,67 @@
 			x: 12.0d
 			y: 8.0d
 		}
+		{
+			dependencies: ["0D658D357E4D6ABE"]
+			id: "2178D31396A43636"
+			tasks: [
+				{
+					id: "116494544668C2E5"
+					item: "finality:final_helmet"
+					type: "item"
+				}
+				{
+					id: "57BE82E54679C365"
+					item: "finality:final_chestplate"
+					type: "item"
+				}
+				{
+					id: "5659BE7E18AE205F"
+					item: "finality:final_leggings"
+					type: "item"
+				}
+				{
+					id: "1D64A82B44E8E4FC"
+					item: "finality:final_boots"
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0D658D357E4D6ABE"]
+			id: "11AEBF16012AB46F"
+			tasks: [
+				{
+					id: "0AF7F8D881785838"
+					item: "finality:final_sword"
+					type: "item"
+				}
+				{
+					id: "4D1281D306D11D5D"
+					item: "finality:final_pickaxe"
+					type: "item"
+				}
+				{
+					id: "2C85890473E9CF5F"
+					item: "finality:final_axe"
+					type: "item"
+				}
+				{
+					id: "520481486C49CBA0"
+					item: "finality:final_shovel"
+					type: "item"
+				}
+				{
+					id: "29EF708D90693443"
+					item: "finality:final_hoe"
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 8.0d
+		}
 	]
 	subtitle: [
 		"Work in progress."

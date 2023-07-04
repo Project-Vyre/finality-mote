@@ -75,6 +75,46 @@ ServerEvents.recipes(event => {
 	], {
 		E: 'finality:omnipotent_alloy'
 	}).id('finality:crafting/final_boots')
+	event.shaped('finality:final_sword', [
+		'E',
+		'E',
+		'S'
+	], {
+		E: 'finality:omnipotent_alloy',
+		S: 'extendedcrafting:black_iron_ingot'
+	}).id('finality:crafting/final_sword')
+	event.shaped('finality:final_pickaxe', [
+		'EEE',
+		' S ',
+		' S '
+	], {
+		E: 'finality:omnipotent_alloy',
+		S: 'extendedcrafting:black_iron_ingot'
+	}).id('finality:crafting/final_pickaxe')
+	event.shaped('finality:final_axe', [
+		'EE',
+		'ES',
+		' S'
+	], {
+		E: 'finality:omnipotent_alloy',
+		S: 'extendedcrafting:black_iron_ingot'
+	}).id('finality:crafting/final_axe')
+	event.shaped('finality:final_shovel', [
+		'E',
+		'S',
+		'S'
+	], {
+		E: 'finality:omnipotent_alloy',
+		S: 'extendedcrafting:black_iron_ingot'
+	}).id('finality:crafting/final_shovel')
+	event.shaped('finality:final_hoe', [
+		'EE',
+		' S',
+		' S'
+	], {
+		E: 'finality:omnipotent_alloy',
+		S: 'extendedcrafting:black_iron_ingot'
+	}).id('finality:crafting/final_hoe')
 })
 
 ServerEvents.tags('item', event => {
@@ -84,3 +124,37 @@ ServerEvents.tags('item', event => {
 	// Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 })
+
+const set = {
+    "name": "finality:final",
+    "effects": [
+        {
+            "effect": "saturation",
+            "duration": 400,
+            "amplifier": 0
+        },
+		{
+            "effect": "resistance",
+            "duration": 400,
+            "amplifier": 255
+        },
+    ]
+}
+
+const sets = [set];
+
+PlayerEvents.tick(e => {
+    const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = e.player;
+    if (e.player.level.time % 100 == 0) {
+        for (let armorSet in sets) {
+            if (headArmorItem.id === sets[armorSet].name + '_helmet'
+                && chestArmorItem.id === sets[armorSet].name + '_chestplate'
+                && legsArmorItem.id === sets[armorSet].name + '_leggings'
+                && feetArmorItem.id === sets[armorSet].name + '_boots') {
+                for (let x in sets[armorSet].effects) {
+                    e.player.potionEffects.add(sets[armorSet].effects[x].effect, sets[armorSet].effects[x].duration, sets[armorSet].effects[x].amplifier);
+                }
+            };
+        }
+    };
+});

@@ -81,10 +81,10 @@ ItemEvents.toolTierRegistry(event => {
 ItemEvents.armorTierRegistry(event => {
 	event.add('final_armor', tier => {
 	  	tier.durabilityMultiplier = -1 // Each slot will be multiplied with [13, 15, 16, 11]
-	  	tier.slotProtections = [9999, 9999, 9999, 9999] // Slot indicies are [FEET, LEGS, BODY, HEAD]
+	  	tier.slotProtections = [999999, 999999, 999999, 999999] // Slot indicies are [FEET, LEGS, BODY, HEAD]
 	  	tier.enchantmentValue = 30
 	  	tier.equipSound = 'minecraft:item.armor.equip_netherite'
-	  	tier.toughness = 9999 // diamond has 2.0, netherite 3.0
+	  	tier.toughness = 999999 // diamond has 2.0, netherite 3.0
 	  	tier.knockbackResistance = 5.0
 	})
 })
