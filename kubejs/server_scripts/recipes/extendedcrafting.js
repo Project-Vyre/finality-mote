@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
         G: '#forge:glass/colorless',
         S: 'extendedcrafting:ender_star',
         O: 'minecraft:obsidian'
-    }).id('finality:beacon')
+    }).id('minecraft:beacon')
     event.recipes.createMechanicalCrafting(Item.of('4x extendedcrafting:crystaltine_ingot'), [
         'DLLLLLD',
         'DGISIGD',
