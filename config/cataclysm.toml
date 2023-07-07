@@ -36,7 +36,7 @@
 	WASWHowitzerCooldown = 90
 	#Void Assault Shoulder Weapon's Cooldown
 	#Range: 0 ~ 1000000
-	VASWCooldown = 60
+	VASWCooldown = 30
 	#Void Core's Cooldown
 	#Range: 0 ~ 1000000
 	VoidCoreCooldown = 60
