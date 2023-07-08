@@ -2,7 +2,6 @@
 let TOOLS = ['sword','shovel','pickaxe','axe','hoe']
 let ARMOR = ['helmet','chestplate','leggings','boots']
 ItemEvents.modification(event => {
-	// wooden tools
     TOOLS.forEach(tool => event.modify(`wooden_${tool}`, item => {
         item.maxDamage = 16
     }))
@@ -25,7 +24,6 @@ ItemEvents.modification(event => {
         item.maxDamage = 2048
     }))
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
-	// leather armor
     ARMOR.forEach(armor => event.modify(`leather_${armor}`, item => {
         item.maxDamage = 128
     }))
