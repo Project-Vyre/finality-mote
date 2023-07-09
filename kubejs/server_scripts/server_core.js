@@ -6,6 +6,9 @@ let C = (id) => `create:${id}`
 let MC = (id) => `minecraft:${id}`
 let EXT = (id) => `extendedcrafting:${id}`
 
+let STONEPLATES = ['stone','polished_blackstone']
+let WOODPLATES = ['oak','spruce','birch','jungle','acacia','dark_oak','mangrove','crimson','warped']
+
 ServerEvents.recipes(event => {
     event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), ['#forge:rods/wooden','#forge:rods/wooden']).id('finality:documentation_book')
     event.remove({id: 'minecraft:redstone_from_smelting_redstone_ore'}) // cursed recipe
@@ -16,13 +19,13 @@ ServerEvents.recipes(event => {
 	event.remove({id: 'createaddition:rolling/brass_ingot'})
 	event.remove({id: 'createaddition:rolling/straw'})
 	event.remove({id: 'createaddition:mixing/bioethanol'})
-	event.shaped(MC('bucket'), [
+	event.shaped('bucket', [
 		'I I',
 		' I '
 	], {
 		I: C('iron_sheet')
 	}).id('minecraft:bucket')
-	event.shaped(MC('clock'), [
+	event.shaped('clock', [
 		' G ',
 		'GMG',
 		' G '
@@ -30,7 +33,7 @@ ServerEvents.recipes(event => {
 		G: C('golden_sheet'),
 		M: C('precision_mechanism')
 	}).id('minecraft:clock')
-	event.shaped(MC('compass'), [
+	event.shaped('compass', [
 		' I ',
 		'IRI',
 		' I '
@@ -38,6 +41,16 @@ ServerEvents.recipes(event => {
 		I: C('iron_sheet'),
 		R: MC('redstone')
 	}).id('minecraft:compass')
+	event.shaped('piston', [
+		'WWW',
+		'CEC',
+		'CRC'
+	], {
+		W: '#minecraft:planks',
+		C: 'cobblestone',
+		E: 'create:piston_extension_pole',
+		R: 'redstone'
+	}).id('minecraft:piston')
 	event.recipes.createMixing('finality:omnipotent_alloy', [
 		EXT('the_ultimate_catalyst'),
 		EXT('crystaltine_catalyst'),
@@ -115,6 +128,26 @@ ServerEvents.recipes(event => {
 		E: 'finality:omnipotent_alloy',
 		S: 'extendedcrafting:black_iron_ingot'
 	}).id('finality:crafting/final_hoe')
+	STONEPLATES.forEach(stone => {
+		event.recipes.create.cutting([`${stone}_pressure_plate`, `${stone}_slab`], `${stone}`).id(`minecraft:${stone}_pressure_plate`)
+	})
+	WOODPLATES.forEach(wood => {
+		event.recipes.create.cutting([`${wood}_pressure_plate`, `${wood}_slab`], `${wood}_planks`).id(`minecraft:${wood}_pressure_plate`)
+	})
+	event.shaped('light_weighted_pressure_plate', [
+		'G',
+		'R'
+	], {
+		G: 'create:golden_sheet',
+		R: 'redstone'
+	}).id('minecraft:light_weighted_pressure_plate')
+	event.shaped('heavy_weighted_pressure_plate', [
+		'G',
+		'R'
+	], {
+		G: 'create:iron_sheet',
+		R: 'redstone'
+	}).id('minecraft:heavy_weighted_pressure_plate')
 })
 
 ServerEvents.tags('item', event => {

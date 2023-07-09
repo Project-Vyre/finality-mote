@@ -296,7 +296,7 @@ customization {
   actionid = 94fda249-8660-4bfe-ba19-a99a807f2a231688254658715
   y = -149
   alignment = left
-  base_color = 7594F0
+  base_color = A7BAEF
   height = 113
 }
 

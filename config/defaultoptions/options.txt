@@ -5,7 +5,7 @@ chatColors:true
 chatLinks:true
 chatLinksPrompt:true
 enableVsync:false
-entityShadows:false
+entityShadows:true
 forceUnicodeFont:false
 discrete_mouse_scroll:true
 invertYMouse:false
@@ -36,7 +36,7 @@ graphicsMode:1
 ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
-renderClouds:"false"
+renderClouds:"true"
 resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","create:legacy_copper","file/Enhanced Audio r5.zip","file/Finality Mote Resources"]
 incompatibleResourcePacks:["quark:emote_resources"]
 lastServer:
@@ -77,15 +77,15 @@ showAutosaveIndicator:true
 allowServerListing:true
 chatPreview:1
 onlyShowSecureChat:false
-soundCategory_master:0.5033113
-soundCategory_music:0.25704226
+soundCategory_master:0.50165564
+soundCategory_music:0.25
 soundCategory_record:1.0
 soundCategory_weather:0.5070422
 soundCategory_block:1.0
 soundCategory_hostile:1.0
 soundCategory_neutral:1.0
 soundCategory_player:1.0
-soundCategory_ambient:0.75352114
+soundCategory_ambient:0.7570422
 soundCategory_voice:1.0
 modelPart_cape:true
 modelPart_jacket:true

@@ -131,8 +131,7 @@ ServerEvents.recipes(event => {
 		'create:cinder_flour',
 		Item.of('create:cinder_flour').withChance(0.50),
 		Item.of('minecraft:netherite_scrap').withChance(0.002)
-	],
-		'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
+	], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
     // filling
     event.recipes.createFilling('minecraft:netherrack', [
 		'minecraft:cobblestone', 

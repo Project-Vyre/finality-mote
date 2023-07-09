@@ -88,16 +88,6 @@
 					item: "supplementaries:gold_door"
 					type: "item"
 				}
-				{
-					id: "27031331138D5973"
-					item: "supplementaries:silver_door"
-					type: "item"
-				}
-				{
-					id: "0D1F7DF4EEA1B425"
-					item: "supplementaries:lead_door"
-					type: "item"
-				}
 			]
 			title: "Luxury Doors!"
 			x: 1.5d
@@ -186,16 +176,6 @@
 				{
 					id: "222D611B74E5FB73"
 					item: "supplementaries:gold_trapdoor"
-					type: "item"
-				}
-				{
-					id: "37AB041C931401AB"
-					item: "supplementaries:silver_trapdoor"
-					type: "item"
-				}
-				{
-					id: "69A122A0D0C5B87A"
-					item: "supplementaries:lead_trapdoor"
 					type: "item"
 				}
 			]
@@ -292,6 +272,12 @@
 					count: 9L
 					id: "014AB88B75889CF8"
 					item: "create:warped_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "667782F011BEC1F2"
+					item: "create:mangrove_window"
 					type: "item"
 				}
 			]

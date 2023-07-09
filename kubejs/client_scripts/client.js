@@ -94,6 +94,7 @@ JEIEvents.hideItems(event => {
 	event.hide('createaddition:brass_rod')
 })
 JEIEvents.information(event => {
+	event.add('tempad:he_who_remains_tempad', ['Can only be acquired from the End, somewhere.'])
 	event.add('mysticalagriculture:fertilized_essence', ['Can only be acquired from Mystical Agriculture crops upon harvesting.', 'Not a guaranteed drop!'])
 	event.add('minecraft:ender_eye', ['There is a certain eye that can only be acquired from enchanting.', 'It is very rare, however.'])
 	event.add('endrem:black_eye', ['Can be found in lost treasure chests.'])

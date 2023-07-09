@@ -24,6 +24,11 @@
         },
         {
             "type": "patchouli:crafting",
+            "recipe": "minecraft:piston",
+            "text": "Recipe status: Finalized."
+        },
+        {
+            "type": "patchouli:crafting",
             "recipe": "minecraft:beacon",
             "text": "Recipe status: Finalized."
         }

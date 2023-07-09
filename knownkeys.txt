@@ -177,3 +177,5 @@ key.raised.hud.up
 key.raised.chat.down
 key.raised.chat.up
 gui.xaero_pac_key_open_menu
+key.shetiphiancore.tool.next
+key.shetiphiancore.tool.previous
