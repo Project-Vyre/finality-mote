@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 3,
-          "name": "minecraft:lead"
+          "name": "alexsmobs:vine_lasso"
         },
         {
           "type": "minecraft:item",

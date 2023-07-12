@@ -60,7 +60,7 @@
         {
           "type": "minecraft:item",
           "weight": 2,
-          "name": "minecraft:tropical_fish"
+          "name": "alexsmobs:fish_oil"
         },
         {
           "type": "minecraft:item",

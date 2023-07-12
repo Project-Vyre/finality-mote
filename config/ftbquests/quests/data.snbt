@@ -28,6 +28,6 @@
 	}
 	pause_game: false
 	progression_mode: "linear"
-	title: "Finality Mote Edition"
+	title: "Finality Mote"
 	version: 13
 }

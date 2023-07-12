@@ -2,7 +2,7 @@
   "parent": "idas:idas_root",
   "display": {
     "icon": {
-      "item": "minecraft:leather"
+      "item": "alexsmobs:moose_antler"
     },
     "title": {
       "translate": "Hunter's Cabin"

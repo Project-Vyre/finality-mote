@@ -89,7 +89,28 @@
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "minecraft:axolotl_bucket"
+          "name": "alexsmobs:lobster_bucket"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "alexsmobs:elastic_tendon"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "alexsmobs:blood_sac",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              },
+              "add": false
+            }
+          ]
         },
         {
           "type": "minecraft:item",

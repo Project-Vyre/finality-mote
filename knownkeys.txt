@@ -179,3 +179,5 @@ key.raised.chat.up
 gui.xaero_pac_key_open_menu
 key.shetiphiancore.tool.next
 key.shetiphiancore.tool.previous
+key.modernfix.config
+key.zoom

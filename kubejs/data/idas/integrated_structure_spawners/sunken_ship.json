@@ -1,7 +1,7 @@
 {
   "mobs": [
     {
-      "name": "minecraft:drowned",
+      "name": "alexsmobs:frilled_shark",
       "weight": 15
     }
   ]

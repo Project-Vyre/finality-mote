@@ -55,7 +55,7 @@
           "functions": [
             {
               "function": "minecraft:set_potion",
-              "id": "minecraft:night_vision"
+              "id": "alexsmobs:lava_vision"
             }
           ]
         }
@@ -67,12 +67,12 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:warped_fungus"
+          "name": "alexsmobs:warped_mixture"
         },
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "minecraft:glass_bottle"
+          "name": "alexsmobs:lava_bottle"
         },
         {
           "type": "minecraft:item",
@@ -171,7 +171,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "minecraft:warped_fungus",
+          "name": "alexsmobs:warped_muscle",
           "functions": [
             {
               "function": "minecraft:limit_count",

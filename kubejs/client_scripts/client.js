@@ -96,6 +96,9 @@ JEIEvents.hideItems(event => {
 JEIEvents.information(event => {
 	event.add('tempad:he_who_remains_tempad', ['Can only be acquired from the End, somewhere.'])
 	event.add('mysticalagriculture:fertilized_essence', ['Can only be acquired from Mystical Agriculture crops upon harvesting.', 'Not a guaranteed drop!'])
+	event.add('cataclysm:burning_ashes', ['Used to summon Ignis.'])
+	event.add('minecraft:nether_star', ['If you find a deactivated and mechanical version of the Wither, give it a Nether Star.', 'Also extensively used in certain recipes.'])
+	event.add('cataclysm:abyssal_sacrifice', ['Required to summon the Leviathan.', 'Use on the Altar of Abyss located in the Sunken City.'])
 	event.add('minecraft:ender_eye', ['There is a certain eye that can only be acquired from enchanting.', 'It is very rare, however.'])
 	event.add('endrem:black_eye', ['Can be found in lost treasure chests.'])
 	event.add('endrem:cold_eye', ['Found in igloos.'])

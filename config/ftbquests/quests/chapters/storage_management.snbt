@@ -10,19 +10,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["1229F8883A381F07"]
-			id: "35B4674E46E57316"
-			subtitle: "Just a regular barrel."
-			tasks: [{
-				id: "69D88EC6E66E3B09"
-				item: "minecraft:barrel"
-				type: "item"
-			}]
-			title: "Make a barrel."
-			x: 1.0d
-			y: 1.0d
-		}
-		{
 			dependencies: ["4A691BB889286C89"]
 			description: ["You are free to utilize whatever storage methods you feel best suit your needs."]
 			hide: true
@@ -41,13 +28,20 @@
 		{
 			dependencies: ["1229F8883A381F07"]
 			id: "6175DFE7CD3F470E"
-			subtitle: "Make a basic chest."
-			tasks: [{
-				id: "1BA6340D3FDD8082"
-				item: "minecraft:chest"
-				type: "item"
-			}]
-			title: "Make a chest."
+			subtitle: "The basics of vanilla storage."
+			tasks: [
+				{
+					id: "1BA6340D3FDD8082"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					id: "0C4FAC706DD2EF22"
+					item: "minecraft:barrel"
+					type: "item"
+				}
+			]
+			title: "Starting with Vanilla Storage"
 			x: -2.0d
 			y: 0.0d
 		}
