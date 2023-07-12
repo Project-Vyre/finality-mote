@@ -316,6 +316,32 @@
 			x: 0.0d
 			y: -4.5d
 		}
+		{
+			dependencies: ["2FB0CBAD2F6C47FC"]
+			description: [
+				"Tame and heal the baby leviathan with some tropical fish. "
+				""
+				"Please try to protect it at all costs ;-;"
+			]
+			id: "7B41C8C1C7837774"
+			shape: "square"
+			subtitle: "Also, you now have a baby leviathan in your possession now."
+			tasks: [
+				{
+					id: "77FAD21A4E3989F4"
+					item: "cataclysm:tidal_claws"
+					type: "item"
+				}
+				{
+					id: "72EB65397C97EBE9"
+					item: "cataclysm:abyssal_egg"
+					type: "item"
+				}
+			]
+			title: "Victory at last!"
+			x: 0.0d
+			y: -6.0d
+		}
 	]
 	subtitle: ["A lot of boss fights and indestructible tools!"]
 	title: "Cataclysm"
