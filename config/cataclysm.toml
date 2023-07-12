@@ -55,6 +55,9 @@
 	#Abyss Orb's Damage
 	#Range: 0.0 ~ 1000000.0
 	AbyssOrbdamage = 4.0
+	#Lionfish Spike's Damage
+	#Range: 0.0 ~ 1000000.0
+	LionfishSpikedamage = 4.0
 
 ["Ender Guardian"]
 	#EnderGuardian's Health Multiplier
