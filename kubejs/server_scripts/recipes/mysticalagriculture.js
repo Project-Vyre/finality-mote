@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
         MYST('prosperity_shard'),
         MYST('prosperity_shard')
     ]).id('finality:mysta_master_infusion_crystal')
-    event.recipes.createFilling(MYST(MASTERCRYS), [MYST('supremium_gemstone'), Fluid.of('kubejs:supreme_infusion_essence')])
+    event.recipes.createFilling(MYST(MASTERCRYS), [MYST('supremium_gemstone'), Fluid.of('kubejs:supreme_infusion_essence', 250)])
     // renewable prosperity shards
     event.recipes.createCrushing([
         Item.of(MYST('prosperity_shard')).withChance(0.25), 

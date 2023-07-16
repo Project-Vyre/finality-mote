@@ -14,7 +14,7 @@ customization {
 }
 
 customization {
-  orientation = mid-centered
+  orientation = top-centered
   channel = music
   audio_source:beed4771-abf5-4179-832f-60753c7697991688265730716 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
   audio_source:a71214f7-51e4-40b1-a086-b70f04a135a11688265741886 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
@@ -25,9 +25,29 @@ customization {
   width = 50
   action = custom_layout_element:fancymenu_extension:audio_item
   actionid = 1ecbf32e-7f48-43f1-b663-af317dc9160d1688265657892
-  y = -25
+  y = 0
   once_per_session = false
   audio_source:5116c694-6427-45b9-8a25-dd8c6497d8a41688265687120 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
   height = 50
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = false
+  shadow = true
+  scale = 3.0
+  source = Please set your GUI scale to 2%n%for the best experience.
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -267
+  width = 535
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 1b767821-cf72-47ce-a91d-37a52b1177eb1689518376945
+  y = -51
+  [loading_requirement:fancymenu_loading_requirement_is_gui_scale][requirement_mode:if_not][req_id:cff9232c-4c90-4a72-ae28-60e7439bb2e31689518624288] = 2.0
+  alignment = centered
+  height = 102
 }
 
