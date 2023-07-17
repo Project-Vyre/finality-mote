@@ -320,6 +320,26 @@
 			x: -9.0d
 			y: 2.5d
 		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			description: [
+				"You may notice Sophisticated Backpacks is missing if you played through the other variants of the Finality modpack."
+				""
+				"To keep this closer to vanilla gameplay, Backpacked achieves this quite nicely."
+				""
+				"Backpacked's backpacks also come with nifty enchantments. Type @backpacked in JEI's search bar to see them."
+			]
+			id: "551714CF633AC549"
+			subtitle: "Your very own personal and customizable backpack!"
+			tasks: [{
+				id: "65B0BFD9BACC9D00"
+				item: "backpacked:backpack"
+				type: "item"
+			}]
+			title: "Craft the Backpack"
+			x: 2.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Organization is your best friend."]
 	title: "Storage Management"

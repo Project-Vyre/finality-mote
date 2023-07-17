@@ -192,7 +192,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "alexsmobs:frontier_cap",
+          "name": "minecraft:leather_helmet",
           "functions": [
             {
               "function": "minecraft:set_count",

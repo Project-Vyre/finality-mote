@@ -227,7 +227,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "alexsmobs:bear_fur",
+          "name": "minecraft:brown_wool",
           "functions": [
             {
               "function": "minecraft:set_count",

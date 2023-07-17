@@ -181,3 +181,7 @@ key.shetiphiancore.tool.next
 key.shetiphiancore.tool.previous
 key.modernfix.config
 key.zoom
+key.carry.desc
+placebo.toggleTrails
+placebo.toggleWings
+key.toastcontrol.clear

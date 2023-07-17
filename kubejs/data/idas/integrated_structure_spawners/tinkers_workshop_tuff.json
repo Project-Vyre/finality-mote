@@ -1,8 +1,12 @@
 {
   "mobs": [
     {
-      "name": "alexsmobs:rocky_roller",
+      "name": "minecraft:skeleton",
       "weight": 10
+    },
+    {
+      "name": "quark:forgotten",
+      "weight": 5
     }
   ]
 }

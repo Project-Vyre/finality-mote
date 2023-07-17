@@ -28,10 +28,7 @@
 		}
 		{
 			dependencies: ["38C4D6D6DB7D9044"]
-			description: [
-				"Make sure you are prepared with the Terrible Sword. It is the only weapon that can defeat her."
-				""
-			]
+			description: ["Make sure you are prepared with the Terrible Sword. It is one of the few weapons that can defeat her."]
 			id: "67F927F7012EC595"
 			shape: "rsquare"
 			subtitle: "With the sound of the horn, Captain Cornelia appears."

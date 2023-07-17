@@ -465,21 +465,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "alexsmobs:fish_bones",
-          "type": "minecraft:item",
-          "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
-            }
-          ]
         }
       ]
     },
@@ -538,22 +523,7 @@
           "weight": 1
         },
         {
-          "name": "alexsmobs:flying_fish_bucket",
-          "type": "minecraft:item",
-          "weight": 1
-        },
-        {
-          "name": "alexsmobs:lobster_bucket",
-          "type": "minecraft:item",
-          "weight": 1
-        },
-        {
-          "name": "alexsmobs:medium_catfish_bucket",
-          "type": "minecraft:item",
-          "weight": 1
-        },
-        {
-          "name": "alexsmobs:frilled_shark_bucket",
+          "name": "minecraft:axolotl_bucket",
           "type": "minecraft:item",
           "weight": 1
         },

@@ -60,22 +60,6 @@
         {
           "type": "minecraft:item",
           "weight": 15,
-          "name": "alexsmobs:bone_serpent_tooth",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 4,
-                "max": 6
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 15,
           "name": "minecraft:lapis_lazuli",
           "functions": [
             {
@@ -84,22 +68,6 @@
                 "type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 10,
-          "name": "alexsmobs:rattlesnake_rattle",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 5
               },
               "add": false
             }
@@ -130,11 +98,6 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "minecraft:enchanted_golden_apple"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 10,
-          "name": "alexsmobs:poison_bottle"
         },
         {
           "type": "minecraft:item",

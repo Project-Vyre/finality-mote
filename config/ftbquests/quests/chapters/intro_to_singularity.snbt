@@ -155,7 +155,11 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["You're welcome~"]
+			description: [
+				"You're welcome~"
+				""
+				"Apologies if you are on Finality Mote, these crops will follow the regular vanilla height of 3 blocks."
+			]
 			hide: true
 			id: "5693356D2578CF5E"
 			rewards: [{

@@ -123,22 +123,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 25,
-          "name": "alexsmobs:banana",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 4,
-                "max": 6
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "weight": 16,
           "name": "create:experience_nugget",
           "functions": [

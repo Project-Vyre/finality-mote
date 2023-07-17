@@ -2,7 +2,7 @@
   "parent": "idas:idas_root",
   "display": {
     "icon": {
-      "item": "alexsmobs:bear_fur"
+      "item": "minecraft:honey_bottle"
     },
     "title": {
       "translate": "The Bearclaw Inn"

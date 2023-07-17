@@ -1058,11 +1058,13 @@
 			id: "2169920C949FBF9B"
 			shape: "rsquare"
 			size: 2.0d
+			subtitle: "You finally made it."
 			tasks: [{
 				id: "03AAB0D18125F2D7"
 				item: "create:handheld_worldshaper"
 				type: "item"
 			}]
+			title: "The Worldshaper"
 			x: 12.0d
 			y: 14.0d
 		}
@@ -1106,12 +1108,14 @@
 					type: "item"
 				}
 			]
+			title: "Arma Omnipotens"
 			x: 10.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["0D658D357E4D6ABE"]
 			id: "11AEBF16012AB46F"
+			subtitle: "Plurima instrumenta reperire potes."
 			tasks: [
 				{
 					id: "0AF7F8D881785838"

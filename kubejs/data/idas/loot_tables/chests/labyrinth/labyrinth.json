@@ -139,22 +139,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 10,
-          "name": "alexsmobs:rattlesnake_rattle",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "weight": 25,
           "name": "minecraft:rotten_flesh",
           "functions": [
@@ -198,12 +182,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "alexsmobs:guster_eye"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:vine_lasso"
+          "name": "minecraft:lead"
         },
         {
           "type": "minecraft:item",

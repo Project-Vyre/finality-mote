@@ -185,7 +185,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "alexsmobs:frontier_cap",
+          "name": "minecraft:leather_helmet",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -263,7 +263,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "alexsmobs:bison_fur",
+          "name": "minecraft:gray_wool",
           "functions": [
             {
               "function": "minecraft:set_count",

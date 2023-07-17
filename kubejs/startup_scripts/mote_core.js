@@ -27,6 +27,8 @@ let DYE = {
 	magenta: 'Magenta'
 }
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
+	event.create('trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
+	event.create('trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
 	// minecraft core forgot what was supposed to be here
 	// singularity related
 	event.create(FIN('dormant_singularity_core')).texture('kubejs:item/dormant_singularity_core').maxStackSize(16)

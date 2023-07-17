@@ -243,6 +243,19 @@ customization {
 }
 
 customization {
+  orientation = element
+  shape = rectangle
+  color = #1E212640
+  orientation_element = 94fda249-8660-4bfe-ba19-a99a807f2a231688254658715
+  x = -2
+  width = 351
+  action = addshape
+  actionid = ec503c3d-7de6-49f9-bc7c-923acb592abb1689531071104
+  y = -6
+  height = 121
+}
+
+customization {
   orientation = mid-left
   copy_client_player = true
   slim = false
@@ -285,9 +298,11 @@ customization {
   enable_scrolling = true
   shadow = true
   scale = 1.0
+  grabber_color_normal = 1E2126
   source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-mote.txt
   text_border = 0
   case_mode = normal
+  grabber_color_hover = CEA05A
   source_mode = web
   line_spacing = 1
   x = 1

@@ -66,11 +66,6 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "alexsmobs:mimic_octopus_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
           "name": "minecraft:axolotl_bucket"
         },
         {
@@ -81,27 +76,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "alexsmobs:lobster_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:blobfish_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:platypus_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:frilled_shark_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:terrapin_bucket"
+          "name": "minecraft:axolotl_bucket"
         },
         {
           "type": "minecraft:item",
@@ -289,7 +264,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "alexsmobs:bear_fur",
+          "name": "minecraft:brown_wool",
           "functions": [
             {
               "function": "minecraft:limit_count",
@@ -303,21 +278,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "alexsmobs:bison_fur",
-          "functions": [
-            {
-              "function": "minecraft:limit_count",
-              "limit": {
-                "min": 3,
-                "max": 6
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "alexsmobs:raccoon_tail",
+          "name": "minecraft:gray_wool",
           "functions": [
             {
               "function": "minecraft:limit_count",

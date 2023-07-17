@@ -60,7 +60,7 @@
         {
           "type": "minecraft:item",
           "weight": 2,
-          "name": "alexsmobs:fish_oil"
+          "name": "minecraft:tropical_fish"
         },
         {
           "type": "minecraft:item",
@@ -86,16 +86,6 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "minecraft:milk_bucket"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:shrimp_fried_rice"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:boiled_emu_egg"
         },
         {
           "type": "minecraft:item",
@@ -247,7 +237,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "alexsmobs:bear_fur",
+          "name": "minecraft:brown_wool",
           "functions": [
             {
               "function": "minecraft:limit_count",

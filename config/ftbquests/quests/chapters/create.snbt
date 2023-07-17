@@ -705,7 +705,13 @@
 				"1406D000426425FC"
 				"18B37484A6C7F37E"
 			]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mechanical Arms may be slow in your eyes, but they are able to deposit directly into Basins without the use of Andesite or Brass funnels."
+				""
+				"They can also reach then take and deposit fuel for your Blaze Burners that sit under your boiler precisely. It's neat!"
+			]
 			hide: true
 			id: "0352B65BF524BA37"
 			subtitle: "Achievement unlocked: Busy Hands"
@@ -930,6 +936,15 @@
 		}
 		{
 			dependencies: ["79F980EE4DAB682D"]
+			description: [
+				"Wheat flour can be used to make Bread in two ways."
+				""
+				"You have the option of using 3 wheat flour in one Basin filled with 1,000mb of Water to make Dough, but the water is consumed in this process."
+				""
+				"The other method is using Bulk Washing on the Wheat Flour on a moving Mechanical Belt production line."
+				""
+				"Just keep in mind that additional Encased Fans aimed at the same block is the only way of speeding up this process."
+			]
 			id: "1EC1E1E64C630B96"
 			subtitle: "Wheat can be now be refined further."
 			tasks: [{
@@ -974,6 +989,15 @@
 		}
 		{
 			dependencies: ["1EC1E1E64C630B96"]
+			description: [
+				"Soooo, you finally got here."
+				""
+				"What do you do to Dough in real life? You bake it."
+				""
+				"You bake it automatically by using a Campfire in front of an Encased Fan."
+				""
+				"&cDO NOT USE LAVA TO BAKE YOUR DOUGH!&r"
+			]
 			id: "3A0AE21655B5678E"
 			subtitle: "Prepare some dough."
 			tasks: [{
@@ -1498,7 +1522,7 @@
 			tasks: [{
 				icon: "minecraft:nether_bricks"
 				id: "7EF2F9F8166D05E3"
-				structure: "minecraft:fortress"
+				structure: "betterfortresses:fortress"
 				type: "structure"
 			}]
 			title: "Find a Nether Fortress"

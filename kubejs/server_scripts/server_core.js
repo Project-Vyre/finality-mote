@@ -51,6 +51,24 @@ ServerEvents.recipes(event => {
 		E: 'create:piston_extension_pole',
 		R: 'redstone'
 	}).id('minecraft:piston')
+	event.shaped('trident', [
+		'PPP',
+		' A ',
+		' A '
+	], {
+		P: 'kubejs:trident_prong',
+		A: 'kubejs:trident_pole'
+	}).id('finality:trident')
+	event.shaped('kubejs:trident_pole', [
+		'S',
+		'S'
+	], {
+		S: 'prismarine_shard'
+	}).id('finality:trident_pole')
+	event.shapeless('kubejs:trident_prong', [
+		'pointed_dripstone',
+		'prismarine_crystals'
+	]).id('finality:trident_prong')
 	event.recipes.createMixing('finality:omnipotent_alloy', [
 		EXT('the_ultimate_catalyst'),
 		EXT('crystaltine_catalyst'),

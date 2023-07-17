@@ -58,11 +58,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:banner_pattern_bear"
-        },
-        {
-          "type": "minecraft:item",
           "weight": 15,
           "name": "minecraft:book",
           "functions": [
@@ -197,7 +192,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "alexsmobs:frontier_cap",
+          "name": "minecraft:leather_helmet",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -363,38 +358,6 @@
                 "type": "minecraft:uniform",
                 "min": 2,
                 "max": 5
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 5,
-          "name": "alexsmobs:bear_fur",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 3,
-                "max": 5
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 3,
-          "name": "alexsmobs:dropbear_claw",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
               },
               "add": false
             }

@@ -23,15 +23,13 @@
         },
         {
             "type": "patchouli:entity",
-            "entity": "minecraft:elder_guardian",
+            "entity": "cataclysm:the_leviathan",
             "scale": 0.75,
-            "text": "Currently the Leviathan boss is a work in progress."
+            "text": "Very dangerous. You need the Abyssal Sacrifice to summon it back in this world."
         },
         {
-            "type": "patchouli:link",
-            "url": "https://youtu.be/ljgf0aPEm-c",
-            "link_text": "Leviathan Teaser",
-            "text": "L_Ender is currently working on this boss but has extensively released teasers, one of which I have linked below as a large button. Good luck on the underwater boss battle!"
+            "type": "patchouli:text",
+            "text": "Highly recommended to gear up for an underwater boss fight. Good options would be Create's Netherite Diving Helmet, Netherite Backtank paired with a Power V Potato Cannon."
         }
     ]
 }
