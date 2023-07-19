@@ -5,9 +5,9 @@ ServerEvents.recipes(event => {
         'RTB',
         'QQQ'
     ], {
-        Q: 'minecraft:quartz_block',
+        Q: 'quartz_block',
         R: 'create:rose_quartz_lamp',
-        T: 'minecraft:tinted_glass',
-        B: 'minecraft:beacon'
+        T: 'tinted_glass',
+        B: 'beacon'
     }).id('finality:tempad')
 })

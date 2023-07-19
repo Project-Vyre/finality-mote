@@ -3,7 +3,6 @@
 console.info('Hello, World! (You will see this line every time server resources reload)')
 
 let C = (id) => `create:${id}`
-let MC = (id) => `minecraft:${id}`
 let EXT = (id) => `extendedcrafting:${id}`
 
 let STONEPLATES = ['stone','polished_blackstone']
@@ -39,7 +38,7 @@ ServerEvents.recipes(event => {
 		' I '
 	], {
 		I: C('iron_sheet'),
-		R: MC('redstone')
+		R: 'redstone'
 	}).id('minecraft:compass')
 	event.shaped('piston', [
 		'WWW',
@@ -69,81 +68,81 @@ ServerEvents.recipes(event => {
 		'pointed_dripstone',
 		'prismarine_crystals'
 	]).id('finality:trident_prong')
-	event.recipes.createMixing('finality:omnipotent_alloy', [
+	event.recipes.createMixing('kubejs:omnipotent_alloy', [
 		EXT('the_ultimate_catalyst'),
 		EXT('crystaltine_catalyst'),
-		MC('netherite_ingot'),
+		'netherite_ingot',
 		C('rose_quartz'),
 		C('brass_ingot'),
 		C('andesite_alloy'),
-		MC('diamond'),
-		MC('amethyst_shard'),
-		Fluid.of('finality:condensed_universal_entropy', 500)
+		'diamond',
+		'amethyst_shard',
+		Fluid.of('kubejs:condensed_universal_entropy', 500)
 	]).id('finality:mixing/omnipotent_alloy')
-	event.shaped('finality:final_helmet', [
+	event.shaped('kubejs:final_helmet', [
 		'EEE',
 		'E E'
 	], {
-		E: 'finality:omnipotent_alloy',
+		E: 'kubejs:omnipotent_alloy',
 	}).id('finality:crafting/final_helmet')
-	event.shaped('finality:final_chestplate', [
+	event.shaped('kubejs:final_chestplate', [
 		'E E',
 		'EEE',
 		'EEE'
 	], {
-		E: 'finality:omnipotent_alloy'
+		E: 'kubejs:omnipotent_alloy'
 	}).id('finality:crafting/final_chestplate')
-	event.shaped('finality:final_leggings', [
+	event.shaped('kubejs:final_leggings', [
 		'EEE',
 		'E E',
 		'E E'
 	], {
-		E: 'finality:omnipotent_alloy'
+		E: 'kubejs:omnipotent_alloy'
 	}).id('finality:crafting/final_leggings')
-	event.shaped('finality:final_boots', [
+	event.shaped('kubejs:final_boots', [
 		'E E',
 		'E E'
 	], {
-		E: 'finality:omnipotent_alloy'
+		E: 'kubejs:omnipotent_alloy'
 	}).id('finality:crafting/final_boots')
-	event.shaped('finality:final_sword', [
+	event.shaped('kubejs:final_sword', [
 		'E',
 		'E',
 		'S'
 	], {
-		E: 'finality:omnipotent_alloy',
+		E: 'kubejs:omnipotent_alloy',
 		S: 'extendedcrafting:black_iron_ingot'
 	}).id('finality:crafting/final_sword')
-	event.shaped('finality:final_pickaxe', [
+	event.shaped('kubejs:final_pickaxe', [
 		'EEE',
 		' S ',
 		' S '
 	], {
-		E: 'finality:omnipotent_alloy',
+		E: 'kubejs:omnipotent_alloy',
 		S: 'extendedcrafting:black_iron_ingot'
 	}).id('finality:crafting/final_pickaxe')
-	event.shaped('finality:final_axe', [
+	event.shaped('kubejs:final_axe', [
 		'EE',
 		'ES',
 		' S'
 	], {
-		E: 'finality:omnipotent_alloy',
+		E: 'kubejs:omnipotent_alloy',
 		S: 'extendedcrafting:black_iron_ingot'
 	}).id('finality:crafting/final_axe')
-	event.shaped('finality:final_shovel', [
+	event.shaped('kubejs:final_shovel', [
 		'E',
 		'S',
 		'S'
 	], {
-		E: 'finality:omnipotent_alloy',
+		E: 'kubejs:omnipotent_alloy',
 		S: 'extendedcrafting:black_iron_ingot'
 	}).id('finality:crafting/final_shovel')
-	event.shaped('finality:final_hoe', [
+	event.shaped('kubejs:final_hoe', [
 		'EE',
 		' S',
 		' S'
 	], {
-		E: 'finality:omnipotent_alloy',
+		E: 'kubejs:omnipotent_alloy',
 		S: 'extendedcrafting:black_iron_ingot'
 	}).id('finality:crafting/final_hoe')
 	STONEPLATES.forEach(stone => {
@@ -183,13 +182,18 @@ ServerEvents.tags('item', event => {
 })
 
 const set = {
-    "name": "finality:final",
+    "name": "kubejs:final",
     "effects": [
         {
             "effect": "saturation",
             "duration": 400,
             "amplifier": 0
         },
+		{
+			"effect": "regeneration",
+			"duration": 400,
+			"amplifier": 255
+		},
 		{
             "effect": "resistance",
             "duration": 400,

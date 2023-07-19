@@ -1046,30 +1046,18 @@
 			hide: true
 			id: "4196F75FB2342B67"
 			subtitle: "The first step in making Electron Tubes."
-			tasks: [
-				{
-					id: "6515E9AECCF5EC65"
-					item: {
-						Count: 1b
-						id: "create:sand_paper"
-						tag: {
-							Damage: 0
-						}
+			tasks: [{
+				id: "6515E9AECCF5EC65"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:sandpaper"
 					}
-					type: "item"
 				}
-				{
-					id: "04130E20BE2371B3"
-					item: {
-						Count: 1b
-						id: "create:red_sand_paper"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
+				title: "Any #create:sandpaper"
+				type: "item"
+			}]
 			title: "Craft some Sandpaper"
 			x: 6.5d
 			y: 4.5d
