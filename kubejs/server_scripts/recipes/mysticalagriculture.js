@@ -112,6 +112,11 @@ ServerEvents.recipes(event => {
         '8x mysticalagriculture:nether_essence',
         'mysticalagriculture:earth_essence'
     ]).id('finality:mysta_mixing_soul_soil')
+    // water essence related
+    event.recipes.createMixing('12x minecraft:mud', [
+        '4x mysticalagriculture:dirt_essence',
+        'mysticalagriculture:water_essence'
+    ]).id('finality:mysta_mixing_mud')
     // stone essence
     event.shaped('16x minecraft:cobblestone', [
         'SSS',
@@ -332,6 +337,7 @@ ServerEvents.recipes(event => {
     ], {
         F: 'mysticalagriculture:machine_frame',
         S: 'mysticalagriculture:soulium_ingot',
+        D: 'mysticalagriculture:soulium_dagger',
         B: 'create:deployer'
     }).id('mysticalagriculture:soul_extractor')
     event.shaped('mysticalagriculture:basic_reprocessor', [

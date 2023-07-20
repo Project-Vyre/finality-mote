@@ -51,18 +51,18 @@ ServerEvents.recipes(event => {
 		Item.of('minecraft:clay_ball').withChance(0.50),
 		Item.of('create:copper_nugget').withChance(0.25),
 		Item.of('create:experience_nugget').withChance(0.75)
-	], 'dripstone_block').processingTime(250).id('finality:dripstone_crushing')
+	], 'minecraft:dripstone_block').processingTime(250).id('finality:dripstone_crushing')
     event.recipes.createCrushing([
 		Item.of('create:copper_nugget').withChance(0.05),
 		Item.of('minecraft:gunpowder').withChance(0.10)
-	], 'basalt').id('finality:basalt_crushing')
+	], 'minecraft:basalt').id('finality:basalt_crushing')
     event.recipes.createCrushing([
 		'create:cinder_flour',
 		Item.of('create:cinder_flour').withChance(0.50),
 		Item.of('minecraft:netherite_scrap').withChance(0.002)
-	], 'netherrack').processingTime(250).id('finality:netherrack_crushing')
+	], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
     // filling
-    event.recipes.createFilling('netherrack', [
+    event.recipes.createFilling('minecraft:netherrack', [
 		'minecraft:cobblestone', 
 		Fluid.of('create:potion', 250, '{Potion: "minecraft:strong_healing"}')
 	]).id('finality:living_flesh_stone')

@@ -2,9 +2,6 @@
 
 console.info('Hello, World! (You will see this line every time server resources reload)')
 
-let C = (id) => `create:${id}`
-let EXT = (id) => `extendedcrafting:${id}`
-
 let STONEPLATES = ['stone','polished_blackstone']
 let WOODPLATES = ['oak','spruce','birch','jungle','acacia','dark_oak','mangrove','crimson','warped']
 
@@ -29,16 +26,16 @@ ServerEvents.recipes(event => {
 		'GMG',
 		' G '
 	], {
-		G: C('golden_sheet'),
-		M: C('precision_mechanism')
+		G: 'create:golden_sheet',
+		M: 'create:precision_mechanism'
 	}).id('minecraft:clock')
 	event.shaped('minecraft:compass', [
 		' I ',
 		'IRI',
 		' I '
 	], {
-		I: C('iron_sheet'),
-		R: 'redstone'
+		I: 'create:iron_sheet',
+		R: 'minecraft:redstone'
 	}).id('minecraft:compass')
 	event.shaped('minecraft:piston', [
 		'WWW',
@@ -46,10 +43,18 @@ ServerEvents.recipes(event => {
 		'CRC'
 	], {
 		W: '#minecraft:planks',
-		C: 'cobblestone',
+		C: 'minecraft:cobblestone',
 		E: 'create:piston_extension_pole',
-		R: 'redstone'
+		R: 'minecraft:redstone'
 	}).id('minecraft:piston')
+    event.shaped('minecraft:hopper',[
+        'F F',
+        'FCF',
+        ' F '
+    ],{
+        F: 'create:iron_sheet',
+        C: '#forge:chests/wooden'
+    }).id('minecraft:hopper')
 	event.shaped('minecraft:trident', [
 		'PPP',
 		' A ',
