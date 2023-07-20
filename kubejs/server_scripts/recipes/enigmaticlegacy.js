@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
                 item: 'enigmaticlegacy:enigmatic_item'
             }
     }).id('finality:heart_of_creation')
-    event.shaped(Item.of('enigmaticlegacy:earth_heart'), [
+    event.shaped('enigmaticlegacy:earth_heart', [
         'PSP',
         'SDS',
         'PSP'

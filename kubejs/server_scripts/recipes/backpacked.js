@@ -4,17 +4,17 @@ ServerEvents.recipes(event => {
         'SIS',
         'HHH'
     ], {
-        H: 'rabbit_hide',
-        S: 'string',
-        I: 'iron_ingot'
+        H: 'minecraft:rabbit_hide',
+        S: 'minecraft:string',
+        I: 'minecraftiron_ingot'
     }).id('backpacked:backpack')
     event.shaped('backpacked:backpack', [
         'LLL',
         'SIS',
         'LLL'
     ], {
-        L: 'leather',
-        S: 'string',
-        I: 'iron_ingot'
+        L: 'minecraft:leather',
+        S: 'minecraft:string',
+        I: 'minecraft:iron_ingot'
     }).id('finality:backpack_alt')
 })

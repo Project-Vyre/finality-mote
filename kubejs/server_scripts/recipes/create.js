@@ -1,15 +1,21 @@
 ServerEvents.recipes(event => {
     // compacting
+	event.recipes.createCompacting([
+		'minecraft:sponge', 
+		Fluid.of('minecraft:water', 1000)
+	], [
+		'minecraft:wet_sponge'
+	]).id('finality:sponge_squeezing')
     event.recipes.createCompacting([
 		'minecraft:diamond'
 	], [
-		Item.of('coal_block', 9), 
-		Fluid.of('lava', 250)
+		Item.of('minecraft:coal_block', 9), 
+		Fluid.of('minecraft:lava', 250)
 	]).superheated().id('finality:renew_diamond')
     event.recipes.createCompacting([
 		'minecraft:coal'
 	], [
-		Item.of('dried_kelp_block', 9)
+		Item.of('minecraft:dried_kelp_block', 9)
 	]).heated().id('finality:renew_coal')
     event.recipes.createCompacting([
 		'minecraft:basalt'
@@ -18,13 +24,13 @@ ServerEvents.recipes(event => {
 		Fluid.of('minecraft:lava', 500)
 	]).id('finality:compacting_basalt')
     event.recipes.createCompacting([
-		'tuff'
+		'minecraft:tuff'
 	], [
 		Item.of('minecraft:gravel', 18),
 		Fluid.of('minecraft:lava', 250)
 	]).superheated().id('finality:renew_tuff')
     event.recipes.createCompacting([
-		'tuff'
+		'minecraft:tuff'
 	], [
 		Item.of('minecraft:deepslate', 9),
 		Fluid.of('minecraft:lava', 250)
@@ -39,7 +45,7 @@ ServerEvents.recipes(event => {
     event.recipes.createCrushing([
 		'minecraft:sand',
 		Item.of('minecraft:clay_ball').withChance(0.05)
-	], 'dirt').processingTime(250).id('finality:dirt_crushing')
+	], 'minecraft:dirt').processingTime(250).id('finality:dirt_crushing')
     event.recipes.createCrushing([
 		Item.of('minecraft:pointed_dripstone', 4),
 		Item.of('minecraft:clay_ball').withChance(0.50),

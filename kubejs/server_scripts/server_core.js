@@ -18,13 +18,13 @@ ServerEvents.recipes(event => {
 	event.remove({id: 'createaddition:rolling/brass_ingot'})
 	event.remove({id: 'createaddition:rolling/straw'})
 	event.remove({id: 'createaddition:mixing/bioethanol'})
-	event.shaped('bucket', [
+	event.shaped('minecraft:bucket', [
 		'I I',
 		' I '
 	], {
-		I: C('iron_sheet')
+		I: 'create:iron_sheet'
 	}).id('minecraft:bucket')
-	event.shaped('clock', [
+	event.shaped('minecraft:clock', [
 		' G ',
 		'GMG',
 		' G '
@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
 		G: C('golden_sheet'),
 		M: C('precision_mechanism')
 	}).id('minecraft:clock')
-	event.shaped('compass', [
+	event.shaped('minecraft:compass', [
 		' I ',
 		'IRI',
 		' I '
@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
 		I: C('iron_sheet'),
 		R: 'redstone'
 	}).id('minecraft:compass')
-	event.shaped('piston', [
+	event.shaped('minecraft:piston', [
 		'WWW',
 		'CEC',
 		'CRC'
@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
 		E: 'create:piston_extension_pole',
 		R: 'redstone'
 	}).id('minecraft:piston')
-	event.shaped('trident', [
+	event.shaped('minecraft:trident', [
 		'PPP',
 		' A ',
 		' A '
@@ -62,21 +62,21 @@ ServerEvents.recipes(event => {
 		'S',
 		'S'
 	], {
-		S: 'prismarine_shard'
+		S: 'minecraft:prismarine_shard'
 	}).id('finality:trident_pole')
 	event.shapeless('kubejs:trident_prong', [
-		'pointed_dripstone',
-		'prismarine_crystals'
+		'minecraft:pointed_dripstone',
+		'minecraft:prismarine_crystals'
 	]).id('finality:trident_prong')
 	event.recipes.createMixing('kubejs:omnipotent_alloy', [
-		EXT('the_ultimate_catalyst'),
-		EXT('crystaltine_catalyst'),
-		'netherite_ingot',
-		C('rose_quartz'),
-		C('brass_ingot'),
-		C('andesite_alloy'),
-		'diamond',
-		'amethyst_shard',
+		'extendedcrafting:the_ultimate_catalyst',
+		'extendedcrafting:crystaltine_catalyst',
+		'minecraft:netherite_ingot',
+		'create:rose_quartz',
+		'create:brass_ingot',
+		'create:andesite_alloy',
+		'minecraft:diamond',
+		'minecraft:amethyst_shard',
 		Fluid.of('kubejs:condensed_universal_entropy', 500)
 	]).id('finality:mixing/omnipotent_alloy')
 	event.shaped('kubejs:final_helmet', [

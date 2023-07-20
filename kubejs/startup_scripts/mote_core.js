@@ -2,7 +2,6 @@
 Platform.mods.kubejs.name = 'Finality'
 console.info('Registering Finality items...')
 
-let C = (id) => `create:${id}`
 let NATR = ['blue_ice', 'sand', 'coarse_dirt', 'cobblestone']
 let CMAT = ['andesite_alloy', 'zinc', 'copper', 'brass', 'rose_quartz', 'framed_glass', 'precision_mechanism', 'sturdy_sheet']
 // let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
@@ -37,12 +36,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 	/*
 	INCOMPLETE SINGULARITIES
 	for use for making a singularity. dormant core to incomplete core to singularity
-	follow format .create(FIN(), C(sequenced_assembly)).displayName().texture().maxStackSize(1)
+	follow format .create('kubejs:', 'create:sequenced_assembly).displayName().texture().maxStackSize(1)
 	*/
-	NATR.forEach(insert => event.create(`kubejs:incomplete_${insert}_singularity`, C('sequenced_assembly')).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${insert}`).maxStackSize(1))
-	CMAT.forEach(MTRL => event.create(`kubejs:incomplete_${MTRL}_singularity`, C('sequenced_assembly')).texture(`kubejs:item/incomplete_singularities/incomplete_${MTRL}`).maxStackSize(1))
+	NATR.forEach(insert => event.create(`kubejs:incomplete_${insert}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/nature/incomplete_${insert}`).maxStackSize(1))
+	CMAT.forEach(MTRL => event.create(`kubejs:incomplete_${MTRL}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/incomplete_${MTRL}`).maxStackSize(1))
 	Object.keys(DYE).forEach(color => { // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
-		event.create(`kubejs:incomplete_concrete_${color}_singularity`, C('sequenced_assembly')).displayName(`§dIncomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
+		event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§dIncomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
 	})
 	/*
 	ACTIVATED SINGULARITY CORES
@@ -73,11 +72,11 @@ StartupEvents.registry('fluid', event => {
 		.thickTexture(0x7800FF)
 		.bucketColor(0x7800FF)
 		.luminosity(14) // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
-	event.create('inferior_infusion_essence')
+	event.create('kubejs:inferior_infusion_essence')
 		.displayName('§eInferior Infusion Essence')
 		.thickTexture(0xACCF00)
 		.bucketColor(0xACCF00)
-	event.create('supreme_infusion_essence')
+	event.create('kubejs:supreme_infusion_essence')
 		.displayName('§eSupreme Infusion Essence')
 		.thickTexture(0xFC0000)
 		.bucketColor(0xFC0000)

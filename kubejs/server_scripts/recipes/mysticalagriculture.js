@@ -1,498 +1,358 @@
-// modid shortcuts
-let MC = (id) => `minecraft:${id}`
-let C = (id) => `create:${id}`
-let MYST = (id) => `mysticalagriculture:${id}`
-let MYSTADD = (id) => `mysticalagradditions:${id}`
-// minecraft materials
-const COBBL = 'cobblestone'
-const CRSDT = 'coarse_dirt'
-const DIRT = 'dirt'
-const SND = 'sand'
-const STN = 'stone'
-const BLU_ICE = 'blue_ice'
-const FE = 'iron'
-const AU = 'gold'
-const RE = 'redstone'
-const DMD = 'diamond'
-const AMHST = 'amethyst'
-const NTHR = 'nether'
-const QRTZ = 'quartz'
-// create materials
-const ANDT = 'andesite'
-const ZI = 'zinc'
-const CU = 'copper'
-const BRSS = 'brass'
-const RQRTZ = 'rose_quartz'
-const F_GLSS = 'framed_glass'
-const PRECISION = 'precision_mechanism'
-const STURDY = 'sturdy_sheet'
-// mysta basics
-const ESS = 'essence'
-const PROSP = 'prosperity'
-const GEM = 'gemstone'
-const SHRD = 'shard'
-const INFCRYSTAL = 'infusion_crystal'
-const MASTERCRYS = 'master_infusion_crystal'
-// mysta tier essence
-const INFRM = 'inferium'
-const PDNTM = 'prudentium'
-const TERTM = 'tertium'
-const IMPRM = 'inperium'
-const SUPRM = 'supremium'
-// elements
-const FIRE = 'fire'
-const H20 = 'water'
-// requires kubejs create and mysticalagriculture
 ServerEvents.recipes(event => {
-    // infusion crystals
-    event.remove({id: 'mysticalagriculture:infusion_crystal'})
-    event.remove({id: 'mysticalagriculture:master_infusion_crystal'})
+    // infusion essence
     event.recipes.createMixing([Fluid.of('kubejs:inferior_infusion_essence', 250)], [
-        Item.of(MYST('inferium_essence'), 4),
-        Item.of(MYST('prosperity_shard'), 4)
+        '4x mysticalagriculture:inferium_essence',
+        '4x mysticalagriculture:prosperity_shard', 
     ]).id('finality:mysta_infusion_crystal_essence')
     event.recipes.createMixing([Fluid.of('kubejs:supreme_infusion_essence', 250)], [
-        Item.of(MYST('supremium_essence'), 4),
-        Item.of(MYST('prosperity_shard'), 4)
+        '4x mysticalagriculture:supremium_essence',
+        '4x mysticalagriculture:prosperity_shard', 
     ]).id('finality:mysta_master_infusion_crystal_essence')
-    event.recipes.createFilling(MYST(INFCRYSTAL), [
-        'diamond', 
+    // infusion crystals
+    event.recipes.createFilling('mysticalagriculture:infusion_crystal', [
+        'minecraft:diamond', 
         Fluid.of('kubejs:inferior_infusion_essence', 250)
-    ]).id('finality:mysta_master_infusion_crystal')
-    event.recipes.createFilling(MYST(MASTERCRYS), [MYST('supremium_gemstone'), Fluid.of('kubejs:supreme_infusion_essence', 250)])
+    ]).id('mysticalagriculture:infusion_crystal')
+    event.recipes.createFilling('mysticalagriculture:master_infusion_crystal', [
+        'mysticalagriculture:supremium_gemstone', 
+        Fluid.of('kubejs:supreme_infusion_essence', 250)
+    ]).id('mysticalagriculture:master_infusion_crystal')
     // renewable prosperity shards
     event.recipes.createCrushing([
-        Item.of(MYST('prosperity_shard')).withChance(0.25), 
-        Item.of(MYST('prosperity_seed_base')).withChance(0.009765625)
-    ], 'coarse_dirt').processingTime(250).id('finality:renew_prosperity')
+        Item.of('mysticalagriculture:prosperity_shard').withChance(0.25), 
+        Item.of('mysticalagriculture:prosperity_seed_base').withChance(0.009765625)
+    ], 'minecraft:coarse_dirt').processingTime(250).id('finality:renew_prosperity')
     // redstone
-    event.remove({id: 'mysticalagriculture:essence/minecraft/redstone'})
-    event.recipes.createMixing([Item.of('redstone', 16)], [
-        Item.of(MYST('redstone_essence'), 8),
-        C('cinder_flour')
-    ]).id('finality:mysta_mixing_redstone')
-    event.recipes.createMechanicalCrafting(Item.of(MC('redstone'), 16), [
+    event.shaped('16x minecraft:redstone', [
         'RRR',
         'RFR',
         'RRR'
     ], {
-        R: MYST('redstone_essence'),
-        F: C('cinder_flour')
-    }).id('finality:mysta_mechanical_redstone')
-
+        R:'mysticalagriculture:redstone_essence',
+        F:'create:cinder_flour'
+    }).id('mysticalagriculture:essence/minecraft/redstone')
+    event.recipes.createMixing(['16x minecraft:redstone'], [
+        '8x mysticalagriculture:redstone_essence',
+        'create:cinder_flour'
+    ]).id('finality:mysta_mixing_redstone')
     // fire essences
-    event.remove({id: 'mysticalagriculture:essence/minecraft/red_sand'}) // converted to mixing and mechanical crafting recipe exclusive
-    event.recipes.createMixing([Item.of('red_sand', 16)], [
-        Item.of(MYST('dirt_essence'), 2),
-        Item.of(MYST('fire_essence'), 2),
-        'gold_nugget'
-    ]).id('finality:mysta_mix_red_sand')
-    event.recipes.createMechanicalCrafting(Item.of(MC('red_sand'), 16), [
+    event.shaped('16x minecraft:red_sand', [
         'DF',
         'FG'
     ], {
-        D: MYST('dirt_essence'),
-        F: MYST('fire_essence'),
-        G: 'gold_nugget'
-    }).id('finality:mysta_mechanical_red_sand')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/sand'}) // converted to mixing and mechanical crafting recipe exclusive
-    event.recipes.createMixing(Item.of(MC('sand'), 16), [
-        Item.of(MYST('dirt_essence'), 2),
-        Item.of(MYST('fire_essence'), 2)
-    ]).id('finality:mysta_mix_sand')
-    event.recipes.createMechanicalCrafting(Item.of(MC('sand'), 16), [
+        D: 'mysticalagriculture:dirt_essence',
+        F: 'mysticalagriculture:fire_essence',
+        G: 'minecraft:gold_nugget'
+    }).id('mysticalagriculture:essence/minecraft/red_sand')
+    event.recipes.createMixing(['16x minecraft:red_sand', 16], [
+        '2x mysticalagriculture:dirt_essence',
+        '2x mysticalagriculture:fire_essence',
+        'minecraft:gold_nugget'
+    ]).id('finality:mysta_mix_red_sand')
+    event.shaped('16x minecraft:sand', [
         'DF',
         'FD'
     ], {
-        D: MYST('dirt_essence'),
-        F: MYST('fire_essence')
-    }).id('finality:mysta_mechanical_sand')
-
-    event.remove({id: 'mysticalagriculture:essence/minecraft/soul_sand'}) // converted to mixing and mechanical crafting recipe exclusive
-    event.recipes.createMixing(Item.of(MC('soul_sand'), 16), [
-        Item.of(MYST('nether_essence'), 8),
-        MYST('fire_essence')
-    ]).id('finality:mysta_mix_soul_sand')
-    event.recipes.createMechanicalCrafting(Item.of(MC('soul_sand'), 16), [
+        D: 'mysticalagriculture:dirt_essence',
+        F: 'mysticalagriculture:fire_essence'
+    }).id('mysticalagriculture:essence/minecraft/sand')
+    event.recipes.createMixing('16x minecraft:sand', [
+        '2x mysticalagriculture:dirt_essence',
+        '2x mysticalagriculture:fire_essence'
+    ]).id('finality:mysta_mix_sand')
+    event.shaped('16x minecraft:soul_sand', [
         'NNN',
         'NFN',
         'NNN'
     ], {
-        N: MYST('nether_essence'),
-        F: MYST('fire_essence')
-    }).id('finality:mysta_mechanical_soul_sand')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/lava_bucket'}) // converted to lava fluid output, no longer requires a bucket
+        N: 'mysticalagriculture:nether_essence',
+        F: 'mysticalagriculture:fire_essence'
+    }).id('mysticalagriculture:essence/minecraft/soul_sand')
+    event.recipes.createMixing('16x minecraft:soul_sand', [
+        '8x mysticalagriculture:nether_essence',
+        'mysticalagriculture:fire_essence'
+    ]).id('finality:mysta_mix_soul_sand')
     event.recipes.createCompacting([Fluid.of('minecraft:lava', 1000)], [
-        MYST('fire_essence'),
-        MYST('fire_essence'),
-        MYST('fire_essence'),
-        MYST('fire_essence'),
-        MYST('fire_essence'),
+        '4x mysticalagriculture:fire_essence'
     ]).id('finality:mysta_compacting_lava')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/tuff'}) // converting to compacting and mechanical crafting recipe exclusive
-    event.recipes.createCompacting(Item.of(MC('tuff'), 12), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'), 
-        MYST('fire_essence')
-    ]).id('finality:mysta_compacting_tuff')
-    event.recipes.createMechanicalCrafting(Item.of(MC('tuff'), 12), [
+    event.shaped('12x minecraft:tuff', [
         ' S ',
         'SFS',
         ' S '
     ], {
-        S: MYST('stone_essence'),
-        F: MYST('fire_essence')
-    }).id('finality:mysta_mechanical_tuff')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/flint'}) // fully removed, get flint the create way
+        S: 'mysticalagriculture:stone_essence',
+        F: 'mysticalagriculture:fire_essence'
+    }).id('mysticalagriculture:essence/minecraft/tuff')
+    event.recipes.createCompacting('12x minecraft:tuff', [
+        '5x mysticalagriculture:stone_essence',
+        'mysticalagriculture:fire_essence'
+    ]).id('finality:mysta_compacting_tuff')
+    event.shaped('8x minecraft:flint', [
+        'SF',
+        'FS'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        F: 'mysticalagriculture:fire_essence'
+    }).id('mysticalagriculture:essence/minecraft/flint')
+    event.recipes.createMixing('8x minecraft:flint', [
+        '2x mysticalagriculture:stone_essence',
+        '2x mysticalagriculture:fire_essence'
+    ]).id('finality:mysta_mixing_flint')
     // earth essence related
-    event.remove({id: 'mysticalagriculture:essence/minecraft/soul_soil'})
-    event.recipes.createMixing(Item.of(MC('soul_soil'), 16), [
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('earth_essence')
+    event.shaped('16x minecraft:soul_soil', [
+        'NDN',
+        'DED',
+        'NDN'   
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        D: 'minecraft:dirt',
+        E: 'mysticalagriculture:earth_essence'
+    }).id('mysticalagriculture:essence/minecraft/soul_soil')
+    event.recipes.createMixing('16x minecraft:soul_soil', [
+        '8x mysticalagriculture:nether_essence',
+        'mysticalagriculture:earth_essence'
     ]).id('finality:mysta_mixing_soul_soil')
-
     // stone essence
-    event.remove({id: 'mysticalagriculture:essence/minecraft/cobblestone'}) // just use a cobble generator lol
-    event.remove({id: 'mysticalagriculture:essence/minecraft/stone'}) // compacting exclusive
-    event.recipes.createCompacting(Item.of(MC('stone'), 24), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence')
-    ]).id('finality:mysta_compacting_stone')
-
-    event.remove({id: 'mysticalagriculture:essence/minecraft/andesite'}) // andesite compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(MC('andesite'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('nether_quartz_essence')
-    ]).id('finality:mysta_compacting_andesite')
-    event.recipes.createMechanicalCrafting('16x minecraft:andesite', [
-        ' S ',
+    event.shaped('16x minecraft:cobblestone', [
         'SSS',
-        ' Q '
-    ], {
-        S: MYST('stone_essence'),
-        Q: MYST('nether_quartz_essence')
-    }).id('finality:mysta_mechanical_andesite')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/diorite'}) // diorite compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(MC('diorite'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'), 
-        MYST('nether_quartz_essence'),
-        MYST('nether_quartz_essence'),
-        MYST('nether_quartz_essence')
-    ]).id('finality:mysta_compacting_diorite')
-    event.recipes.createMechanicalCrafting(Item.of(MC('diorite'), 16), [
-        'SS ',
-        'S Q',
-        ' QQ'
-    ], {
-        S: MYST('stone_essence'),
-        Q: MYST('nether_quartz_essence')
-    }).id('finality:mysta_mechanical_diorite')
-
-    event.remove({id: 'mysticalagriculture:essence/minecraft/granite'}) // granite compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(MC('granite'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('nether_quartz_essence'),
-        MYST('nether_quartz_essence'),
-    ]).id('finality:mysta_compacting_granite')
-    event.recipes.createMechanicalCrafting('16x minecraft:granite', [
-        ' S ',
-        'SQS',
-        ' Q '
-    ], {
-        S: MYST('stone_essence'),
-        Q: MYST('nether_quartz_essence')
-    }).id('finality:mysta_mechanical_granite')
-
-    event.remove({id: 'mysticalagriculture:essence/minecraft/dripstone'}) // dripstone compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(MC('dripstone_block'), 16), [
-        Item.of(MYST('stone_essence'), 4), 
-        MYST('water_essence')
-    ]).id('finality:mysta_compacting_dripstone')
-    event.recipes.createMechanicalCrafting(Item.of(MC('dripstone_block'), 16), [
-        ' S ',
-        'SWS',
-        ' S '
-    ], {
-        S: MYST('stone_essence'),
-        W: MYST('water_essence')
-    }).id('finality:mysta_mechanical_dripstone')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/calcite'}) // calcite compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(MC('calcite'), 16), [
-        Item.of(MYST('stone_essence'), 8), 
-        MYST('amethyst_essence')
-    ]).id('finality:mysta_compacting_calcite')
-    event.recipes.createMechanicalCrafting(Item.of(MC('calcite'), 16), [
-        'SSS',
-        'SAS',
+        'S S',
         'SSS'
     ], {
-        S: MYST('stone_essence'),
-        A: MYST('amethyst_essence')
-    }).id('finality:mysta_mechanical_calcite')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/blackstone'}) // blackstone compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(MC('blackstone'), 24), [
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('nether_essence'),
-        MYST('stone_essence')
-    ]).id('finality:mysta_compacting_blackstone')
-    event.recipes.createMechanicalCrafting('24x minecraft:blackstone', [
-        'NNN',
-        'NSN',
-        'NNN'
-    ], {
-        N: MYST('nether_essence'),
-        S: MYST('stone_essence')
-    }).id('finality:mysta_mechanical_blackstone')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/gravel'}) // gravel mixing and mechanical crafting exclusive
-    event.recipes.createMixing(Item.of(MC('gravel'), 16), [
-        MYST('dirt_essence'),
-        MYST('dirt_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-    ]).id('finality:mysta_mixing_gravel')
-    event.recipes.createMechanicalCrafting(Item.of(MC('gravel'), 16), [
-        'DS',
-        'SD'
-    ], {
-        D: MYST('dirt_essence'),
-        S: MYST('stone_essence')
-    }).id('finality:mysta_mechanical_gravel')
-    // create orestone essence recipes
-    event.remove({id: 'mysticalagriculture:essence/create/asurine'}) // asurine compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(C('asurine'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('zinc_essence')
-    ]).id('finality:mysta_compacting_asurine')
-    event.recipes.createMechanicalCrafting(Item.of(C('asurine'), 16), [
-        'SSS',
-        'SZS',
-        'SSS'
-    ], {
-        S: MYST('stone_essence'),
-        Z: MYST('zinc_essence')
-    }).id('finality:mysta_mechanical_asurine')
-    event.remove({id: 'mysticalagriculture:essence/create/crimsite'}) // crimsite compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(C('crimsite'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('iron_essence')
-    ]).id('finality:mysta_compacting_crimsite')
-    event.recipes.createMechanicalCrafting(Item.of(C('crimsite'), 16), [
-        'SSS',
-        'SIS',
-        'SSS'
-    ], {
-        S: MYST('stone_essence'),
-        I: MYST('iron_essence')
-    }).id('finality:mysta_mechanical_crimsite')
-    event.remove({id: 'mysticalagriculture:essence/create/ochrum'}) // ochrum compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(C('ochrum'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('gold_essence')
-    ]).id('finality:mysta_compacting_ochrum')
-    event.recipes.createMechanicalCrafting(Item.of(C('ochrum'), 16), [
-        'SSS',
-        'SGS',
-        'SSS'
-    ], {
-        S: MYST('stone_essence'),
-        G: MYST('gold_essence')
-    }).id('finality:mysta_mechanical_ochrum')
-    event.remove({id: 'mysticalagriculture:essence/create/veridium'}) // veridium compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(C('veridium'), 16), [
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('stone_essence'),
-        MYST('copper_essence')
-    ]).id('finality:mysta_compacting_veridium')
-    event.recipes.createMechanicalCrafting(Item.of(C('veridium'), 16), [
+        S: 'mysticalagriculture:stone_essence'
+    }).id('mysticalagriculture:essence/minecraft/cobblestone')
+    event.recipes.createCompacting('16x minecraft:cobblestone', [
+        '8x mysticalagriculture:stone_essence'
+    ]).id('finality:mysta_compacting_cobblestone')
+    event.shaped('18x minecraft:stone', [
         'SSS',
         'SCS',
         'SSS'
     ], {
-        S: MYST('stone_essence'),
-        C: MYST('copper_essence')
-    }).id('finality:mysta_mechanical_veridium')
-    event.remove({id: 'mysticalagriculture:essence/create/limestone'}) // create limestone compacting and mechanical crafting exclusive
-    event.recipes.createCompacting(Item.of(C('limestone'), 16), [
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence'),
-        MYST('limestone_essence')
-    ]).id('finality:mysta_compacting_limestone')
-    event.recipes.createMechanicalCrafting(Item.of(C('limestone'), 16), [
+        S: 'mysticalagriculture:stone_essence',
+        C: 'mysticalagriculture:coal_essence'
+    }).id('mysticalagriculture:essence/minecraft/stone')
+    event.recipes.createCompacting('18x minecraft:stone', [
+        '9x mysticalagriculture:stone_essence'
+    ]).id('finality:mysta_compacting_stone')
+    event.shaped('8x minecraft:andesite', [
+        ' S ',
+        'SSS',
+        ' Q '
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        Q: 'mysticalagriculture:nether_quartz_essence'
+    }).id('mysticalagriculture:essence/minecraft/andesite')
+    event.recipes.createCompacting('16x minecraft:andesite', [
+        '4x mysticalagriculture:stone_essence',
+        'mysticalagriculture:nether_quartz_essence'
+    ]).id('finality:mysta_compacting_andesite')
+    event.shaped('8x minecraft:diorite', [
+        'SS ',
+        'S Q',
+        ' QQ'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        Q: 'mysticalagriculture:nether_quartz_essence'
+    }).id('mysticalagriculture:essence/minecraft/diorite')
+    event.recipes.createCompacting('16x minecraft:diorite', [
+        '3x mysticalagriculture:stone_essence',
+        '3x mysticalagriculture:nether_quartz_essence'
+    ]).id('finality:mysta_compacting_diorite')
+    event.shaped('16x minecraft:granite', [
+        ' S ',
+        'SQS',
+        ' Q '
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        Q: 'mysticalagriculture:nether_quartz_essence'
+    }).id('mysticalagriculture:essence/minecraft/granite')
+    event.recipes.createCompacting('16x minecraft:granite', [
+        '4x mysticalagriculture:stone_essence',
+        '2x mysticalagriculture:nether_quartz_essence'
+    ]).id('finality:mysta_compacting_granite')
+    event.shaped(Item.of('minecraft:dripstone_block', 16), [
+        ' S ',
+        'SWS',
+        ' S '
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        W: 'mysticalagriculture:water_essence'
+    }).id('mysticalagriculture:essence/minecraft/dripstone')
+    event.recipes.createCompacting(Item.of('minecraft:dripstone_block', 16), [
+        Item.of('mysticalagriculture:stone_essence', 4), 
+        'mysticalagriculture:water_essence'
+    ]).id('finality:mysta_compacting_dripstone')
+    event.shaped(Item.of('minecraft:calcite', 16), [
+        'SSS',
+        'SAS',
+        'SSS'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        A: 'mysticalagriculture:amethyst_essence'
+    }).id('mysticalagriculture:essence/minecraft/calcite')
+    event.recipes.createCompacting(Item.of('minecraft:calcite', 16), [
+        Item.of('mysticalagriculture:stone_essence', 8), 
+        'mysticalagriculture:amethyst_essence'
+    ]).id('finality:mysta_compacting_calcite')
+    event.shaped('24x minecraft:blackstone', [
+        'NNN',
+        'NSN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        S: 'mysticalagriculture:stone_essence'
+    }).id('mysticalagriculture:essence/minecraft/blackstone')
+    event.recipes.createCompacting(Item.of('minecraft:blackstone', 24), [
+        '8x mysticalagriculture:nether_essence',
+        'mysticalagriculture:stone_essence'
+    ]).id('finality:mysta_compacting_blackstone')
+    event.shaped(Item.of('minecraft:gravel', 16), [
+        'DS',
+        'SD'
+    ], {
+        D: 'mysticalagriculture:dirt_essence',
+        S: 'mysticalagriculture:stone_essence'
+    }).id('mysticalagriculture:essence/minecraft/gravel')
+    event.recipes.createMixing(Item.of('minecraft:gravel', 16), [
+        '2x mysticalagriculture:dirt_essence',
+        '2x mysticalagriculture:stone_essence'
+    ]).id('finality:mysta_mixing_gravel')
+    // create orestone essence recipes
+    event.shaped(Item.of('create:asurine', 16), [
+        'SSS',
+        'SZS',
+        'SSS'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        Z: 'mysticalagriculture:zinc_essence'
+    }).id('mysticalagriculture:essence/create/asurine')
+    event.recipes.createCompacting(Item.of('create:asurine', 16), [
+        '8x mysticalagriculture:stone_essence',
+        'mysticalagriculture:zinc_essence'
+    ]).id('finality:mysta_compacting_asurine')
+    event.shaped(Item.of('create:crimsite', 16), [
+        'SSS',
+        'SIS',
+        'SSS'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        I: 'mysticalagriculture:iron_essence'
+    }).id('mysticalagriculture:essence/create/crimsite')
+    event.recipes.createCompacting(Item.of('create:crimsite', 16), [
+        '8x mysticalagriculture:stone_essence',
+        'mysticalagriculture:iron_essence'
+    ]).id('finality:mysta_compacting_crimsite')
+    event.shaped(Item.of('create:ochrum', 16), [
+        'SSS',
+        'SGS',
+        'SSS'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        G: 'mysticalagriculture:gold_essence'
+    }).id('mysticalagriculture:essence/create/ochrum')
+    event.recipes.createCompacting(Item.of('create:ochrum', 16), [
+        '8x mysticalagriculture:stone_essence',
+        'mysticalagriculture:gold_essence'
+    ]).id('finality:mysta_compacting_ochrum')
+    event.shaped(Item.of('create:veridium', 16), [
+        'SSS',
+        'SCS',
+        'SSS'
+    ], {
+        S: 'mysticalagriculture:stone_essence',
+        C: 'mysticalagriculture:copper_essence'
+    }).id('mysticalagriculture:essence/create/veridium')
+    event.recipes.createCompacting(Item.of('create:veridium', 16), [
+        '8x mysticalagriculture:stone_essence',
+        'mysticalagriculture:copper_essence'
+    ]).id('finality:mysta_compacting_veridium')
+    event.shaped(Item.of('create:limestone', 16), [
         'LLL',
         'LLL',
         'LLL'
     ], {
-        L: MYST('limestone_essence')
-    }).id('finality:mysta_mechanical_limestone')
-
+        L: 'mysticalagriculture:limestone_essence'
+    }).id('mysticalagriculture:essence/create/limestone')
+    event.recipes.createCompacting(Item.of('create:limestone', 16), [
+        '9x mysticalagriculture:limestone_essence'
+    ]).id('finality:mysta_compacting_limestone')
     // diamond essence
-    event.remove({id: 'mysticalagriculture:essence/minecraft/diamond'}) // diamond essence compacting exclusive
-    event.recipes.createCompacting(MC('diamond'), [
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
+    event.shaped('minecraft:diamond', [
+        'DDD',
+        'DDD',
+        'DDD'
+    ], {
+        D: 'mysticalagriculture:diamond_essence'
+    }).id('mysticalagriculture:essence/minecraft/diamond')
+    event.recipes.createCompacting('minecraft:diamond', [
+        '9x mysticalagriculture:diamond_essence'
     ]).id('finality:mysta_compacting_diamond')
-    event.remove({id: 'mysticalagriculture:essence/minecraft/heart_of_the_sea'}) // heart of the sea compacting and mechanical crafting exclusive
-    event.recipes.createMixing(MC('heart_of_the_sea'), [
-        MC('nautilus_shell'), 
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'),
-        MYST('diamond_essence'), 
-        MYST('prismarine_essence'),
-        MYST('prismarine_essence'),
-        MYST('prismarine_essence'),
-        MYST('prismarine_essence'),
-        MYST('squid_essence'),
-        MYST('squid_essence'),
-        MYST('squid_essence'),
-        MYST('squid_essence'),
+    event.shaped('minecraft:heart_of_the_sea', [
+        'SDP',
+        'DND',
+        'PDS',
+    ], {
+        D: 'mysticalagriculture:diamond_essence',
+        S: 'mysticalagriculture:squid_essence',
+        P: 'mysticalagriculture:prismarine_essence',
+        N: 'minecraft:nautilus_shell'
+    }).id('mysticalagriculture:essence/minecraft/heart_of_the_sea')
+    event.recipes.createMixing('4x minecraft:heart_of_the_sea', [
+        'minecraft:nautilus_shell', 
+        '4x mysticalagriculture:diamond_essence',
+        '4x mysticalagriculture:prismarine_essence',
+        '4x mysticalagriculture:squid_essence'
     ]).id('finality:mysta_mixing_sea_heart')
-    event.recipes.createMechanicalCrafting('minecraft:heart_of_the_sea', [
+    event.recipes.createMechanicalCrafting('4x minecraft:heart_of_the_sea', [
         '  S  ',
         ' SDP ',
         'PDNDP',
         ' PDS ',
         '  S  '
     ], {
-        D: MYST('diamond_essence'),
-        S: MYST('squid_essence'),
-        P: MYST('prismarine_essence'),
-        N: MC('nautilus_shell')
-    })
-    
+        D: 'mysticalagriculture:diamond_essence',
+        S: 'mysticalagriculture:squid_essence',
+        P: 'mysticalagriculture:prismarine_essence',
+        N: 'minecraft:nautilus_shell'
+    }).id('finality:mysta_mechanical_heart_of_the_sea')
     // machine frame related
-    event.remove({id: 'mysticalagriculture:machine_frame'})
-    event.remove({id: 'mysticalagriculture:soul_extractor'})
-    event.remove({id: 'mysticalagriculture:basic_reprocessor'})
-    event.recipes.createMechanicalCrafting(MYST('machine_frame'), [
-        'IIIII',
-        'IRRRI',
-        'IRSRI',
-        'IRRRI',
-        'IIIII'
+    event.shaped('mysticalagriculture:machine_frame', [
+        'IRI',
+        'RSR',
+        'IRI'
     ], {
-        I: C('iron_sheet'),
-        R: MC('redstone'),
+        I: 'create:iron_sheet',
+        R: 'minecraft:redstone',
         S: '#forge:stone'
-    }).id('finality:mysta_machine_frame')
-    event.recipes.createMechanicalCrafting('mysticalagriculture:soul_extractor', [
-        'FFSFF',
-        'F M F',
-        'DBRBD',
-        'F M F',
-        'FFSFF'
+    }).id('mysticalagriculture:machine_frame')
+    event.shaped('mysticalagriculture:soul_extractor', [
+        'FSF',
+        'DBD',
+        'FSF'
     ], {
-        F: MYST('machine_frame'),
-        S: MYST('soulium_ingot'),
-        D: MYST('soulium_dagger'),
-        M: C('mechanical_bearing'),
-        R: C('radial_chassis'),
-        B: C('deployer')
-    }).id('finality:mysta_soul_extractor')
-    event.recipes.createMechanicalCrafting('mysticalagriculture:basic_reprocessor', [
-        'FFSFF',
-        'F M F',
-        'HBRBH',
-        'F M F',
-        'FFSFF'
+        F: 'mysticalagriculture:machine_frame',
+        S: 'mysticalagriculture:soulium_ingot',
+        B: 'create:deployer'
+    }).id('mysticalagriculture:soul_extractor')
+    event.shaped('mysticalagriculture:basic_reprocessor', [
+        'FSF',
+        'DRD',
+        'FSF'
     ], {
-        F: MYST('machine_frame'),
-        S: MYST('soulium_ingot'),
-        H: MC('iron_hoe'),
-        M: C('mechanical_bearing'),
-        B: C('deployer'),
-        R: C('radial_chassis')
-    }).id('finality:mysta_basic_reprocessor')
-
+        F: 'mysticalagriculture:machine_frame',
+        S: 'mysticalagriculture:soulium_ingot',
+        D: 'mysticalagriculture:soulium_dagger',
+        R: 'create:radial_chassis'
+    }).id('mysticalagriculture:basic_reprocessor')
     // miscellaneous
-    event.remove({id: 'mysticalagriculture:mystical_fertilizer'})
-    event.remove({id: 'mysticalagriculture:mystical_fertilizer_better'})
-    event.recipes.createMixing(Item.of(MYST('mystical_fertilizer'), 4), [
-        Item.of(MYST('inferium_essence'), 4), 
-        Item.of(MC('bone_meal'), 4), 
-        MC('diamond')
+    event.recipes.createMixing(Item.of('mysticalagriculture:mystical_fertilizer', 4), [
+        Item.of('mysticalagriculture:inferium_essence', 4), 
+        Item.of('minecraft:bone_meal', 4), 
+        'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer')
-    event.recipes.createMixing(Item.of(MYST('mystical_fertilizer'), 8), [
-        MYST('inferium_essence'),
-        MYST('inferium_essence'),
-        MYST('inferium_essence'),
-        MYST('inferium_essence'),
-        MYST('fertilized_essence'),
-        MYST('fertilized_essence'),
-        MYST('fertilized_essence'),
-        MYST('fertilized_essence'),
-        MC('diamond')
+    event.recipes.createMixing(Item.of('mysticalagriculture:mystical_fertilizer', 8), [
+        '4x mysticalagriculture:inferium_essence',
+        '4x mysticalagriculture:fertilized_essence',
+        'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer_better_eff')
-
 })
