@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
     ], 'kubejs:awakened_singularity_core', [
         event.recipes.createDeploying(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity', 'create:andesite_alloy_block']),
         event.recipes.createPressing(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity'])
-    ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(64).id(`finality:andesite_alloy_singularity`)
+    ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(64).id('finality:andesite_alloy_singularity')
     let CREATEVALUED = ['brass', 'zinc']
     CREATEVALUED.forEach(valued => {
         event.recipes.createSequencedAssembly([
