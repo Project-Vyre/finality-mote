@@ -2,11 +2,6 @@
 
 console.info('Client scripts loaded. You will see this line every time client resources reload.')
 
-let C = (id) => `create:${id}`
-let MC = (id) => `minecraft:${id}`
-let EXT = (id) => `extendedcrafting:${id}`
-let MYST = (id) => `mysticalagriculture:${id}`
-let CMTL = ['andesite', 'brass']
 let MYSHIDE = [
 	'rubber', 
 	'silicon', 

@@ -167,14 +167,14 @@ ServerEvents.recipes(event => {
 		'R'
 	], {
 		G: 'create:golden_sheet',
-		R: 'redstone'
+		R: 'minecraft:redstone'
 	}).id('minecraft:light_weighted_pressure_plate')
 	event.shaped('heavy_weighted_pressure_plate', [
 		'G',
 		'R'
 	], {
 		G: 'create:iron_sheet',
-		R: 'redstone'
+		R: 'minecraft:redstone'
 	}).id('minecraft:heavy_weighted_pressure_plate')
 })
 
