@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
     ], 'kubejs:awakened_singularity_core', [
         event.recipes.createDeploying(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity', 'create:andesite_alloy_block']),
         event.recipes.createPressing(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity'])
-    ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(64).id('finality:andesite_alloy_singularity')
+    ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(256).id('finality:andesite_alloy_singularity')
     let CREATEVALUED = ['brass', 'zinc']
     CREATEVALUED.forEach(valued => {
         event.recipes.createSequencedAssembly([
@@ -112,6 +112,12 @@ ServerEvents.recipes(event => {
             event.recipes.createPressing([`kubejs:incomplete_${valued}_singularity`], [`kubejs:incomplete_${valued}_singularity`])
         ]).transitionalItem(`kubejs:incomplete_${valued}_singularity`).loops(256).id(`finality:${valued}_singularity`)
     })
+    event.recipes.createSequencedAssembly([
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:train_track"}'),
+    ], 'kubejs:awakened_singularity_core', [
+        event.recipes.createDeploying(['kubejs:incomplete_track_singularity'], ['kubejs:incomplete_track_singularity', 'create:track']),
+        event.recipes.createPressing(['kubejs:incomplete_track_singularity'], ['kubejs:incomplete_track_singularity'])
+    ]).transitionalItem('kubejs:incomplete_track_singularity').loops(256).id('finality:track_singularity')
     // sequenced assembly singularities
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}')

@@ -1077,7 +1077,7 @@
 			subtitle: "Nothing hurts as much anymore."
 			tasks: [{
 				id: "0737E792E488D09D"
-				item: "finality:omnipotent_alloy"
+				item: "kubejs:omnipotent_alloy"
 				type: "item"
 			}]
 			x: 12.0d
@@ -1089,22 +1089,22 @@
 			tasks: [
 				{
 					id: "116494544668C2E5"
-					item: "finality:final_helmet"
+					item: "kubejs:final_helmet"
 					type: "item"
 				}
 				{
 					id: "57BE82E54679C365"
-					item: "finality:final_chestplate"
+					item: "kubejs:final_chestplate"
 					type: "item"
 				}
 				{
 					id: "5659BE7E18AE205F"
-					item: "finality:final_leggings"
+					item: "kubejs:final_leggings"
 					type: "item"
 				}
 				{
 					id: "1D64A82B44E8E4FC"
-					item: "finality:final_boots"
+					item: "kubejs:final_boots"
 					type: "item"
 				}
 			]
@@ -1119,27 +1119,27 @@
 			tasks: [
 				{
 					id: "0AF7F8D881785838"
-					item: "finality:final_sword"
+					item: "kubejs:final_sword"
 					type: "item"
 				}
 				{
 					id: "4D1281D306D11D5D"
-					item: "finality:final_pickaxe"
+					item: "kubejs:final_pickaxe"
 					type: "item"
 				}
 				{
 					id: "2C85890473E9CF5F"
-					item: "finality:final_axe"
+					item: "kubejs:final_axe"
 					type: "item"
 				}
 				{
 					id: "520481486C49CBA0"
-					item: "finality:final_shovel"
+					item: "kubejs:final_shovel"
 					type: "item"
 				}
 				{
 					id: "29EF708D90693443"
-					item: "finality:final_hoe"
+					item: "kubejs:final_hoe"
 					type: "item"
 				}
 			]

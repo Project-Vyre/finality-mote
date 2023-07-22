@@ -3,7 +3,7 @@ Platform.mods.kubejs.name = 'Finality'
 console.info('Registering Finality items...')
 
 let NATR = ['blue_ice', 'sand', 'coarse_dirt', 'cobblestone']
-let CMAT = ['andesite_alloy', 'zinc', 'copper', 'brass', 'rose_quartz', 'framed_glass', 'precision_mechanism', 'sturdy_sheet']
+let CMAT = ['andesite_alloy', 'zinc', 'copper', 'brass', 'rose_quartz', 'framed_glass', 'precision_mechanism', 'sturdy_sheet', 'track']
 // let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 // let DISPLAY_COLOR = ['White', 'Orange', 'Magenta', 'Light Blue', 'Lime', 'Pink', 'Purple', 'Light Gray', 'Gray', 'Cyan', 'Brown', 'Green', 'Blue', 'Red', 'Black', 'Yellow']
 let DYE = {
@@ -38,8 +38,8 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 	for use for making a singularity. dormant core to incomplete core to singularity
 	follow format .create('kubejs:', 'create:sequenced_assembly).displayName().texture().maxStackSize(1)
 	*/
-	NATR.forEach(insert => event.create(`kubejs:incomplete_${insert}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/nature/incomplete_${insert}`).maxStackSize(1))
-	CMAT.forEach(MTRL => event.create(`kubejs:incomplete_${MTRL}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/incomplete_${MTRL}`).maxStackSize(1))
+	NATR.forEach(material => event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1))
+	CMAT.forEach(material => event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1))
 	Object.keys(DYE).forEach(color => { // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
 		event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§dIncomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
 	})

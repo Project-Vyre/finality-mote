@@ -1,7 +1,11 @@
 {
+	icon: "create:andesite_casing"
 	id: "67C3F29676CAACE6"
 	loot_size: 1
 	order_index: 0
-	rewards: [ ]
+	rewards: [
+		{ count: 16, item: "create:andesite_alloy" }
+		{ item: "create:andesite_alloy_block" }
+	]
 	title: "Andesite Starter Pack"
 }
