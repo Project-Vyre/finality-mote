@@ -1,6 +1,5 @@
 let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 ServerEvents.recipes(event => {
-    event.remove({id: 'minecraft:beacon'})
     event.remove({id: 'tconstruct:common/glass/vanilla/beacon'})
     event.remove({id: 'minecraft:end_crystal'})
     event.remove({id: 'unusualend:end_crystal'})
@@ -211,7 +210,7 @@ ServerEvents.recipes(event => {
         ' CCCCCCC '
     ], {
         C: 'minecraft:coal_block',
-        O: 'kubejs:dormant_singularity_core'
+        O: 'kubejs:awakened_singularity_core'
     }).id('finality:coal_singularity')
     event.recipes.createMechanicalCrafting(Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:lapis_lazuli"}'), [
         ' LLLLLLL ',
@@ -225,7 +224,7 @@ ServerEvents.recipes(event => {
         ' LLLLLLL '
     ], {
         L: 'minecraft:crying_obsidian',
-        C: 'kubejs:dormant_singularity_core',
+        C: 'kubejs:awakened_singularity_core',
         O: 'minecraft:lapis_block'
     }).id('finality:lapis_singularity')
     VANILLAMATS.forEach(vanilla => {
@@ -241,7 +240,7 @@ ServerEvents.recipes(event => {
             ' LLLLLLL '
         ], {
             L: 'minecraft:crying_obsidian',
-            C: 'kubejs:dormant_singularity_core',
+            C: 'kubejs:awakened_singularity_core',
             O: `minecraft:${vanilla}_block`
         }).id(`finality:${vanilla}_singularity`)
     })
@@ -258,7 +257,7 @@ ServerEvents.recipes(event => {
             ' LLLLLLL '
         ], {
             L: 'minecraft:crying_obsidian',
-            C: 'kubejs:dormant_singularity_core',
+            C: 'kubejs:awakened_singularity_core',
             O: `minecraft:${insert}`
         }).id(`finality:${insert}_singularity`)        
     })
@@ -275,7 +274,7 @@ ServerEvents.recipes(event => {
             ' LLLLLLL '
         ], {
             L: 'crying_obsidian',
-            C: 'kubejs:dormant_singularity_core',
+            C: 'kubejs:awakened_singularity_core',
             R: `create:${insert}`
         }).id(`finality:${insert}singularity`)
     })
