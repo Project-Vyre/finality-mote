@@ -9,14 +9,25 @@ ServerEvents.recipes(event => {
     event.recipes.createCompacting([
 		'minecraft:diamond'
 	], [
-		Item.of('minecraft:coal_block', 9), 
+		Item.of('minecraft:coal_block', 1), 
 		Fluid.of('minecraft:lava', 250)
 	]).superheated().id('finality:renew_diamond')
+	event.recipes.createCompacting([
+		'minecraft:diamond_block'
+	], [
+		Item.of('minecraft:coal_block', 9),
+		Fluid.of('minecraft:lava', 250)
+	]).superheated().id('finality:renew_diamond_bulk')
     event.recipes.createCompacting([
 		'minecraft:coal'
 	], [
-		Item.of('minecraft:dried_kelp_block', 9)
+		Item.of('minecraft:dried_kelp_block', 1)
 	]).heated().id('finality:renew_coal')
+	event.recipes.createCompacting([
+		'minecraft:coal_block'
+	], [
+		Item.of('minecraft:dried_kelp_block', 9)
+	]).heated().id('finality:renew_coal_bulk')
     event.recipes.createCompacting([
 		'minecraft:basalt'
 	], [
