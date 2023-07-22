@@ -198,12 +198,12 @@ customization {
 
 customization {
   orientation = top-left
-  hidden = false
+  hidden = true
   x = 731
   width = 228
   action = deep_customization_element:title_screen_forge_copyright
   actionid = 0d50966b-b91e-49af-98eb-a2634135e62d1688253613390
-  y = 485
+  y = 520
   height = 9
 }
 
