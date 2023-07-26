@@ -51,7 +51,7 @@ ServerEvents.recipes(event => {
         'F F',
         'FCF',
         ' F '
-    ],{
+    ], {
         F: 'create:iron_sheet',
         C: '#forge:chests/wooden'
     }).id('minecraft:hopper')
