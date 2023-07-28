@@ -101,6 +101,9 @@
 	#EnderGuardianBlockBreaking radius
 	#Range: 0 ~ 20
 	"EnderGuardianBlockBreaking Z" = 15
+	#Guardian's music volume
+	#Range: 0.0 ~ 1.0
+	"Guardian's Music Volume" = 0.5
 
 ["Netherite Monstrosity"]
 	#Monstrosity's Lavabomb magazine.
@@ -126,6 +129,9 @@
 	#Monstrosity's Immune to Long distance attack range.
 	#Range: 1.0 ~ 1000000.0
 	"Monstrosity's prevent attacks from far away Range" = 18.0
+	#Monstrosity's music volume
+	#Range: 0.0 ~ 1.0
+	"Monstrosity's Music Volume" = 0.5
 
 ["Ender Golem"]
 	#Ender Golem's block breaking ignore the MobGriefing
@@ -155,6 +161,9 @@
 	IgnisDamageCap = 20
 	#Ignis's cracked block breaking ignore the MobGriefing
 	IgnisBlockBreaking = true
+	#Ignis's music volume
+	#Range: 0.0 ~ 1.0
+	"Ignis's Music Volume" = 0.5
 
 [revenant]
 	#Revenant's Health Multiplier
@@ -182,6 +191,9 @@
 	#The Harbinger's charge attack Hp Damage
 	#Range: 0.0 ~ 1.0
 	"The Harbinger's charge attack Hp Damage" = 0.06
+	#The Harbinger's music volume
+	#Range: 0.0 ~ 1.0
+	"The Harbinger's Music Volume" = 0.5
 
 [Weapon]
 	#Armor Infinity Durability(on/off)
@@ -243,4 +255,7 @@
 	LeviathanBlockBreaking = true
 	#Leviathan Immune Out of Water
 	LeviathanImmuneOutofWater = true
+	#The Leviathan's music volume
+	#Range: 0.0 ~ 1.0
+	"The Leviathan's Music Volume" = 0.5
 
