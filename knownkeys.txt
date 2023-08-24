@@ -185,3 +185,4 @@ key.carry.desc
 placebo.toggleTrails
 placebo.toggleWings
 key.toastcontrol.clear
+gui.xaero_toggle_tracked_players

@@ -10,7 +10,16 @@
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["Here's a free soul sconce once you make the regular variant."]
+			description: [
+				"Here's a free soul sconce once you make the regular variant."
+				""
+				"Decoration mods have been added! Search them in JEI like so to view all the blocks available with ItemZoom on the left side of your inventory showing the full block, if applicable."
+				""
+				"- @chipped"
+				"- @handcrafted"
+				"- @decorative_blocks"
+				"- Dark Paintings adds new paintings, so you will have to make paintings to see them all."
+			]
 			hide: true
 			id: "4A2CFDD09FF7A975"
 			rewards: [{
@@ -86,6 +95,16 @@
 				{
 					id: "2BA7AC969BB99939"
 					item: "supplementaries:gold_door"
+					type: "item"
+				}
+				{
+					id: "27031331138D5973"
+					item: "supplementaries:silver_door"
+					type: "item"
+				}
+				{
+					id: "0D1F7DF4EEA1B425"
+					item: "supplementaries:lead_door"
 					type: "item"
 				}
 			]
@@ -176,6 +195,16 @@
 				{
 					id: "222D611B74E5FB73"
 					item: "supplementaries:gold_trapdoor"
+					type: "item"
+				}
+				{
+					id: "37AB041C931401AB"
+					item: "supplementaries:silver_trapdoor"
+					type: "item"
+				}
+				{
+					id: "69A122A0D0C5B87A"
+					item: "supplementaries:lead_trapdoor"
 					type: "item"
 				}
 			]
@@ -274,12 +303,6 @@
 					item: "create:warped_window"
 					type: "item"
 				}
-				{
-					count: 9L
-					id: "667782F011BEC1F2"
-					item: "create:mangrove_window"
-					type: "item"
-				}
 			]
 			title: "Windows for Days"
 			x: -1.0d
@@ -296,14 +319,34 @@
 					type: "item"
 				}
 				{
-					id: "346CC917503ABEA1"
-					item: "create:cuckoo_clock"
+					id: "50BD208F85A3F4BE"
+					item: "supplementaries:hourglass"
 					type: "item"
 				}
 			]
 			title: "Keeping Track of Time"
 			x: 0.0d
 			y: -1.5d
+		}
+		{
+			dependencies: ["4D7D29F3E7D7AC0D"]
+			description: ["You can make spooky dark iron decorations with this stuff."]
+			id: "51E52655B6A6B78A"
+			rewards: [{
+				count: 9
+				id: "31349043EF7D0A7C"
+				item: "graveyard:dark_iron_block"
+				type: "item"
+			}]
+			subtitle: "This is mostly used for decorative purposes."
+			tasks: [{
+				id: "2BF1C78F5E339158"
+				item: "graveyard:corruption"
+				type: "item"
+			}]
+			title: "Corrupted Decoration"
+			x: -3.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["A lot more decorative blocks."]

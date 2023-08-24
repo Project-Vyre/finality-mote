@@ -5,7 +5,19 @@
 	group: ""
 	icon: "minecraft:end_portal_frame"
 	id: "316C9BB1844BE86C"
-	order_index: 1
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 144.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 144.0d
+		x: 0.0d
+		y: 3.0d
+	}]
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -321,9 +333,10 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: ["Ancient texts say it can be acquired from an equally cryptic book that enchants items."]
 			hide: true
 			id: "7E7D888C64FD0E69"
-			subtitle: "Origins unkown, maybe from a tome of ancient knowledge?"
+			subtitle: "Origins unkown."
 			tasks: [{
 				id: "2D593506152BC546"
 				item: {

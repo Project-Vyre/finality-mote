@@ -1,3 +1,6 @@
+// requires: backpacked
+// planning on changing the recipes later.
+
 ServerEvents.recipes(event => {
     event.shaped('backpacked:backpack', [
         'HHH',
@@ -6,7 +9,7 @@ ServerEvents.recipes(event => {
     ], {
         H: 'minecraft:rabbit_hide',
         S: 'minecraft:string',
-        I: 'minecraftiron_ingot'
+        I: 'minecraft:iron_ingot'
     }).id('backpacked:backpack')
     event.shaped('backpacked:backpack', [
         'LLL',

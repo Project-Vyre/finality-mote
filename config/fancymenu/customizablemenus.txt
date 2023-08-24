@@ -9,9 +9,6 @@ net.minecraft.client.gui.screens.TitleScreen {
 net.minecraft.client.gui.screens.SoundOptionsScreen {
 }
 
-net.minecraft.client.gui.screens.OptionsScreen {
-}
-
 net.minecraft.client.gui.screens.worldselection.SelectWorldScreen {
 }
 
@@ -49,5 +46,8 @@ net.minecraft.client.gui.screens.MouseSettingsScreen {
 }
 
 net.minecraft.client.gui.screens.AccessibilityOptionsScreen {
+}
+
+net.minecraft.client.gui.screens.OptionsScreen {
 }
 

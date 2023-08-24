@@ -1077,7 +1077,7 @@
 			subtitle: "Nothing hurts as much anymore."
 			tasks: [{
 				id: "0737E792E488D09D"
-				item: "kubejs:omnipotent_alloy"
+				item: "kubejs:high_entropy_alloy"
 				type: "item"
 			}]
 			x: 12.0d

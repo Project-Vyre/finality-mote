@@ -28,7 +28,7 @@
         },
         {
             "type": "patchouli:spotlight",
-            "item": "morphtool:tool",
+            "item": "eccentrictome:tome",
             "text": "This item consolidates all tools, it is very useful."
         }
     ]
