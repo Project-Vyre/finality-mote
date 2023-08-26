@@ -1,4 +1,6 @@
 // requires: tempad
+// requires: create
+// requires: extendedcrafting
 
 ServerEvents.recipes(event => {
     event.remove({id: 'tempad:tempad'})
@@ -7,9 +9,9 @@ ServerEvents.recipes(event => {
         'RTB',
         'QQQ'
     ], {
-        Q: 'quartz_block',
+        Q: 'minecraft:quartz_block',
         R: 'create:rose_quartz_lamp',
-        T: 'tinted_glass',
-        B: 'beacon'
+        T: 'minecraft:tinted_glass',
+        B: 'minecraft:beacon'
     }).id('finality:tempad')
 })
