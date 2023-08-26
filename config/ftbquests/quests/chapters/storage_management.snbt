@@ -46,7 +46,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["6175DFE7CD3F470E"]
+			dependencies: ["107000FD98C13980"]
 			id: "4DEB9CA0C44C7443"
 			subtitle: "Don't underestimate Functional Storage."
 			tasks: [{
@@ -55,8 +55,8 @@
 				type: "item"
 			}]
 			title: "A basic drawer."
-			x: -3.0d
-			y: 1.0d
+			x: -1.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1229F8883A381F07"]
@@ -95,8 +95,8 @@
 				}
 			]
 			title: "Compacting Drawers: Magical compacting!"
-			x: -4.5d
-			y: 2.5d
+			x: -3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["4DEB9CA0C44C7443"]
@@ -106,8 +106,8 @@
 				item: "functionalstorage:copper_upgrade"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 1.0d
+			x: -3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["4E05EE9F10CE5BA1"]
@@ -117,8 +117,8 @@
 				item: "functionalstorage:gold_upgrade"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 1.0d
+			x: -4.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["756DF593AAB6B979"]
@@ -128,8 +128,8 @@
 				item: "functionalstorage:diamond_upgrade"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 1.0d
+			x: -6.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["79CCD3538FB4A2CF"]
@@ -139,8 +139,8 @@
 				item: "functionalstorage:netherite_upgrade"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 1.0d
+			x: -7.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["537EBAE5E0065751"]
@@ -234,8 +234,8 @@
 				}
 			]
 			title: "A customized drawer."
-			x: -3.0d
-			y: 2.5d
+			x: -1.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["537EBAE5E0065751"]
@@ -283,8 +283,8 @@
 					type: "item"
 				}
 			]
-			x: -6.0d
-			y: 2.5d
+			x: -4.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["6AFFD71C3366EA4E"]
@@ -294,8 +294,8 @@
 				item: "functionalstorage:storage_controller"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 2.5d
+			x: -6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["6AFFD71C3366EA4E"]
@@ -306,8 +306,8 @@
 				item: "functionalstorage:ender_drawer"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 4.5d
+			x: -4.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["407B062DED7EB26F"]
@@ -317,8 +317,8 @@
 				item: "functionalstorage:controller_extension"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 2.5d
+			x: -7.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1229F8883A381F07"]
@@ -339,6 +339,21 @@
 			title: "Craft the Backpack"
 			x: 2.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "107000FD98C13980"
+			tasks: [{
+				id: "33F38AEABFB9FEDC"
+				item: {
+					Count: 1b
+					id: "monobank:monobank"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	subtitle: ["Organization is your best friend."]

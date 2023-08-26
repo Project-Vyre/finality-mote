@@ -267,9 +267,9 @@
 			description: [
 				"You can now &arepair&r your tools in the crafting grid, so you won't have to throw away your tools."
 				""
-				"If you still find yourself running out of string or wool, gather flax seeds and plant them. Flax can then be refined with a Millstone to get additional string and seeds."
+				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
 				""
-				"This process can then be automated with Create and its Mechanical Harvesters."
+				"This process can then be automated with &6Create&r and its &7Mechanical Harvesters&r."
 			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
@@ -332,6 +332,11 @@
 					item: "supplementaries:flax_seeds"
 					type: "item"
 				}
+				{
+					id: "362A0BBC769A75CF"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.1"
 			x: 0.0d
@@ -347,6 +352,12 @@
 				"Also, with the addition of the Locksmith mod you can lock your storage from untrustworthy friends... if you happen to have any."
 				""
 				"For Locksmith related items, search &e@locksmith&r in the JEI search bar."
+				"{@pagebreak}"
+				"With the power of chalk, you will never get lost again!"
+				""
+				"Right click while sneaking to open a menu where you can choose the desired symbol you want to draw."
+				""
+				"Some symbols are unlocked by default while others require advancements to be unlocked."
 			]
 			icon: {
 				Count: 1b
@@ -423,8 +434,15 @@
 					type: "item"
 				}
 				{
-					id: "52C136C4C28070D6"
-					item: "locksmith:locksmithing_table"
+					id: "2AF6BAA75C5D0744"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "chalk:chalks"
+						}
+					}
+					title: "Any #chalk:chalks"
 					type: "item"
 				}
 			]
@@ -556,6 +574,32 @@
 					}
 					type: "item"
 				}
+				{
+					id: "10A76D233A9CFD28"
+					item: {
+						Count: 1b
+						id: "minecraft:bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "079FACE01E7837E9"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								SelectedSlot: 0
+								Size: 6
+							}
+						}
+						id: "supplementaries:quiver"
+					}
+					type: "item"
+				}
 			]
 			title: "Getting somewhere..."
 			x: 1.5d
@@ -642,11 +686,18 @@
 			dependencies: ["13186E7B0D6B6115"]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
-			rewards: [{
-				id: "5550D0D6DDAF20F5"
-				type: "xp_levels"
-				xp_levels: 30
-			}]
+			rewards: [
+				{
+					id: "5550D0D6DDAF20F5"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "0CD06BEB1FC62C5F"
+					item: "artifacts:mimic_spawn_egg"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "For both explorers and those who seek a certain biome."
 			tasks: [
@@ -675,29 +726,19 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: [
-				"Right click while sneaking to open a menu where you can choose the desired symbol you want to draw."
-				""
-				"Some symbols are unlocked by default while others require advancements to be unlocked."
-			]
+			description: ["Try making an &4Obsidian Arrow&r and automating the process with Create."]
 			hide: true
 			hide_dependency_lines: true
+			icon: "minecraft:fletching_table"
 			id: "6CF276144FAF7265"
 			shape: "rsquare"
-			subtitle: "Never get lost again!"
+			subtitle: "They're now actually useful!"
 			tasks: [{
-				id: "416612E864E84E4D"
-				item: {
-					Count: 1b
-					id: "itemfilters:tag"
-					tag: {
-						value: "chalk:chalks"
-					}
-				}
-				title: "Any #chalk:chalks"
+				id: "14C60DC776D991B9"
+				item: "apotheosis:obsidian_arrow"
 				type: "item"
 			}]
-			title: "Introduction to Chalk"
+			title: "Functional Fletching Tables"
 			x: -1.5d
 			y: -1.5d
 		}

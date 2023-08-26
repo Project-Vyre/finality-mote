@@ -812,27 +812,6 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["123D0E0F69B73A88"]
-			description: ["There's Ultimerite and Creativerite armor and tools for you to use as well, if you like."]
-			id: "2E104733BBA290DB"
-			subtitle: "Are you still sane?"
-			tasks: [
-				{
-					id: "65B3667242BB3F88"
-					item: "upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot"
-					type: "item"
-				}
-				{
-					id: "3D93A01AC0D7C1C6"
-					item: "upgradednetherite_creative:creative_upgraded_netherite_ingot"
-					type: "item"
-				}
-			]
-			title: "Ultimerite to Creativerite"
-			x: 0.0d
-			y: -9.0d
-		}
-		{
 			dependencies: ["1544915BBE4467E4"]
 			id: "4F8E459413F29159"
 			subtitle: "Good luck."
