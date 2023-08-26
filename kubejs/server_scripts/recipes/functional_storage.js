@@ -19,6 +19,20 @@ ServerEvents.recipes(event => {
     ], {
         W: '#forge:chests/wooden'
     }).id('functionalstorage:oak_drawer_alternate_x1')
+    event.shaped('kubejs:denied_result', [
+        ' W ',
+        '   ',
+        ' W '
+    ], {
+        W: '#forge:chests/wooden'
+    }).id('functionalstorage:oak_drawer_alternate_x2')
+    event.shaped('kubejs:denied_result', [
+        'W W',
+        '   ',
+        'W W'
+    ], {
+        W: '#forge:chests/wooden'
+    }).id('functionalstorage:oak_drawer_alternate_x4')
     wood_types.forEach(material => {
         event.shaped(`functionalstorage:${material}_1`, [
             'WWW',
