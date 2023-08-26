@@ -14,6 +14,11 @@ let wood_types = [
 ]
 
 ServerEvents.recipes(event => {
+    event.shaped('kubejs:denied_result', [
+        'W'
+    ], {
+        W: '#forge:chests/wooden'
+    }).id('functionalstorage:oak_drawer_alternate_x1')
     wood_types.forEach(material => {
         event.shaped(`functionalstorage:${material}_1`, [
             'WWW',
@@ -40,6 +45,30 @@ ServerEvents.recipes(event => {
             I: 'monobank:monobank'
         }).id(`functionalstorage:${material}_4`)
     })
+    event.shaped('functionalstorage:framed_1', [
+        'III',
+        'IVI',
+        'III'
+    ], {
+        I: 'minecraft:iron_nugget',
+        V: 'monobank:monobank'
+    }).id('functionalstorage:framed_1')
+    event.shaped('functionalstorage:framed_2', [
+        'IVI',
+        'III',
+        'IVI'
+    ], {
+        I: 'minecraft:iron_nugget',
+        V: 'monobank:monobank'
+    }).id('functionalstorage:framed_2')
+    event.shaped('functionalstorage:framed_4', [
+        'VIV',
+        'III',
+        'VIV'
+    ], {
+        I: 'minecraft:iron_nugget',
+        V: 'monobank:monobank'
+    }).id('functionalstorage:framed_4')
     event.shaped('functionalstorage:fluid_1', [
         'III',
         'IFI',

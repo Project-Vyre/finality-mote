@@ -388,6 +388,16 @@ ServerEvents.recipes(event => {
         '#forge:stripped_logs',
         'create:shadow_steel'
     ]).id('create:shadow_steel_casing')
+    if (Platform.isLoaded('quark')) {
+        event.shaped('minecraft:hopper', [
+            'ILI',
+            'ILI',
+            ' I '
+        ], {
+            I: 'create:iron_sheet',
+            L: '#minecraft:logs'
+        }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
+    }
 })
 
 ServerEvents.tags('item', event => {
