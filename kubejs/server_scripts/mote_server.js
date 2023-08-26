@@ -355,11 +355,6 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing('salt:salt', [
         Fluid.of('minecraft:water', 1000)
     ]).heated().id('finality:create_salt_compat')
-    event.recipes.createMixing('create:chromatic_compound', [
-        '3x minecraft:glowstone_dust',
-        '3x create:powdered_obsidian',
-        'create:polished_rose_quartz'
-    ]).superheated().id('create:mixing/chromatic_compound')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
