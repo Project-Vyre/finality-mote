@@ -390,19 +390,17 @@ ServerEvents.recipes(event => {
     ]).id('create:shadow_steel_casing')
 })
 
-//ServerEvents.tags('item', event => {
-//    CMD.forEach(insert => {
-//        event.add('kubejs:command_blocks', `kubejs:${insert}`)
-//    })
-//})
-//ServerEvents.tags('block', event => {
-//    CMD.forEach(insert => {
-//        event.add('minecraft:wither_immune', `kubejs:${insert}`)
-//        event.add('minecraft:dragon_immune', `kubejs:${insert}`)
-//        event.add('minecraft:mineable/pickaxe', `kubejs:${insert}`)
-//        event.add('forge:needs_netherite_tool', `kubejs:${insert}`)
-//    })
-//})
+ServerEvents.tags('item', event => {
+    event.add('forge:rope', [
+        'farmersdelight:rope',
+        'quark:rope',
+        'supplementaries:rope'
+    ])
+})
+
+ServerEvents.tags('block', event => {
+
+})
 
 PlayerEvents.loggedIn(event => {
     //Give the player the quest book on first join
@@ -465,7 +463,9 @@ const set = {
         }
     ]
 }
+
 const sets = [set];
+
 PlayerEvents.tick(check => {
     const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
     if (check.player.level.time % 100 == 0) {
@@ -507,4 +507,38 @@ LevelEvents.afterExplosion(event => {
             entity.sendData('screenshake', { i1: distance * 0.6, i2: distance, i3: distance * 0.2, duration: 15 })
         }
     })
+})
+
+let BLACKLIST = {
+    ae2: 'Applied Energistics 2',
+    ars_nouveau: 'Ars Nouveau',
+    create_confectionery: 'Create Confectionery',
+    create_jetpack: 'Create Jetpack',
+    create_sa: 'Create Stuff and Additions',
+    creategoggles: 'Create Goggles',
+    createsifter: 'Create Sifting',
+    create_things_and_misc: 'Create: Things and Misc',
+    extendedgears: 'Create: Extended Cogwheels',
+    alloyed: 'Create: Alloyed',
+    createendertransmission: 'Create: Ender Transmission',
+    create_compressed: 'Create: Compressed',
+    mekanism: 'Mekanism',
+    immersiveengineering: 'Immersive Engineering',
+    ftbultimine: 'FTB Ultimine',
+    unusualend: 'Unusual End',
+    hammerlib: 'HammerLib',
+    solarflux: 'Solar Flux Reborn',
+    twilightforest: 'Twilight Forest'
+}
+
+Object.keys(BLACKLIST).forEach(modid => {
+    if (Platform.isLoaded(`${modid}`)) {
+        ServerEvents.recipes(event => {
+            event.remove({})
+        })
+        console.warn(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        PlayerEvents.loggedIn(event => {
+            event.server.tell(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        })
+    }
 })
