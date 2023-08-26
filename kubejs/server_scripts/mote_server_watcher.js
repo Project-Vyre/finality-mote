@@ -1,3 +1,5 @@
+let TIME_INTERVAL = 20 * 60
+
 function check_updates() {
     let server = Utils.server
     let players = server.players
@@ -11,7 +13,7 @@ PlayerEvents.loggedIn(event => {
 })
 
 ServerEvents.loaded(event => {
-    Utils.server.scheduleInTicks(120 * 1, e => {
+    Utils.server.scheduleInTicks(TIME_INTERVAL * 10, e => {
         check_updates()
         e.reschedule()
     })
