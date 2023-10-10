@@ -51,3 +51,6 @@ net.minecraft.client.gui.screens.AccessibilityOptionsScreen {
 net.minecraft.client.gui.screens.OptionsScreen {
 }
 
+net.minecraft.client.gui.screens.PauseScreen {
+}
+

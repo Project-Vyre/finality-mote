@@ -94,3 +94,14 @@ customization {
   height = 25
 }
 
+customization {
+  path = config/fancymenu/assets/title.png
+  orientation = top-centered
+  x = -158
+  width = 316
+  action = addtexture
+  actionid = adc84878-edb7-4e07-8327-03368007c19a1693369540387
+  y = 0
+  height = 110
+}
+

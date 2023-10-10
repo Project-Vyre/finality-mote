@@ -1,11 +1,12 @@
 #CONFIG ONLY OPTIONS
-ignoreUpdate:359
+ignoreUpdate:364
 settingsButton:false
 allowWrongWorldTeleportation:false
 differentiateByServerAddress:true
 debugEntityIcons:false
 debugEntityVariantIds:false
 radarHideInvisibleEntities:true
+allowInternetAccess:true
 #INGAME SETTINGS (DO NOT EDIT!)
 updateNotification:true
 minimap:true
@@ -118,7 +119,7 @@ infoDisplay:biome:true:15:-1
 infoDisplay:weather:false:15:-1
 infoDisplay:light_level:0:15:-1
 infoDisplay:time:0:15:-1
-infoDisplay:real_time:0:15:-1
+infoDisplay:real_time:2:15:-1
 infoDisplay:highlights:true:15:-1
 infoDisplay:light_overlay_indicator:true:15:-1
 infoDisplay:manual_cave_mode_indicator:true:15:-1
