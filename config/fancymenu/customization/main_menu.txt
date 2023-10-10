@@ -28,15 +28,6 @@ customization {
 }
 
 customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/train-button_hover.png
-  backgroundnormal = config/fancymenu/assets/train-button.png
-}
-
-customization {
   identifier = %id=376322%
   action = hidebutton
 }
@@ -58,29 +49,11 @@ customization {
 }
 
 customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/train-button_hover.png
-  backgroundnormal = config/fancymenu/assets/train-button.png
-}
-
-customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
   orientation = mid-right
   x = -360
   action = movebutton
   y = 8
-}
-
-customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/train-button_hover.png
-  backgroundnormal = config/fancymenu/assets/train-button.png
 }
 
 customization {
@@ -118,15 +91,6 @@ customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
   action = setbuttonlabel
   value = Options
-}
-
-customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/train-button_hover.png
-  backgroundnormal = config/fancymenu/assets/train-button.png
 }
 
 customization {
@@ -290,18 +254,16 @@ customization {
 
 customization {
   orientation = element
-  restartbackgroundanimations = true
-  buttonaction = openlink;https://project-vyre.github.io/finality-wiki/%btnaction_splitter_fm%
-  backgroundhovered = config/fancymenu/assets/train-button_hover.png
-  label = Modpack Wiki
   loopbackgroundanimations = true
+  restartbackgroundanimations = true
   orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  buttonaction = openlink;https://project-vyre.github.io/finality-wiki/%btnaction_splitter_fm%
   x = 0
   width = 200
   action = addbutton
   actionid = 31109325-986e-4bb0-b149-637960ed52541688265449498
   y = 46
-  backgroundnormal = config/fancymenu/assets/train-button.png
+  label = Modpack Wiki
   height = 20
 }
 

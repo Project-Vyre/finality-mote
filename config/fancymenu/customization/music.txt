@@ -23,9 +23,9 @@ customization {
   audio_source:2215821d-a357-477d-b29a-1a97b57f73281691353499968 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
   orientation = mid-centered
   channel = record
-  audio_source:beed4771-abf5-4179-832f-60753c7697991688265730716 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:a71214f7-51e4-40b1-a086-b70f04a135a11688265741886 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:77d3dee4-b92d-462f-982d-47355810c2e61688265718059 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:beed4771-abf5-4179-832f-60753c7697991688265730716 = kubejs/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:a71214f7-51e4-40b1-a086-b70f04a135a11688265741886 = kubejs/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:77d3dee4-b92d-462f-982d-47355810c2e61688265718059 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
   [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:0776b48d-c1f4-4073-9e6a-e05418f842201688276848166] = 
   loop = true
   x = -25
@@ -34,7 +34,7 @@ customization {
   actionid = 1ecbf32e-7f48-43f1-b663-af317dc9160d1688265657892
   y = -25
   once_per_session = false
-  audio_source:5116c694-6427-45b9-8a25-dd8c6497d8a41688265687120 = resourcepacks/Finality Mote Resources/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:5116c694-6427-45b9-8a25-dd8c6497d8a41688265687120 = kubejs/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
   height = 50
 }
 

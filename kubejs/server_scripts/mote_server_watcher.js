@@ -1,3 +1,14 @@
+// requires: netjs
+
+/**
+ * Authors
+ * 
+ * @KostromDan Original script author
+ * @CelestialAbyss
+ */
+
+const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
+
 let TIME_INTERVAL = 20 * 60
 
 function check_updates() {
