@@ -186,3 +186,4 @@ placebo.toggleTrails
 placebo.toggleWings
 key.toastcontrol.clear
 gui.xaero_toggle_tracked_players
+quark.keybind.variant_selector
