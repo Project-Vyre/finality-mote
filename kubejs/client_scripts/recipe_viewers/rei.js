@@ -1,7 +1,26 @@
 // requires: roughlyenoughitems
-// requires: roughlyenoughresources
-// requires: roughlyenoughprofessions
 
+/**
+ * Authors
+ * @CelestialAbyss
+ * 
+ * Contributors & Helpers
+ * @Hunter19823 For helping with REI regex and grouping
+ * mercenaryarek For the groupChippedTags function
+ * p3lim function correction
+*/
+
+let REI_CREATE_COMPAT_ORES = [
+    'osmium',
+    'platinum',
+    'silver',
+    'tin',
+    'lead',
+    'quicksilver',
+    'aluminum',
+    'uranium',
+    'nickel'
+]
 let MYSHIDE = [
     'rubber',
     'silicon',
@@ -70,10 +89,6 @@ let MYSHIDE = [
     'niotic_crystal',
     'spirited_crystal',
     'uraninite',
-    'gaia_spirit',
-    'awakened_draconium',
-    'neutronium',
-    'nitro_crystal',
     'sulfur',
     'lead'
 ]
@@ -87,19 +102,27 @@ let MYS_FLUID_HIDE = [
 ]
 let CAdditionsItems = [
     'straw',
-    'bioethanol_bucket',
-    'gold_rod',
     'brass_rod',
-    'electrum_rod',
-    'electrum_ingot',
-    'electrum_sheet',
-    'electrum_nugget',
-    'electrum_wire',
-    'electrum_spool',
     'digital_adapter'
 ]
-
-function groupModTags(modName, event, exclude) { // function written by mercenaryarek from the KubeJS Discord
+const REI_GROUPS = {
+    'minecraft': 'Minecraft',
+    'ad_astra': 'Ad Astra',
+    'alexsmobs': "Alex's Mobs",
+    'aquamirae': 'Aquamirae',
+    'autumnity': 'Autumnity',
+    'blue_skies': 'Blue Skies',
+    'buzzier_bees': 'Buzzier Bees',
+    'cataclysm': 'Cataclysm',
+    'cloudstorage': 'Cloud Storage',
+    'graveyard': 'Graveyard',
+    'irons_spellbooks': "Iron's Spells n' Spellbooks",
+    'neapolitan': 'Neapolitan',
+    'savage_and_ravage': 'Savage and Ravage',
+    'quark': 'Quark',
+    'whisperwoods': 'Whisperwoods'
+}
+function groupChippedTags(modName, event, exclude) { // function written by mercenaryarek from the KubeJS Discord
     const modIngredient = Ingredient.of(`@${modName}`)
     modIngredient.stacks.toList().stream()
         .flatMap(stack => stack.tags)
@@ -115,32 +138,164 @@ function groupModTags(modName, event, exclude) { // function written by mercenar
             else {
                 let items = Ingredient.of(`#${modName}:${path}`).itemIds // function correction made by p3lim from the KubeJS Discord
                     .filter(item => Item.of(item).getMod() == `${modName}`)
-                event.groupItems(`kubejs:rei_groups/${modName}/${path}`, name, items)
+                event.groupItems(`chipped:rei_groups/${modName}/${path}`, name, items)
             }
         })
 }
 
 REIEvents.hide('item', event => {
-    MYSHIDE.forEach(name => {
-        event.hide(`mysticalagriculture:${name}_essence`)
-        event.hide(`mysticalagriculture:${name}_seeds`)
+    event.hide([
+        'kubejs:denied_result',
+        'kubejs:removed_item',
+        /^kubejs.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
+        /^create.*[_:\/]andesite_encased(?![a-zA-Z0-9]).*/,
+        /^create.*[_:\/]brass_encased(?![a-zA-Z0-9]).*/,
+        'create:copper_backtank_placeable',
+        'create:netherite_backtank_placeable',
+        'create:incomplete_track',
+        'create:incomplete_precision_mechanism',
+        'create:unprocessed_obsidian_sheet',
+        'create:schematic'
+    ])
+    REI_CREATE_COMPAT_ORES.forEach(ore => {
+        event.hide(`create:crushed_raw_${ore}`)
     })
     CAdditionsItems.forEach(name => {
         event.hide(`createaddition:${name}`)
     })
-    event.hide('mysticalagriculture:harvester')
+    event.hide([
+        /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
+        /^create_central_kitchen.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
+        /^createcafe.*[_:\/]incomplete(?![a-zA-Z0-9]).*/
+    ])
+    if (Platform.isLoaded('abnormals_delight')) {
+        event.hide('abnormals_delight:laurel_cabinet')
+    }
+    if (Platform.isLoaded('alexsmobs')) {
+        event.hide(/^alexsmobs.*[_:\/]shard(?![a-zA-Z0-9]).*/)
+        event.hide(/^alexsmobs.*[_:\/]inventory(?![a-zA-Z0-9]).*/)
+        event.hide(/^alexsmobs.*[_:\/]empty(?![a-zA-Z0-9]).*/)
+        event.hide(/^alexsmobs.*[_:\/]hand(?![a-zA-Z0-9]).*/)
+    }
+    if (Platform.isLoaded('biomesoplenty')) {
+        event.hide('biomesoplenty:blood')
+    }
+    if (Platform.isLoaded('cataclysm')) {
+        event.hide('cataclysm:void_shard')
+    }
+    if (Platform.isLoaded('domesticationinnovation')) {
+        event.hide([
+            'domesticationinnovation:deflection_shield',
+            'domesticationinnovation:magnet'
+        ])
+    }
+    if (Platform.isLoaded('incubation')) {
+        event.hide('incubation:fried_egg')
+    }
+    if (Platform.isLoaded('irons_spellbooks')) {
+        event.hide([
+            'irons_spellbooks:legendary_spell_book',
+            'irons_spellbooks:wimpy_spell_book'
+        ])
+    }
+    if (Platform.isLoaded('gag')) {
+        event.hide([
+            'gag:hearthstone',
+            'gag:energized_hearthstone'
+        ])
+    }
+    if (Platform.isLoaded('graveyard')) {
+        event.hide(/^graveyard.*[_:\/]lid(?![a-zA-Z0-9]).*/)
+        event.hide(/^graveyard.*[_:\/]base(?![a-zA-Z0-9]).*/)
+    }
+    MYSHIDE.forEach(name => {
+        event.hide(`mysticalagriculture:${name}_essence`)
+        event.hide(`mysticalagriculture:${name}_seeds`)
+    })
+    event.hide([
+        'mysticalagriculture:harvester',
+        'mysticalagriculture:basic_reprocessor',
+        'mysticalagriculture:inferium_reprocessor',
+        'mysticalagriculture:prudentium_reprocessor',
+        'mysticalagriculture:tertium_reprocessor',
+        'mysticalagriculture:imperium_reprocessor',
+        'mysticalagriculture:supremium_reprocessor',
+        'mysticalagriculture:awakened_supremium_reprocessor'
+    ])
+
+    if (Platform.isLoaded('abnormals_delight')) {
+        event.hide('abnormals_delight:laurel_cabinet')
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('avaritia')
+    ) {
+        event.hide([
+            'mysticalagriculture:neutronium_essence',
+            'mysticalagriculture:neutronium_seeds',
+            'mysticalagradditions:neutronium_crux'
+        ])
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('botania')
+    ) {
+        event.hide([
+            'mysticalagriculture:gaia_spirit_seeds',
+            'mysticalagriculture:gaia_spirit_essence',
+            'mysticalagradditions:gaia_spirit_crux'
+        ])
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('draconicevolution')
+    ) {
+        event.hide([
+            'mysticalagriculture:awakened_draconium_seeds',
+            'mysticalagriculture:awakened_draconium_essence',
+            'mysticalagradditions:awakened_draconium_crux'
+        ])
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('powah')
+    ) {
+        event.hide([
+            'mysticalagriculture:nitro_crystal_seeds',
+            'mysticalagriculture:nitro_crystal_essence',
+            'mysticalagradditions:nitro_crystal_crux'
+        ])
+    }
+    // developer tools hidden
+    event.hide([
+        /^citadel.*[_:\/]item(?![a-zA-Z0-9]).*/,
+        /^citadel.*[_:\/]icon(?![a-zA-Z0-9]).*/,
+        'citadel:debug',
+        'citadel:citadel_book'
+    ])
+    if (Platform.isLoaded('decorative_blocks')) {
+        event.hide('decorative_blocks:blockstate_copy_item')
+    }
 })
 
 REIEvents.hide('fluid', event => {
     MYS_FLUID_HIDE.forEach(name => {
         event.hide(`mysticalagradditions:${name}`)
     })
-    event.hide('createaddition:bioethanol')
+    if (Platform.isLoaded('decorative_blocks')) {
+        event.hide('decorative_blocks:thatch')
+    }
 })
 
 REIEvents.information(event => {
     event.addItem('minecraft:campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:soul_campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
+    event.addItem('minecraft:dragon_egg', 'Uses', ['Can be used to make Dragon Breath.'])
+    event.addItem('kubejs:lemon_seed', 'Acquisition', ['Can only be acquired from grass or trading with farmers.'])
     event.addItem('tempad:tempad', 'Usage', ['Allows you to teleport to points you placed throughout the world but has a 3 minute cooldown.'])
     event.addItem('tempad:he_who_remains_tempad', 'Acquisition Method', ['Can only be acquired from the End, somewhere.'])
     event.addItem('mysticalagriculture:fertilized_essence', 'Acquisition', [
@@ -180,35 +335,74 @@ REIEvents.information(event => {
     event.addItem('endrem:undead_eye', 'Acquisition', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
     event.addItem('endrem:undead_soul', 'Acquisition', ['Acquired from slaying a skeleton horse.'])
     event.addItem('endrem:exotic_eye', 'Acquisition', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
-    event.addItem(['farmersdelight:wild_cabbages', 'farmersdelight:cabbage_seeds'], 'Acquisition', [
+    event.addItem(['farmersdelight:wild_cabbages',
+        'farmersdelight:cabbage_seeds'
+    ], 'Acquisition', [
         'Can be found on beaches.',
         'It looks like a large bush with small yellow flowers on top.'
     ])
-    event.addItem(['farmersdelight:wild_beetroots', 'minecraft:beetroot_seeds'], 'Acquisition', [
+    event.addItem([
+        'farmersdelight:wild_beetroots',
+        'minecraft:beetroot_seeds'
+    ], 'Acquisition', [
         'Can be found on beaches.',
         'It is a type of beet with larger leaves.'
     ])
-    event.addItem(['farmersdelight:wild_potatoes', 'minecraft:potato'], 'Acquisition', [
+    event.addItem([
+        'farmersdelight:wild_potatoes',
+        'minecraft:potato'
+    ], 'Acquisition', [
         'Can be found in biomes with cold climates. This means that the biome must have a temperature between 0.0 and 0.3.',
         'Similar in appearance to normal Potato patches, but has large flowers.'
     ])
-    event.addItem(['farmersdelight:wild_onions', 'farmersdelight:onion'], 'Acquisition', [
+    event.addItem([
+        'farmersdelight:wild_onions',
+        'farmersdelight:onion'
+    ], 'Acquisition', [
         'Can be found in biomes with temperate climates. This means that the biome must have a temperature of 0.3 and 1.0.',
         'It looks like a thick cluster of Allium flowers with an onion bulb under them.'
     ])
-    event.addItem(['farmersdelight:wild_carrots', 'minecraft:carrot'], 'Acquisition', [
+    event.addItem([
+        'farmersdelight:wild_carrots',
+        'minecraft:carrot'
+    ], 'Acquisition', [
         'Can be found in biomes with temperate climates. This means that the biome must have a temperature of 0.3 and 1.0.',
         'Looks like a flowering weed with white flowers and has an orange base poking out slightly from the dirt.'
     ])
-    event.addItem(['farmersdelight:wild_tomatoes', 'farmersdelight:tomato_seeds'], 'Acquisition', [
+    event.addItem([
+        'farmersdelight:wild_tomatoes',
+        'farmersdelight:tomato_seeds'
+    ], 'Acquisition', [
         'Can be found in biomes with arid climates. This means that the biome must have a temperature above 1.0.',
         'Looks like a cluster of vines covered in tiny tomatoes.'
     ])
-    event.addItem(['farmersdelight:wild_rice', 'farmersdelight:rice_panicle'], 'Acquisition', [
+    event.addItem([
+        'farmersdelight:wild_rice',
+        'farmersdelight:rice_panicle'
+    ], 'Acquisition', [
         'Can be found in swamps and jungles in shallow areas of water.',
         'It has yellow grains on the ends of its stalks and is usually two blocks tall.'
     ])
     event.addItem('obscure_api:astral_dust', 'Acquisition', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
+    if (Platform.isLoaded('aether')) {
+        event.addItem([
+            'aether:obsidian_helmet',
+            'aether:obsidian_chestplate',
+            'aether:obsidian_leggings',
+            'aether:obsidian_boots',
+            'aether:obsidian_gloves'
+        ], 'Acquisition', [
+            'Can only be acquired by wearing Phoenix Armor, then wading into water to convert it to the respective Obsidian armor piece.',
+            'After a spending some time in water, the Phoenix Armor pieces are converted.',
+            'In other words, it is made by wearing Phoenix Armor, then quenching it with water.'
+        ])
+    }
+    if (Platform.isLoaded('neapolitan')) {
+        event.addItem('neapolitan:adzuki_beans', 'Growth', [
+            'Can only be grown in non-tilled soil.',
+            'Does not require water!'
+        ])
+    }
 })
 
 REIEvents.groupEntries(event => {
@@ -350,6 +544,24 @@ REIEvents.groupEntries(event => {
         'minecraft:white_stained_glass_pane',
         'minecraft:yellow_stained_glass_pane'
     ])
+    event.groupItems('minecraft:rei_groups/beds', 'Minecraft Beds', [
+        'minecraft:black_bed',
+        'minecraft:blue_bed',
+        'minecraft:brown_bed',
+        'minecraft:cyan_bed',
+        'minecraft:gray_bed',
+        'minecraft:green_bed',
+        'minecraft:light_blue_bed',
+        'minecraft:light_gray_bed',
+        'minecraft:lime_bed',
+        'minecraft:magenta_bed',
+        'minecraft:orange_bed',
+        'minecraft:pink_bed',
+        'minecraft:purple_bed',
+        'minecraft:red_bed',
+        'minecraft:white_bed',
+        'minecraft:yellow_bed'
+    ])
     event.groupItemsByTag('minecraft:rei_groups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
     event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
     event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^$minecraft.*[_:\/]infested(?![a-zA-Z0-9]).*/)
@@ -432,7 +644,7 @@ REIEvents.groupEntries(event => {
         'caupona:calcite_column_fluted_shaft',
         'caupona:calcite_column_fluted_plinth'
     ])
-    event.groupItems('caupona:rei_grups/smooth_calcite_column', 'Calcite Column Components', [
+    event.groupItems('caupona:rei_groups/smooth_calcite_column', 'Calcite Column Components', [
         'caupona:calcite_tuscan_column_capital',
         'caupona:calcite_column_shaft',
         'caupona:calcite_column_plinth'
@@ -619,23 +831,6 @@ REIEvents.groupEntries(event => {
     event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
-    const REI_GROUPS = {
-        'minecraft': 'Minecraft',
-        'ad_astra': 'Ad Astra',
-        'alexsmobs': "Alex's Mobs",
-        'aquamirae': 'Aquamirae',
-        'autumnity': 'Autumnity',
-        'blue_skies': 'Blue Skies',
-        'buzzier_bees': 'Buzzier Bees',
-        'cataclysm': 'Cataclysm',
-        'cloudstorage': 'Cloud Storage',
-        'graveyard': 'Graveyard',
-        'irons_spellbooks': "Iron's Spells n' Spellbooks",
-        'neapolitan': 'Neapolitan',
-        'savage_and_ravage': 'Savage and Ravage',
-        'quark': 'Quark',
-        'whisperwoods': 'Whisperwoods'
-    }
     Object.keys(REI_GROUPS).forEach((mod) => { // /^modid.*[_:\/]spawn(?![a-zA-Z0-9]).*/ regular expression provided by ILIKEPIEFOO2 developer of KubeJS Additions
         if (Platform.isLoaded(mod)) {
             let regex = new RegExp(`^${mod}.*[_:\/]spawn(?![a-zA-Z0-9]).*`);
@@ -672,7 +867,10 @@ REIEvents.groupEntries(event => {
         event.groupItemsByTag('comforts:rei_groups/hammocks', 'Comforts Hammocks', 'comforts:hammocks')
     }
     if (Platform.isLoaded('chipped')) {
-        groupModTags('chipped', event, true)
+        groupChippedTags('chipped', event, true)
+    }
+    if (Platform.isLoaded('domesticationinnovation')) {
+        event.groupItemsByTag('domesticationinnovation:rei_groups/pet_beds', 'Pet Beds', 'domesticationinnovation:pet_beds')
     }
     if (Platform.isLoaded('gateways')) {
         event.groupSameItem('gateways:rei_groups/gate_pearls', 'Gate Pearls', 'gateways:gate_pearl')
@@ -688,6 +886,7 @@ REIEvents.groupEntries(event => {
     }
     if (Platform.isLoaded('handcrafted')) {
         event.groupItemsByTag('handcrafted:rei_groups/cushions', 'Handcrafted Cushions', 'handcrafted:cushions')
+        event.groupItemsByTag('handcrafted:rei_groups/fancy_beds', 'Handcrafted Fancy Beds', 'handcrafted:fancy_beds')
         event.groupItemsByTag('handcrafted:rei_groups/sheets', 'Handcrafted Sheets', 'handcrafted:sheets')
     }
     if (Platform.isLoaded('irons_spellbooks')) {

@@ -152,6 +152,9 @@ StartupEvents.registry('fluid', event => {
     event.create('kubejs:mushroom_stew')
         .thinTexture(0xCA9777)
         .bucketColor(0xCA9777)
+    event.create('kubejs:shimmer')
+        .flowingTexture('kubejs:block/shimmer_flow')
+        .stillTexture('kubejs:block/shimmer_still')
 })
 // tiers
 ItemEvents.toolTierRegistry(event => {
