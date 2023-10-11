@@ -31,7 +31,7 @@ ServerEvents.loaded(event => {
     if (!Utils.server.isDedicated()) { return }
     let version = $BCC.localPingData.version
     Utils.server.scheduleInTicks(120, e => {
-        NetJS.getGists('Jg0jDeVN', result => {
+        NetJS.getPasteBin('Jg0jDeVN', result => {
             if (result.success) {
                 let json_result = result.parseRawToJson()
                 let latest_version = json_result['version']
