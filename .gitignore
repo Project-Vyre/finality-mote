@@ -6,7 +6,12 @@ saves/
 crash-reports/
 downloads/
 DrippyMenuMusic/
-essential/
+essential/libraries
+essential/loader
+essential/lwjgl3-natives
+essential/*-cache
+essential/*-caches
+essential/*-metadata
 movies/
 modernfix/
 logs/
@@ -25,6 +30,8 @@ spark/
 # files
 .curseclient
 .qmenu_opened.marker
+essential/*.jar
+essential/*.json
 hotbar.nbt
 imgui.ini
 minecraftinstance.json
