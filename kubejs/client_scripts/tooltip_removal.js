@@ -1,7 +1,8 @@
+// priority: 3
+
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Tooltip removal.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ItemEvents.tooltip(event => {
@@ -33,6 +34,9 @@ ItemEvents.tooltip(event => {
             text.remove(1)
             text.remove(1)
         })
+        event.addAdvanced('cataclysm:void_core', (item, advanced, text) => {
+            text.remove(1)
+        })
         event.addAdvanced('cataclysm:tidal_claws', (item, advanced, text) => {
             text.remove(1)
             text.remove(1)
@@ -50,10 +54,29 @@ ItemEvents.tooltip(event => {
         event.addAdvanced('cataclysm:ignitium_boots', (item, advanced, text) => {
             text.remove(1)
         })
+        event.addAdvanced('cataclysm:bloom_stone_pauldrons', (item, advanced, text) => {
+            text.remove(1)
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:blessed_amethyst_crab_meat', (item, advanced, text) => {
+            text.remove(1)
+        })
     }
     if (Platform.isLoaded('etched')) {
         event.addAdvanced('etched:boombox', (item, advanced, text) => {
             text.remove(1)
+        })
+    }
+    if (Platform.isLoaded('exposure')) {
+        event.addAdvanced('exposure:camera', (item, advanced, text) => {
+            text.remove(1)
+        })
+    }
+    if (Platform.isLoaded('supplementaries')) {
+        event.addAdvanced('supplementaries:cage', (item, advanced, text) => {
+            text.remove(1)
+            // nbt variant keeps the tooltip for whatever reason
+            if (item.hasNBT()) { text.remove(1) }
         })
     }
 })

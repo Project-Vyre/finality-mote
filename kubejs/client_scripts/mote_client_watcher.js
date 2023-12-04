@@ -1,6 +1,16 @@
+// priority: 1
+// requires: netjs
+
+/**
+ * @file Client side modpack update checker.
+ * @author KostromDan <https://github.com/KostromDan> Original script author
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
 const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 // const $ConfirmScreen = Java.loadClass('net.minecraft.client.gui.screens.ConfirmScreen')
-let modpack_name = 'Finality Mote'
+let modpack_name = 'Finality Genesis'
+let url_id = 'Jg0jDeVN'
 
 NetworkEvents.dataReceived('update_notifier_check', event => {
     check_updates()
@@ -11,10 +21,10 @@ function check_updates() {
     let current = JsonIO.read('kubejs/update_notifier.json') ?? {}
     if (!("enabled" in current)) { current["enabled"] = true }
     if (!("skipped_versions" in current)) { current["skipped_versions"] = [] }
-    if (!("is_notified_on_launch" in current)) { current["is_notified_on_launch"] = false }
+    if (!("is_notified_at_this_launch" in current)) { current["is_notified_at_this_launch"] = false }
     JsonIO.write('kubejs/update_notifier.json', current)
-    if (current["is_notified_on_launch"]) { return }
-    NetJS.getPasteBin('Jg0jDeVN', result => {
+    if (current["is_notified_at_this_launch"]) { return }
+    NetJS.getPasteBin(url_id, result => {
         if (result.success) {
             let json_result = result.parseRawToJson()
             let latest_version = json_result['version']
@@ -24,7 +34,7 @@ function check_updates() {
                 if (current["enabled"] && !current['skipped_versions'].contains(latest_version)) {
                     Client.player.tell(Component.join([
                         Component.white(`\nAn update for `),
-                        Component.aqua(`${modpack_name}`)
+                        Component.gold(`${modpack_name}`)
                             .click({
                                 "action": "open_url",
                                 "value": json_result["curseforge_link"]
@@ -33,10 +43,10 @@ function check_updates() {
                                 Component.gold(`${modpack_name}`),
                                 Component.yellow(` on CurseForge`)
                             ])),
-                        Component.white(" is available!"),
+                        Component.white(" is available!\n"),
                         Component.white("\nYou are playing on "),
                         Component.red(version),
-                        Component.white(", the lastest is "),
+                        Component.white(", the latest is "),
                         Component.green(latest_version),
                         Component.white('\nUpdate using the CurseForge app or the '),
                         Component.gold("[website]")
@@ -63,7 +73,7 @@ function check_updates() {
                         Component.white(" this update temporarily."),
                     ]))
                 }
-                current["is_notified_on_launch"] = true
+                current["is_notified_at_this_launch"] = true
                 JsonIO.write('kubejs/update_notifier.json', current)
             } else {
                 console.log(`${modpack_name}-logging: No updates found. Modpack version is synchronized!`)
