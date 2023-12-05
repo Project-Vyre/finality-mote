@@ -22,7 +22,7 @@ customization {
 customization {
   audio_source:2215821d-a357-477d-b29a-1a97b57f73281691353499968 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
   orientation = mid-centered
-  channel = record
+  channel = music
   audio_source:beed4771-abf5-4179-832f-60753c7697991688265730716 = kubejs/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
   audio_source:a71214f7-51e4-40b1-a086-b70f04a135a11688265741886 = kubejs/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
   audio_source:77d3dee4-b92d-462f-982d-47355810c2e61688265718059 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0

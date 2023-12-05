@@ -26,6 +26,12 @@
 			description: ["If your item happens to already have slots, you can use a Smithing Table to socket your gems."]
 			icon: "apotheosis:gem_dust"
 			id: "0EB2D84D0683C5C5"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4D918A3FE3530EC1"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
 			subtitle: "Gem Dust has lots of utility."
 			tasks: [
 				{
@@ -52,6 +58,19 @@
 			]
 			icon: "minecraft:anvil"
 			id: "7D3FA3191B051D55"
+			rewards: [
+				{
+					count: 8
+					id: "21ED54E41EA2A770"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+				{
+					id: "4FD1049217D0AD30"
+					type: "xp"
+					xp: 250
+				}
+			]
 			subtitle: "Sacrifice the stuff to get materials for the powerful stuff, got it?"
 			tasks: [{
 				id: "5ACF7B37EC1AE02D"
@@ -66,6 +85,11 @@
 			dependencies: ["74B2239E6D835FD5"]
 			description: ["This salvages Affixed items and converts them into Rarity Materials."]
 			id: "0CC888B34808370F"
+			rewards: [{
+				id: "44EC69D3E2F8D3B6"
+				type: "xp"
+				xp: 500
+			}]
 			subtitle: "Make a Salvaging Table, it's important. It is really important."
 			tasks: [{
 				id: "27739486D76BF9B6"
@@ -78,7 +102,13 @@
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
+			description: ["Use a Salvaging Table to acquire this material from items with a &8dark gray&r name color."]
 			id: "376556B76A4D12A5"
+			rewards: [{
+				id: "78AFCFFFD85999A9"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Tier 1 Rarity Material"
 			tasks: [{
 				id: "54A4CAE1B702579F"
@@ -90,7 +120,21 @@
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
+			description: ["Use a Salvaging Table to acquire this material from items with a &agreen&r name color."]
 			id: "4E3FAA48FA11E177"
+			rewards: [
+				{
+					id: "338520B5DD2066D0"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3BCFC4C9BC8BA3AA"
+					table_id: 946488619696883447L
+					type: "random"
+				}
+			]
 			subtitle: "Tier 2 Rarity Material"
 			tasks: [{
 				id: "1A8CF8C68C5CEA21"
@@ -102,7 +146,20 @@
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
+			description: ["Use a Salvaging Table to acquire this material from items with a &9blue&r name color."]
 			id: "72AD6FF2F61C7FD8"
+			rewards: [
+				{
+					id: "77FCC62C3679D53B"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0FEA652DC12BE667"
+					type: "random"
+				}
+			]
 			subtitle: "Tier 3 Rarity Material"
 			tasks: [{
 				id: "5CEAD17407372A2D"
@@ -114,7 +171,20 @@
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
+			description: ["Use a Salvaging Table to acquire this material from items with a &5dark purple&r name color."]
 			id: "20FEAD12447CB2E2"
+			rewards: [
+				{
+					id: "7E478C18FFDC93CB"
+					type: "xp"
+					xp: 750
+				}
+				{
+					exclude_from_claim_all: true
+					id: "718A5D7E40D49BA2"
+					type: "random"
+				}
+			]
 			subtitle: "Tier 4 Rarity Material"
 			tasks: [{
 				id: "427A80F86A86FF10"
@@ -127,6 +197,19 @@
 		{
 			dependencies: ["0CC888B34808370F"]
 			id: "7A6003AA26F89F01"
+			rewards: [
+				{
+					id: "313A8B2BBEEFEB79"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "19B53CEC8338BCB1"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "Tier 5 Rarity Material"
 			tasks: [{
 				id: "0F13BC80426AE023"
@@ -139,9 +222,9 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"This item allows you to keep the gem but it destroys the Affixed item."
+				"The &dVial of Arcane Extraction&r allows you to &akeep&r the &l&5gem(s)&r socketed in your &bAffixed item&r, but it &l&cdestroys&r your &bAffixed item&r in the process."
 				""
-				"Use it in a Smithing Table."
+				"Use it in a &6Smithing Table&r."
 			]
 			id: "292255F2891C4C7F"
 			subtitle: "The gem is saved, but the item is gone!"
@@ -156,9 +239,9 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"This item allows you to remove the gem and destroy it instead of the Affixed item."
+				"The &6Vial of Searing Expulsion&r allows you to &l&cdestroy&r the &l&5gem(s)&r socketed inside your &bAffixed item&r and allows you to keep your said Affixed item."
 				""
-				"Use it in a Smithing Table."
+				"Use it in a &6Smithing Table&r."
 			]
 			id: "7C48CEAB862B2C27"
 			subtitle: "You monster, what have you done?"
@@ -229,6 +312,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "3280E79F2CD74B0F"
+			subtitle: "Helmet enchantments filter."
 			tasks: [{
 				id: "5C4DCC02B451CBDC"
 				item: "apotheosis:helmet_tome"
@@ -242,6 +326,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "2095D6224E18FB5E"
+			subtitle: "Chestplate enchantments filter."
 			tasks: [{
 				id: "431CA9DABFADA285"
 				item: "apotheosis:chestplate_tome"
@@ -254,6 +339,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "03A8F69CDB1B4D04"
+			subtitle: "Boot enchantments filter."
 			tasks: [{
 				id: "006835D5484ABAAC"
 				item: "apotheosis:boots_tome"
@@ -266,6 +352,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "2DD02CF38762C5DF"
+			subtitle: "Leggings enchantments filter."
 			tasks: [{
 				id: "3C60DAF45F05032B"
 				item: "apotheosis:leggings_tome"
@@ -278,6 +365,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "16310D4341177DBD"
+			subtitle: "Sword enchantments filter."
 			tasks: [{
 				id: "7081D86E3D085F86"
 				item: "apotheosis:weapon_tome"
@@ -290,6 +378,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "5986BE189515A09D"
+			subtitle: "Pickaxe enchantments filter."
 			tasks: [{
 				id: "36E31F9DDE90BA5F"
 				item: "apotheosis:pickaxe_tome"
@@ -302,6 +391,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "099E7DE85728EF7B"
+			subtitle: "Fishing pole enchantments filter."
 			tasks: [{
 				id: "560839E3AE9CC993"
 				item: "apotheosis:fishing_tome"
@@ -314,6 +404,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "08DE4E031180931E"
+			subtitle: "Bow enchantments filter."
 			tasks: [{
 				id: "2FD0B15CA52C1042"
 				item: "apotheosis:bow_tome"
@@ -326,6 +417,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "5B78B34045FCF7C5"
+			subtitle: "Extracts half of the enchantments at the cost of your item."
 			tasks: [{
 				id: "4F5280D1C12F9C38"
 				item: "apotheosis:scrap_tome"
@@ -338,6 +430,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "437A1B22B98D1CB4"
+			subtitle: "...other enchantments filter?"
 			tasks: [{
 				id: "454AAD0DEDC24BA6"
 				item: "apotheosis:other_tome"
@@ -348,13 +441,35 @@
 		}
 		{
 			dependencies: ["1189AFE0B71158E6"]
-			description: ["You can make the most &6powerful&r tools imaginable, don't say I warned you."]
+			description: ["With this, you can now make the most &6powerful&r tools imaginable, don't say I warned you."]
 			id: "3718E49C5B96FBFA"
-			rewards: [{
-				id: "2996F22AA3FA1626"
-				type: "xp_levels"
-				xp_levels: 30
-			}]
+			rewards: [
+				{
+					id: "2996F22AA3FA1626"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "05ADE9AE81C39F18"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "765E80417A1B76E3"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "apotheosis:capturing"
+								lvl: 5s
+							}]
+						}
+					}
+					type: "item"
+				}
+			]
 			subtitle: "This is where things get VERY interesting."
 			tasks: [{
 				id: "46BECAA580019513"
@@ -367,7 +482,21 @@
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
+			description: ["Found a gem you really want to keep and want to upgrade? The Gem Cutting Table allows that."]
 			id: "74B2239E6D835FD5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "617ABB07F7D39FDE"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "5AC27C7B8638EA99"
+					type: "xp"
+					xp: 500
+				}
+			]
 			subtitle: "This is used for upgrading gems."
 			tasks: [{
 				id: "4A4205C21346E6CE"
@@ -390,11 +519,27 @@
 				"If your item has any empty sockets, you can socket gems using the smithing table."
 			]
 			id: "1189AFE0B71158E6"
-			rewards: [{
-				id: "6BAF2DDB432FD4E9"
-				type: "xp_levels"
-				xp_levels: 15
-			}]
+			rewards: [
+				{
+					id: "6BAF2DDB432FD4E9"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+				{
+					id: "17ACA18DFF0AA6EC"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "apotheosis:capturing"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
+			]
 			subtitle: "This is for giving regular items Affixes."
 			tasks: [{
 				id: "3B604826BCC1040B"
@@ -408,6 +553,19 @@
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
 			id: "24E25CD6A011D02C"
+			rewards: [
+				{
+					id: "0F5A65712FD0A055"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1803550DB59A987B"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "These arrows are not your typical arrows."
 			tasks: [
 				{
