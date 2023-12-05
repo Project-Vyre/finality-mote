@@ -1,11 +1,12 @@
+// priority: 7
 // requires: create
 
 /**
  * Authors
  * 
- * @CelestialAbyss
- * @squoshi Proposing the switch function
- * @pietro-lopes For fixing the math portion
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author squoshi <https://github.com/squoshi> Proposing the switch function
+ * @author pietro-lopes <https://github.com/pietro-lopes> For fixing the math portion
  */
 
 /**
@@ -24,12 +25,15 @@ let CreateStandard = 0xC9974C
  */
 let CreateHighlighted = 0xF1DD79
 
-let DICE = 0
+let startRainbowLine = '<rainb>-----------------------------------------------------</rainb>\n'
+let endRainbowLine = '\n<rainb>-----------------------------------------------------</rainb>'
 
 let debug_messages = false
 
+let DICE = 0
+
 function allMessages(event) {
-    DICE = Utils.random.nextInt(0, 18)
+    DICE = Utils.random.nextInt(0, 19)
     switch (DICE) {
         case 0:
             /**
@@ -85,13 +89,12 @@ function allMessages(event) {
                 Component.of('while viewing a Ponder scene.').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
-
             break;
         case 1:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Some advice... \n'),
-                Component.of("\nDon't fight a battle that you know you will lose! "),
+                Component.of('\nDon\'t fight a battle that you know you will lose! '),
                 Component.of('Certain mobs '),
                 Component.of('will ').italic(),
                 Component.of('<shake>chase you down</shake> ').red(),
@@ -131,7 +134,7 @@ function allMessages(event) {
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Here is some information that is not well known by most... mentioned by ').color(CreateStandard),
                 Component.of('Kryppers\n').color(CreateHighlighted),
-                Component.of("\nCreate's ").color(CreateHighlighted),
+                Component.of('\nCreate\'s ').color(CreateHighlighted),
                 Component.of('Item Vaults ').blue(),
                 Component.of('are actually ').color(CreateStandard),
                 Component.of('blast proof').bold().color(CreateHighlighted),
@@ -211,11 +214,11 @@ function allMessages(event) {
                 Component.of('A helpful ').color(CreateStandard),
                 Component.of('Create ').color(CreateHighlighted),
                 Component.of('tip...\n').color(CreateStandard),
-                Component.of("\nUnderwater exploration ").blue(),
+                Component.of('\nUnderwater exploration ').blue(),
                 Component.of('is made ').color(CreateStandard),
                 Component.of('easy ').italic().color(CreateHighlighted),
                 Component.of('with ').color(CreateStandard),
-                Component.of("Create's ").color(CreateHighlighted),
+                Component.of('Create\'s ').color(CreateHighlighted),
                 Component.of('diving gear comprised of the ').color(CreateStandard),
                 Component.of('Copper Diving Helmet, ').color(0xE9A36D),
                 Component.of('Copper Backtank ').color(0xE9A36D),
@@ -289,6 +292,18 @@ function allMessages(event) {
                     Component.of('\n<rainb>-----------------------------------------------------</rainb>')
                 ])
             }
+            if (!Platform.isLoaded('carryon')) {
+                event.server.tell([
+                    Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                    Component.of('Finality Tip\n').bold().lightPurple(),
+                    Component.of('\nIn this modpack, spawners can be ').darkPurple(),
+                    Component.of('crafted ').lightPurple(),
+                    Component.of('with ').darkPurple(),
+                    Component.of('Structure Void').lightPurple(),
+                    Component.of('.').darkPurple(),
+                    Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+                ])
+            }
             break;
         case 7:
             /**
@@ -347,8 +362,8 @@ function allMessages(event) {
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Just got back from a tea break...\n').darkPurple(),
-                Component.of("\nI hope you've been using JEI or REI to check recipes. You ").darkPurple(),
-                Component.of("will ").italic().darkPurple(),
+                Component.of('\nI hope you\'ve been using JEI or REI to check recipes. You ').darkPurple(),
+                Component.of('will ').italic().darkPurple(),
                 Component.of('find yourself lost very quickly.').darkPurple(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
@@ -364,10 +379,10 @@ function allMessages(event) {
                     .clickOpenUrl('https://www.youtube.com/watch?v=4xLVySuwbOo')
                     .hover('<wave>frEEeeeE?</wave>'),
                 Component.of('Raw Iron'),
-                Component.of(" as a form of assistance! Hopefully this helps.").darkPurple(),
+                Component.of(' as a form of assistance! Hopefully this helps.').darkPurple(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
-            event.player.give('9x minecraft:raw_iron')
+            Utils.server.runCommandSilent('give @a minecraft:raw_iron 9')
             break;
         case 11:
             event.server.tell([
@@ -390,7 +405,7 @@ function allMessages(event) {
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Running out of materials should be the least of your worries.\n').color(CreateStandard),
                 Component.of('Build ').color(CreateHighlighted),
-                Component.of("to your heart's desire!").color(CreateStandard),
+                Component.of('to your heart\'s desire!').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
@@ -422,7 +437,7 @@ function allMessages(event) {
                 Component.of('a Mechanical Belt and want to ').color(CreateStandard),
                 Component.of('remove ').color(CreateHighlighted),
                 Component.of('it?\n').color(CreateStandard),
-                Component.of("\nDon't fear! Simply").color(CreateStandard),
+                Component.of('\nDon\'t fear! Simply').color(CreateStandard),
                 Component.of(' [right-click] ').color(CreateHighlighted),
                 Component.of('with a ').color(CreateStandard),
                 Component.of('Wrench ').color(CreateHighlighted),
@@ -445,7 +460,7 @@ function allMessages(event) {
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Create Tip\n').bold().color(CreateHighlighted),
-                Component.of('Toolboxes ').color(CreateHighlighted),
+                Component.of('\nToolboxes ').color(CreateHighlighted),
                 Component.of('can be ').color(CreateStandard),
                 Component.of('remotely accessed ').color(CreateHighlighted),
                 Component.of('by pressing').color(CreateStandard),
@@ -461,7 +476,7 @@ function allMessages(event) {
         case 17:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of("Don't have an idea where to start with ").color(CreateStandard),
+                Component.of('Don\'t have an idea where to start with ').color(CreateStandard),
                 Component.of('Create').color(CreateHighlighted),
                 Component.of('?\n').color(CreateStandard),
                 Component.of('\nStart by making ').color(CreateHighlighted),
@@ -488,10 +503,36 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
+        case 18:
+            if (!Platform.isLoaded('roughlyenoughitems')) {
+                event.server.tell([
+                    Component.of(startRainbowLine),
+                    Component.of('Finality Tip\n').bold().lightPurple(),
+                    Component.of('\nWant more customization in your recipe viewer? Try out '),
+                    Component.of('[Roughly Enough Items]')
+                        .gray()
+                        .clickOpenUrl('https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items')
+                        .hover('Click me to download REI from CurseForge!'),
+                    Component.of(' which lets you pin the recipe\'s window on the side for convenient viewing.\n'),
+                    Component.of('No longer will you have to go back and forth, ever!'),
+                    Component.of(endRainbowLine)
+                ])
+            } else {
+                event.server.tell([
+                    Component.of(startRainbowLine),
+                    Component.of('Finality Tip\n').bold().lightPurple(),
+                    Component.of('\nLooks like REI has been installed... Click and drag recipes and items to the top left corner for '),
+                    Component.of('convenient').yellow(),
+                    Component.of('viewing.\n'),
+                    Component.of('No longer will you have to go back and forth, ever!'),
+                    Component.of(endRainbowLine)
+                ])
+            }
+            break;
         default:
             event.server.tell([
                 Component.of('<shake>-----------------------------------------------------</shake>\n').darkRed(),
-                Component.of('Note to self: If you see this, something in your switch statement broke!'),
+                Component.of('Note to self: If you see this, something in your switch statement broke!').red(),
                 Component.of('\n<shake>-----------------------------------------------------</shake>').darkRed()
             ])
             break;
@@ -507,6 +548,11 @@ ServerEvents.tick(event => {
 
 if (debug_messages) {
     ItemEvents.rightClicked('minecraft:debug_stick', event => {
+        allMessages(event)
+    })
+    ServerEvents.tick(event => {
+        let level = event.server.getLevel('minecraft:overworld')
+        if (level.time % 60 !== 0) return
         allMessages(event)
     })
 }

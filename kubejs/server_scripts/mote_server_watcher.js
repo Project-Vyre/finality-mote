@@ -1,21 +1,24 @@
 // requires: netjs
 
 /**
- * Authors
- * 
- * @KostromDan Original script author
- * @CelestialAbyss
+ * @file Server side modpack update checker.
+ * @author KostromDan <https://github.com/KostromDan> Original script author
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 
 let TIME_INTERVAL = 20 * 60
 
+let modpack_name = 'Finality Mote'
+let url_id = 'Jg0jDeVN'
+
 function check_updates() {
     let server = Utils.server
     let players = server.players
     players.forEach(player => { check_updates_for(player) })
 }
+
 function check_updates_for(player) { player.sendData('update_notifier_check', {}) }
 
 PlayerEvents.loggedIn(event => {
@@ -31,7 +34,7 @@ ServerEvents.loaded(event => {
     if (!Utils.server.isDedicated()) { return }
     let version = $BCC.localPingData.version
     Utils.server.scheduleInTicks(120, e => {
-        NetJS.getPasteBin('Jg0jDeVN', result => {
+        NetJS.getPasteBin(url_id, result => {
             if (result.success) {
                 let json_result = result.parseRawToJson()
                 let latest_version = json_result['version']

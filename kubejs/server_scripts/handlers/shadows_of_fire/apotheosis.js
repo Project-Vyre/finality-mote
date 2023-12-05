@@ -1,5 +1,12 @@
 // requires: apotheosis
-// requires: create
+// requires: kubejs_create
+
+/**
+ * @file Server handler for Apotheosis.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author TheonlyTazz <https://github.com/TheonlyTazz> For helping with for loops. Thank you.
+ */
+
 /*
 let CORE_RARITIES = [
     'common',
@@ -10,6 +17,7 @@ let CORE_RARITIES = [
     'ancient'
 ]
 */
+
 let COREGEMS = [
     'ballast',
     'brawlers',
@@ -38,7 +46,7 @@ let NETHER_GEMS = [
 
 let END_GEMS = [
     'endersurge',
-    'mageslayer',
+    'mageslayer'
 ]
 
 ServerEvents.recipes(event => {
@@ -205,4 +213,49 @@ ServerEvents.recipes(event => {
         S: 'minecraft:stick',
         F: 'minecraft:feather'
     }).id('finality:diamond_mining_arrow_mechanical_crafting')
+})
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'apotheosis:simple_reforging_table',
+        'apotheosis:reforging_table',
+        'apotheosis:salvaging_table',
+        'apotheosis:gem_cutting_table'
+    ])
+})
+
+ServerEvents.lowPriorityData(event => {
+    event.addJson('kubejs:enchanting_stats/command_block.json', {
+        "block": "kubejs:command_block",
+        "stats": {
+            "maxEterna": 900000,
+            "eterna": 900000,
+            "quanta": 0,
+            "arcana": 0
+        }
+    })
+    event.addJson('kubejs:enchanting_stats/chain_command_block.json', {
+        "block": "kubejs:chain_command_block",
+        "stats": {
+            "maxEterna": 0,
+            "eterna": 0,
+            "quanta": 900000,
+            "arcana": 0
+        }
+    })
+    event.addJson('kubejs:enchanting_stats/repeating_command_block.json', {
+        "block": "kubejs:repeating_command_block",
+        "stats": {
+            "maxEterna": 0,
+            "eterna": 0,
+            "quanta": 0,
+            "arcana": 900000
+        }
+    })
+    event.addJson('kubejs:enchanting_stats/high_entropy_alloy_block.json', {
+        "block": "kubejs:high_entropy_alloy_block",
+        "stats": {
+            "rectification": 900000
+        }
+    })
 })

@@ -1,5 +1,11 @@
 // requires: functionalstorage
 // requires: monobank
+// requires: create
+
+/**
+ * @file Server handler for Functional Storage
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
 
 let wood_types = [
     'oak',

@@ -1,9 +1,13 @@
 // requires: tempad
 // requires: create
-// requires: extendedcrafting
+
+/**
+ * @file Server handler for Tempad.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
 
 ServerEvents.recipes(event => {
-    event.remove({id: 'tempad:tempad'})
+    event.remove({ id: 'tempad:tempad' })
     event.shaped('tempad:tempad', [
         'QQQ',
         'RTB',
