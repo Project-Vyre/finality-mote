@@ -1,5 +1,6 @@
 {
     "name": "Chunk Loaders 101",
+    "flag": "mod:chunkloaders",
     "icon": "chunkloaders:ultimate_chunk_loader",
     "category": "patchouli:genesis/tips",
     "pages": [
