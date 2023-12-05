@@ -7,18 +7,6 @@
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-let wood_types = [
-    'oak',
-    'spruce',
-    'birch',
-    'jungle',
-    'acacia',
-    'dark_oak',
-    'crimson',
-    'warped',
-    'mangrove'
-]
-
 ServerEvents.recipes(event => {
     event.shaped('kubejs:denied_result', [
         'W'
@@ -39,7 +27,7 @@ ServerEvents.recipes(event => {
     ], {
         W: '#forge:chests/wooden'
     }).id('functionalstorage:oak_drawer_alternate_x4')
-    wood_types.forEach(material => {
+    WOOD_TYPES.forEach(material => {
         event.shaped(`functionalstorage:${material}_1`, [
             'WWW',
             'WIW',
@@ -123,4 +111,22 @@ ServerEvents.recipes(event => {
     //        I: 'monobank:monobank'
     //    }).id(replace.getOrCreateId())
     //})
+})
+
+ServerEvents.tags('block', event => {
+    WOOD_TYPES.forEach(type => {
+        event.add('create:wrench_pickup', [
+            `functionalstorage:${type}_1`,
+            `functionalstorage:${type}_2`,
+            `functionalstorage:${type}_4`
+        ])
+    })
+    event.add('create:wrench_pickup', [
+        'functionalstorage:framed_1',
+        'functionalstorage:framed_2',
+        'functionalstorage:framed_4',
+        'functionalstorage:fluid_1',
+        'functionalstorage:fluid_2',
+        'functionalstorage:fluid_4'
+    ])
 })
