@@ -1,0 +1,32 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "modid": "kubejs",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "ars_nouveau",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "create",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "aether",
+      "type": "supermartijn642corelib:mod_loaded"
+    }
+  ],
+  "recipe": {
+    "type": "oregrowth:ore_growth",
+    "base": "aether:zanite_ore",
+    "stages": 3,
+    "spawn_chance": 0.15,
+    "growth_chance": 0.2,
+    "result": {
+      "item": "kubejs:zanite_ore_essence",
+      "count": 1
+    }
+  }
+}

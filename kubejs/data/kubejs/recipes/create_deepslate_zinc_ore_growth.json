@@ -1,0 +1,28 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "modid": "kubejs",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "ars_nouveau",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "create",
+      "type": "supermartijn642corelib:mod_loaded"
+    }
+  ],
+  "recipe": {
+    "type": "oregrowth:ore_growth",
+    "base": "create:deepslate_zinc_ore",
+    "stages": 4,
+    "spawn_chance": 0.2,
+    "growth_chance": 0.25,
+    "result": {
+      "item": "kubejs:zinc_ore_essence",
+      "count": 1
+    }
+  }
+}
