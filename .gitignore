@@ -11,6 +11,9 @@ servers.dat
 servers.dat_old
 servers.essential.dat
 
+# Don't ignore
+!kubejs/assets/*.zip
+
 # Ignore files
 *.dll
 *.log
