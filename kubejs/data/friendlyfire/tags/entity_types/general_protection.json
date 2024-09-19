@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "goblintraders:goblin_trader",
+    "goblintraders:vein_goblin_trader",
+    "grimoireofgaia:creeper_girl",
+    "grimoireofgaia:ender_girl",
+    "grimoireofgaia:slime_girl",
+    "grimoireofgaia:trader",
+    "loafcats:loaf_cat",
+    "quark:shiba"
+  ]
+}
