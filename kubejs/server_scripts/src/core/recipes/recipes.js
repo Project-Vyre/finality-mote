@@ -1414,7 +1414,7 @@ ServerEvents.recipes(event => {
     'RLL',
     'LL '
   ], {
-    R: '#forge:rope',
+    R: '#supplementaries:ropes',
     L: '#forge:leather'
   }).id('finality:supplementaries_quiver')
   event.recipes.create.mixing('6x supplementaries:soap', [
