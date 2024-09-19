@@ -18,6 +18,14 @@ let pickletweaks_tools = [
 ]
 
 ServerEvents.recipes(event => {
+  event.recipes.kubejs.shapeless(Item.of('minecraft:bow').withNBT({ Unbreakable: 1 }), [
+    'minecraft:bow',
+    'create:experience_block'
+  ]).id('kubejs:unbreakable_bow')
+  event.recipes.kubejs.shapeless(Item.of('minecraft:crossbow').withNBT({ Unbreakable: 1 }), [
+    'minecraft:crossbow',
+    'create:experience_block'
+  ]).id('kubejs:unbreakable_crossbow')
   for (let i = 0; i < tools.length; i++) {
     let element = tools[i];
     event.recipes.kubejs.shapeless(Item.of('minecraft:netherite_' + element).withNBT({ Unbreakable: 1 }), [
