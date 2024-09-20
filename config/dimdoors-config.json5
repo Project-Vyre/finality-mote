@@ -33,7 +33,7 @@
 		"monolithTeleportation": true
 	},
 	"limbo": {
-		"hardcoreLimbo": true,
+		"hardcoreLimbo": false,
 		"limboReturnDistance": 5000,
 		"limboBlocksCorruptingExitWorldAmount": 5.0,
 		"escapeTargetWorld": {
@@ -47,7 +47,7 @@
 			}
 		},
 		"escapeTargetWorldYSpawn": 64,
-		"escapeToWorldSpawn": true,
+		"escapeToWorldSpawn": false,
 		"worldsLeadingToLimbo": {
 			"list": [],
 			"blacklist": false
