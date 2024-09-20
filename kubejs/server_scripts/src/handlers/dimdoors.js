@@ -15,8 +15,8 @@ ServerEvents.recipes(event => {
   event.remove([
     { id: 'dimdoors:tesselating/fabric_of_finality' }
   ])
-  for (let i = 0; i < template_duplication.length; i++) {
-    let element = template_duplication[i];
+  for (let i = 0; i < dim_dupe.length; i++) {
+    let element = dim_dupe[i];
     event.recipes.create.deploying('2x dimdoors:' + element, [
       'dimdoors:' + element,
       'kubejs:duplicator'
