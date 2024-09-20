@@ -355,7 +355,8 @@ ServerEvents.recipes(event => {
     ], {
       C: 'create:clipboard',
       S: 'create:sturdy_sheet',
-      N: '#forge:nuggets/netherite'
+      N: 'kubejs:high_entropy_alloy_nugget',
+      F: 'dimdoors:fabric_of_finality'
     }).id('finality:mechanical_crafting/duplicator')
   }
   /**
