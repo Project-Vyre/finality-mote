@@ -338,14 +338,26 @@ ServerEvents.recipes(event => {
     D: 'minecraft:crying_obsidian',
     S: 'create:shaft'
   }).id('finality:deconstructor')
-  event.recipes.create.mechanical_crafting('kubejs:duplicator', [
-    'NC',
-    'SN'
-  ], {
-    C: 'create:clipboard',
-    S: 'create:sturdy_sheet',
-    N: '#forge:nuggets/netherite'
-  }).id('finality:mechanical_crafting/duplicator')
+  if (!Platform.isLoaded('dimdoors')) {
+    event.recipes.create.mechanical_crafting('kubejs:duplicator', [
+      'NC',
+      'SN'
+    ], {
+      C: 'create:clipboard',
+      S: 'create:sturdy_sheet',
+      N: '#forge:nuggets/netherite'
+    }).id('finality:mechanical_crafting/duplicator')
+  } else {
+    event.recipes.create.mechanical_crafting('kubejs:duplicator', [
+      '  F',
+      'NC ',
+      'SN '
+    ], {
+      C: 'create:clipboard',
+      S: 'create:sturdy_sheet',
+      N: '#forge:nuggets/netherite'
+    }).id('finality:mechanical_crafting/duplicator')
+  }
   /**
    * QoL
    */
