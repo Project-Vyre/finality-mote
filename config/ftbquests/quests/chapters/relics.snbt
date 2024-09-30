@@ -1,0 +1,152 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "relics"
+	group: "6855847200ADBE3A"
+	icon: {
+		Count: 1
+		id: "relics:magic_mirror"
+		tag: {
+			abilities: {
+				teleport: {
+					points: 0
+					stats: {
+						cooldown: 102.38787d
+						distance: 737.88886d
+					}
+				}
+			}
+		}
+	}
+	id: "51C18EFD0E16EEB6"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"Through world exploration. Good luck!"
+				""
+				"Explanations for each relic will also not be given, so try them out yourself!"
+			]
+			icon: "create:experience_block"
+			id: "5301FF395B4A8CCB"
+			shape: "rsquare"
+			subtitle: "Where can I find them?"
+			tasks: [{
+				id: "677178799783A4DF"
+				title: "Click me to continue!"
+				type: "checkmark"
+			}]
+			title: "Relics?"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "3A448692363E0EF7"
+			tasks: [{
+				id: "4A826D8BE1A0A04E"
+				item: {
+					Count: 1
+					id: "relics:amphibian_boot"
+					tag: {
+						abilities: {
+							gills: {
+								points: 0
+								stats: {
+									chance: 0.05685d
+								}
+							}
+							slipping: {
+								points: 0
+								stats: {
+									duration: 21.47273d
+									speed: 0.00766d
+								}
+							}
+							swimming: {
+								points: 0
+								stats: {
+									duration: 22.41928d
+									speed: 0.00772d
+								}
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			id: "154381E23BB3D4E4"
+			tasks: [{
+				id: "4D214D519274BD88"
+				item: {
+					Count: 1
+					id: "relics:aqua_walker"
+					tag: {
+						abilities: {
+							walking: {
+								points: 0
+								stats: {
+									time: 53.69206d
+								}
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: 1.5d
+		}
+		{
+			id: "01F5D35291B8286B"
+			tasks: [{
+				id: "656225B1BD4FA873"
+				item: {
+					Count: 1
+					id: "relics:arrow_quiver"
+					tag: {
+						abilities: {
+							agility: {
+								points: 0
+								stats: {
+									modifier: 1.0d
+								}
+							}
+							leap: {
+								points: 0
+								stats: {
+									cooldown: 14.95922d
+									duration: 5.94882d
+									multiplier: 0.41667d
+								}
+							}
+							rain: {
+								points: 0
+								stats: {
+									delay: 0.97842d
+									duration: 12.71674d
+									radius: 3.88755d
+								}
+							}
+							receptacle: {
+								points: 0
+								stats: {
+									slots: 4.49215d
+								}
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+	]
+	title: "Relics"
+}

@@ -1,0 +1,12 @@
+## Important
+Please note you may have to switch the Markdown mode with the small button in the bottom left area to be able to click on links on this page. Anyways...
+
+## Notes
+If you wish to read the changelog on a webpage with proper formatting, go here: https://github.com/Project-Vyre/Finality-Mote/wiki/1.20.1
+Otherwise, refer to the changelogs on the left side.
+
+
+- Please note that I am not responsible for lost items, blocks, worlds, pets, etc. if I have mentioned breaking changes such as but not limited to:
+  - Mod removal
+  - Mod updates
+  - Mod updates with breaking changes

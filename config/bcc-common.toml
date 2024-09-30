@@ -1,0 +1,14 @@
+
+#General settings
+[general]
+	#The CurseForge project ID for the modpack
+	#Range: > 0
+	modpackProjectID = 882824
+	#The name of the modpack
+	modpackName = "Finality Mote"
+	#The version of the modpack
+	modpackVersion = "1201.1.0-alpha.1"
+	#Use the metadata.json to determine the modpack version
+	#ONLY ENABLE THIS IF YOU KNOW WHAT YOU ARE DOING
+	useMetadata = false
+
