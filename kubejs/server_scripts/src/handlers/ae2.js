@@ -130,6 +130,15 @@ ServerEvents.recipes(event => {
     I: 'kubejs:iridium_sheet'
   }).id('ae2:network/crafting/patterns_blank')
   // ME Storage Component
+  event.recipes.create.mechanical_crafting('ae2:cell_component_1k', [
+    'RCR',
+    'CLC',
+    'RCR'
+  ], {
+    R: 'minecraft:redstone',
+    C: '#ae2:all_certus_quartz',
+    L: 'ae2:logic_processor'
+  }).id('kubejs:ae2/network/cells/item_storage_components_1k_part')
   event.recipes.create.mechanical_crafting('ae2:cell_component_4k', [
     'R C R',  //     '  C  ',
     ' EQE ',  //     ' RER ',
