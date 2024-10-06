@@ -1248,12 +1248,7 @@ REIEvents.groupEntries(event => {
     event.groupItems('lilwings:rei_groups/spawn_eggs', "Lil' Wings Spawn Eggs", /^lilwings.*[_:\/]egg(?![a-zA-Z0-9]).*/)
   }
   if (!Platform.isLoaded('ad_astra')) {
-    event.groupItems('kubejs:rei_groups/wrenches', 'Wrenches', [
-      'create:wrench',
-      'supplementaries:wrench',
-      'red_power:wrench',
-      'red_power:creative_wrench'
-    ])
+    event.groupItemsByTag('kubejs:rei_groups/wrenches', 'Wrenches', '#forge:tools/wrench')
   }
   if (Platform.isLoaded('ad_astra')) {
     event.groupItems('ad_astra:rei_groups/ad_astra_flags', 'All Ad Astra Flags', [/^(ad_astra:).*(_flag)$/])
