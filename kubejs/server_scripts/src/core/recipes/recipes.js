@@ -1,6 +1,6 @@
 /**
  * @file Handler for core recipes.
- * @version 1.20.1
+ * @version 1.20.1.M
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author squoshi <https://github.com/squoshi> Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
  * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
@@ -615,6 +615,15 @@ ServerEvents.recipes(event => {
     '4x minecraft:netherite_scrap',
     Fluid.of('kubejs:molten_gold', 360)
   ]).heated().id('finality:mixing/netherite_ingot_from_mixing')
+  event.recipes.create.mixing([
+    Item.of('create:asurine').withChance(0.25),
+    Item.of('create:crimsite').withChance(0.25),
+    Item.of('create:ochrum').withChance(0.25),
+    Item.of('create:veridium').withChance(0.25)
+  ], [
+    'minecraft:tuff',
+    Fluid.of('kubejs:condensed_universal_entropy')
+  ]).superheated().id('kubejs:mixing/create_stone_types_renew')
   // Be3Al2(SiO3)6
   event.recipes.create.mixing('minecraft:emerald', [
     'minecraft:quartz',
