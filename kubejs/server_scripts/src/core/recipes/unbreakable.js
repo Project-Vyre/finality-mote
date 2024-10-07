@@ -62,6 +62,46 @@ ServerEvents.recipes(event => {
       'create:experience_block'
     ]).id('kubejs:pickletweaks/unbreakable_netherite_scythe')
   }
+  if (Platform.isLoaded('justhammers')) {
+    event.recipes.kubejs.shapeless(Item.of('justhammers:netherite_hammer').withNBT({ Unbreakable: 1 }), [
+      'justhammers:netherite_hammer',
+      'create:experience_block'
+    ]).id('kubejs:justhammers/unbreakable_netherite_hammer')
+    event.recipes.kubejs.shapeless(Item.of('justhammers:netherite_impact_hammer').withNBT({ Unbreakable: 1 }), [
+      'justhammers:netherite_impact_hammer',
+      'create:experience_block'
+    ]).id('kubejs:justhammers/unbreakable_netherite_impact_hammer')
+    event.recipes.kubejs.shapeless(Item.of('justhammers:netherite_reinforced_hammer').withNBT({ Unbreakable: 1 }), [
+      'justhammers:netherite_reinforced_hammer',
+      'create:experience_block'
+    ]).id('kubejs:justhammers/unbreakable_netherite_reinforced_hammer')
+    event.recipes.kubejs.shapeless(Item.of('justhammers:netherite_reinforced_impact_hammer').withNBT({ Unbreakable: 1 }), [
+      'justhammers:netherite_reinforced_impact_hammer',
+      'create:experience_block'
+    ]).id('kubejs:justhammers/unbreakable_netherite_reinforced_impact_hammer')
+    event.recipes.kubejs.shapeless(Item.of('justhammers:netherite_destructor_hammer').withNBT({ Unbreakable: 1 }), [
+      'justhammers:netherite_destructor_hammer',
+      'create:experience_block'
+    ]).id('kubejs:justhammers/unbreakable_netherite_destructor_hammer')
+  }
+  if (Platform.isLoaded('celestisynth')) {
+    let celestisynth_weapons = {
+      solaris: 'celestisynth:solaris',
+      crescentia: 'celestisynth:crescentia',
+      breezebreaker: 'celestisynth:breezebreaker',
+      poltergeist: 'celestisynth:poltergeist',
+      aquaflora: 'celestisynth:aquaflora',
+      rainfall_serenity: 'celestisynth:rainfall_serenity',
+      frostbound: 'celestisynth:frostbound',
+      keres: 'celestisynth:keres'
+    }
+    for (let [recipeid, id] of Object.entries(celestisynth_weapons)) {
+      event.recipes.kubejs.shapeless(Item.of(id).withNBT({ Unbreakable: 1 }), [
+        id,
+        'create:experience_block'
+      ]).id('kubejs:celestisynth/unbreakable_' + recipeid)
+    }
+  }
 })
 
 /*
