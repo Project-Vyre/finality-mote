@@ -69,6 +69,7 @@ modernfix/
 jei/world/local/
 debug/
 exposures/*
+.mixin.out/*
 
 # Don't ignore default servers.dat
 servers.dat
