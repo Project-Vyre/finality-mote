@@ -86,7 +86,7 @@
 	"functionality": {
 		"inputMethod": null,
 		// Declares whether REI should remove the recipe book.
-		"disableRecipeBook": false,
+		"disableRecipeBook": true,
 		// Declares whether mob effects should be on the left side instead of the right side.
 		"leftSideMobEffects": false,
 		// Declares whether subsets is enabled.
@@ -210,6 +210,11 @@
 					"create:mechanical_crafting",
 					"create:sequenced_assembly",
 					"create:mystery_conversion",
+					"create:advanced_distillation",
+					"create:coking",
+					"create:industrial_blasting",
+					"create:casting",
+					"create:polarizing",
 					"ftbquests:quest",
 					"ftbquests:loot_crate",
 					"alexscaves:spelunkery_table",
@@ -267,7 +272,8 @@
 					"ae2:entropy",
 					"lightmanscurrency:coin_mint",
 					"lightmanscurrency:ticket_station",
-					"summoningrituals:altar"
+					"summoningrituals:altar",
+					"celestisynth:starlit_factory"
 				],
 				"hiddenCategories": []
 			}
