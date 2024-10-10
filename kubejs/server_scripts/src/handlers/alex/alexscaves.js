@@ -33,4 +33,20 @@ ServerEvents.recipes(event => {
     'alexscaves:spelunkery_table',
     'kubejs:duplicator'
   ]).keepHeldItem().id('kubejs:deploying/spelunkery_table_duplication')
+  event.recipes.create.deploying('2x alexscaves:diving_helmet', [
+    'alexscaves:diving_helmet',
+    'kubejs:duplicator'
+  ]).keepHeldItem().id('kubejs:deploying/diving_helmet_duplication')
+  event.recipes.create.deploying('2x alexscaves:diving_chestplate', [
+    'alexscaves:diving_chestplate',
+    'kubejs:duplicator'
+  ]).keepHeldItem().id('kubejs:deploying/diving_chestplate_duplication')
+  event.recipes.create.deploying('2x alexscaves:diving_leggings', [
+    'alexscaves:diving_leggings',
+    'kubejs:duplicator'
+  ]).keepHeldItem().id('kubejs:deploying/diving_leggings_duplication')
+  event.recipes.create.deploying('2x alexscaves:diving_boots', [
+    'alexscaves:diving_boots',
+    'kubejs:duplicator'
+  ]).keepHeldItem().id('kubejs:deploying/diving_boots_duplication')
 })
