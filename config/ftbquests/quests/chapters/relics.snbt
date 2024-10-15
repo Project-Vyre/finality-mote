@@ -5,6 +5,11 @@
 	group: "6855847200ADBE3A"
 	icon: {
 		Count: 1
+		ForgeCaps: {
+			"celestisynth:celestisynthitemstackcapabilities": {
+				cs.aquaSkin: 0
+			}
+		}
 		id: "relics:magic_mirror"
 		tag: {
 			abilities: {
@@ -997,5 +1002,6 @@
 			y: 7.5d
 		}
 	]
+	subtitle: ["Work in progress."]
 	title: "Relics"
 }
