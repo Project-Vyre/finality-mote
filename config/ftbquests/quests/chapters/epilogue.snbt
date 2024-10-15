@@ -588,6 +588,7 @@
 		}
 		{
 			dependencies: ["7D62F82D07137026"]
+			description: ["Advanced uses are a work in progress."]
 			id: "0E7069A0CF461FAF"
 			subtitle: "The tools of the Creator."
 			tasks: [

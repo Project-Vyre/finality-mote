@@ -2,11 +2,11 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "rsquare"
 	filename: "ae2"
-	group: "71A5625CEAEA7423"
+	group: "4A8875A8A8C06088"
 	hide_quest_until_deps_visible: true
 	icon: "ae2:singularity"
 	id: "704BE125DC1524EA"
-	order_index: 0
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -57,11 +57,13 @@
 				""
 				"Just be careful not to break the &bFlawless&r Budding Certus Quartz blocks."
 				""
-				"If you want a stable source of Fe, you can use Alternators from Create: Crafts \\& Additions."
+				"If you want a stable source of Fe, consider making a"
 				""
-				"You may have to configure the Connectors a little bit to push or pull energy around or use Energy Pipes from Pipez to make it an easier process."
+				"{ \"text\": \"Vibration Chamber\", \"underlined\": \"true\", \"color\": \"yellow\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"3A2CB141B4BF4B89\" } }"
+				""
+				"and equip it with upgrades to increase its output."
 			]
-			icon: "ae2:meteorite_compass"
+			icon: "ae2:mysterious_cube"
 			id: "15149B4F5A4E32C0"
 			subtitle: "You will need to find yourself some Mysterious Cubes to start off."
 			tasks: [
@@ -159,6 +161,14 @@
 		}
 		{
 			dependencies: ["332FBE563FD9C196"]
+			description: [
+				"These are the easiest cable to make."
+				""
+				"Please refer to the in-game AE2 guide for their differences."
+				"{image:minecraft:textures/gui/presets/ae2_bare_minimum.png width:16 height:9 align:center fit:true}"
+				""
+				"Above is an image of the bare minimum storage setup using a single ME Drive. The extra cable connecting to the ME Crafting Terminal is there for visual clarity to let you know that it is connected to the back of the terminal."
+			]
 			id: "3B59A45679277208"
 			tasks: [{
 				id: "0796FA5F4CB39404"
@@ -228,7 +238,10 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["6CA80735CB034E36"]
+			dependencies: [
+				"6CA80735CB034E36"
+				"5CE3B51D4EC0E1D9"
+			]
 			id: "2E317343CA23339B"
 			tasks: [{
 				id: "60BF62F070C00C7B"
@@ -317,28 +330,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["15149B4F5A4E32C0"]
-			id: "5F7B32B19F583517"
-			tasks: [{
-				id: "507F87AEB3B05238"
-				item: "ae2:item_cell_housing"
-				type: "item"
-			}]
-			x: 1.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["15149B4F5A4E32C0"]
-			id: "0CCA741252D97742"
-			tasks: [{
-				id: "18F80A7A8E35A8B8"
-				item: "ae2:fluid_cell_housing"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -1.5d
-		}
-		{
 			dependencies: ["3D1A802FD6537CFF"]
 			icon: "ae2:singularity"
 			id: "567B049F63EE2558"
@@ -355,8 +346,8 @@
 				}
 			]
 			title: "Creating a Data Singularity"
-			x: 6.0d
-			y: 6.0d
+			x: 1.5d
+			y: 7.5d
 		}
 		{
 			dependencies: ["7BBDC3F5A940507F"]
@@ -366,7 +357,7 @@
 				item: "ae2:condenser"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 1.5d
 			y: 6.0d
 		}
 		{
@@ -378,8 +369,8 @@
 				item: "ae2:quantum_entangled_singularity"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 6.0d
+			x: 1.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["428ED4CE3BCBDBC3"]
@@ -409,6 +400,193 @@
 				type: "item"
 			}]
 			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E317343CA23339B"]
+			id: "22DB2D1D509B89CD"
+			tasks: [
+				{
+					id: "37F5FD5FDB8114B3"
+					item: {
+						Count: 1
+						id: "ae2:item_storage_cell_1k"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "2B04B13CD28B0D0D"
+					item: {
+						Count: 1
+						id: "ae2:fluid_storage_cell_1k"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "1k ME Storage Cells"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5BB0C121745C13D4"]
+			id: "7AB2AC3092E68154"
+			tasks: [
+				{
+					id: "74547E1D721B6143"
+					item: {
+						Count: 1
+						id: "ae2:item_storage_cell_4k"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "4D1D5DF97E1CDB64"
+					item: {
+						Count: 1
+						id: "ae2:fluid_storage_cell_4k"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "4k ME Storage Cells"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7B2477CF136952DB"]
+			id: "1CBD9006EFD01FF4"
+			tasks: [
+				{
+					id: "7008CCFD2F01A356"
+					item: {
+						Count: 1
+						id: "ae2:item_storage_cell_16k"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "4DD76B5632618968"
+					item: {
+						Count: 1
+						id: "ae2:fluid_storage_cell_16k"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "16k ME Storage Cells"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7BBDC3F5A940507F"]
+			id: "316841A984C6681F"
+			tasks: [
+				{
+					id: "2FA28BC111DBB6E3"
+					item: {
+						Count: 1
+						id: "ae2:item_storage_cell_64k"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "4CA310007DE3E560"
+					item: {
+						Count: 1
+						id: "ae2:fluid_storage_cell_64k"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "64k ME Storage Cells"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["54F5296BA4C558FD"]
+			id: "15E00D2806F91721"
+			tasks: [
+				{
+					id: "02D2814062A7F7E5"
+					item: {
+						Count: 1
+						id: "ae2:item_storage_cell_256k"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "02245DC470303C9F"
+					item: {
+						Count: 1
+						id: "ae2:fluid_storage_cell_256k"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "256k ME Storage Cells"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["64164F00B745E7FC"]
+			id: "5CE3B51D4EC0E1D9"
+			subtitle: "Storage protection."
+			tasks: [
+				{
+					id: "732E160C89026F9A"
+					item: "ae2:item_cell_housing"
+					type: "item"
+				}
+				{
+					id: "2E44337136D7A6B6"
+					item: "ae2:fluid_cell_housing"
+					type: "item"
+				}
+			]
+			title: "ME Cell Housing"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["15149B4F5A4E32C0"]
+			description: [
+				"If you want to find more presses, you'll have to venture out and find more meteorites."
+				""
+				"Alternatively the presses can be duplicated once you make the &dDuplicator&r."
+			]
+			id: "471649FB264287CC"
+			subtitle: "Locating meteorites."
+			tasks: [{
+				id: "781E0C1CA1331F80"
+				item: "ae2:meteorite_compass"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"438CF48F095B737A"
+				"22DB2D1D509B89CD"
+				"0796FA5F4CB39404"
+			]
+			id: "28D23E8146FD5ACA"
+			tasks: [{
+				id: "67FC552B707020F1"
+				item: "ae2:drive"
+				type: "item"
+			}]
+			x: 6.0d
 			y: 1.5d
 		}
 	]

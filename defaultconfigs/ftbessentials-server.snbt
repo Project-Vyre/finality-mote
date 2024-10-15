@@ -10,4 +10,8 @@
 # 	}
 # }
 
-{ }
+{
+	rtp: {
+		enabled: false
+	}
+}

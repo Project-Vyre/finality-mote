@@ -4,7 +4,7 @@
 	filename: "dimensional_doors"
 	group: "4A8875A8A8C06088"
 	id: "2EDEBA580F415396"
-	order_index: 3
+	order_index: 4
 	quest_links: [ ]
 	quests: [{
 		dependencies: ["03F919758AA7E318"]
@@ -14,9 +14,22 @@
 			"&dPlease note that this quest tree is a work in progress and I will be adding the quest nodes in a future update.&r"
 			""
 			"&dIf you find yourself stuck in Limbo, look for Eternal Fluid to be transported back to reality.&r"
+			""
+			"Rifts generated in the world will close and will need to be &are-opened&r using the Rift Sword rewarded by completing this quest node."
 		]
 		id: "1986BD228F185DD4"
 		invisible: true
+		rewards: [{
+			id: "49239F91E23493FA"
+			item: {
+				Count: 1
+				id: "dimdoors:rift_blade"
+				tag: {
+					Damage: 0
+				}
+			}
+			type: "item"
+		}]
 		shape: "square"
 		subtitle: "Is that a new portal?"
 		tasks: [{

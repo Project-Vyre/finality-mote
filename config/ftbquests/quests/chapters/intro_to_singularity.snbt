@@ -844,6 +844,8 @@
 				"This will reveal the quest tree for &bApplied Energistics 2&r."
 				""
 				"Do keep in mind that you will need to make significant progress in Create first before making AE2 systems."
+				""
+				"&dIridium&r is also an important material in making much of AE2's items and blocks."
 			]
 			hide_dependency_lines: true
 			id: "1B039905D73C2612"

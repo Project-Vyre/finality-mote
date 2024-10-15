@@ -35,9 +35,13 @@
 					type: "item"
 				}
 				{
-					id: "6AC6011D3C293688"
-					item: "alexscaves:spelunkery_table"
-					type: "item"
+					icon: "alexscaves:spelunkery_table"
+					id: "177724435C50EF80"
+					observe_type: 0
+					timer: 0L
+					title: "Find a Spelunkery Table in an underground cabin."
+					to_observe: "alexscaves:spelunkery_table"
+					type: "observation"
 				}
 			]
 			title: "Introduction to Alex's Caves"

@@ -4,8 +4,8 @@
 	loot_size: 1
 	order_index: 19
 	rewards: [
-		{ item: "sophisticatedstorage:stack_upgrade_tier_5" }
 		{ item: "sophisticatedbackpacks:stack_upgrade_tier_4" }
+		{ item: "ae2:cell_component_256k" }
 	]
 	title: "Storage Shop"
 }
