@@ -200,7 +200,6 @@ finTip("dragon_breath", "You can now extract Dragon Breath an unlimited amount o
 finTip("fd_rotten_flesh_use", "Rotten Flesh can be used to make Organic Compost which turns into Rich Soil.")
 finTip("rotten_flesh_haunting", "Rotten Flesh can now be haunted and turned into Phantom Membrane.")
 finTip("flax", "Start a Flax plant farm as early as possible. It will help in the long term with making Windmill Sails.")
-finTip("gateway_pearls", "<rainb>Gateway Pearls</rainb> are a fast way of obtaining a lot of loot from a specific mob. Just be prepared for combat.")
 finTip("experience_levels", "While you may receive large amounts of experience from quests, you are not expected to keep all of it.")
 finTip("compact_completion", "It is unlikely that you can complete this modpack in an area of 1-4 chunks. Be prepared to use a Create train network.")
 finTip("compacting_sponges", "Put a Wet Sponge in a Basin with a Mechanical Press to press out the water.")
@@ -221,6 +220,9 @@ if (Platform.isLoaded('alexscaves')) {
 }
 if (Platform.isLoaded("apotheosis")) {
   finTip("spawners", "Spawners now drop Structure Void which can be used to recraft them. Use the Capturing enchantment to acquire Spawn Eggs.")
+}
+if (Platform.isLoaded('gateways')) {
+  finTip("gateway_pearls", "<rainb>Gateway Pearls</rainb> are a fast way of obtaining a lot of loot from a specific mob. Just be prepared for combat.")
 }
 if (Platform.isLoaded("armorstandshiftswap")) {
   finTip("armor_stand_swap", "[Shift] + R-click on Armor Stands to put your entire armor set at once with the addition of Armor Stand Shift Swap.")
