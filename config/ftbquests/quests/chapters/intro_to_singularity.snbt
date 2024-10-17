@@ -88,8 +88,20 @@
 				"- Lootr Chests DO NOT say if they are a trapped chest or not, even with Jade. What does this mean for you?"
 				""
 				"&l&c<shake>Check for TNT or redstone around each Lootr chest.</shake>&r"
+				"{@pagebreak}"
+				"Blockprints is also included in this modpack to allow you to upload and download schematics."
+				""
+				"To access it, press the default keybind which is the &b-&r key."
 			]
-			icon: "minecraft:grass_block"
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"celestisynth:celestisynthitemstackcapabilities": {
+						cs.aquaSkin: 0
+					}
+				}
+				id: "minecraft:grass_block"
+			}
 			id: "4A691BB889286C89"
 			shape: "rsquare"
 			size: 2.0d
