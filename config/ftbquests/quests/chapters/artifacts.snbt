@@ -3,7 +3,15 @@
 	default_quest_shape: "rsquare"
 	filename: "artifacts"
 	group: "6855847200ADBE3A"
-	icon: "artifacts:mimic_spawn_egg"
+	icon: {
+		Count: 1
+		ForgeCaps: {
+			"celestisynth:celestisynthitemstackcapabilities": {
+				cs.aquaSkin: 0
+			}
+		}
+		id: "artifacts:mimic_spawn_egg"
+	}
 	id: "2AD3074639A9CD1F"
 	images: [{
 		height: 64.0d
@@ -13,12 +21,12 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 5
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "134132D08F2351B9"
 			subtitle: "More health, for days."
 			tasks: [{
@@ -32,7 +40,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "29714FA7C6C24B0C"
 			subtitle: "Fortune that will never be found at the end of the rainbow."
 			tasks: [
@@ -58,7 +66,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "639EBE770F335AD5"
 			subtitle: "Sooo cute!"
 			tasks: [
@@ -79,7 +87,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3A56F181BF960F00"
 			subtitle: "FOREVER BEEF"
 			tasks: [
@@ -100,7 +108,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3D38DD7900BDC0CD"
 			subtitle: "I'm ready! Promotion!"
 			tasks: [
@@ -121,7 +129,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "57B8D2900DEAABD3"
 			subtitle: "IT'S THE HASH SLINGING SLASHER"
 			tasks: [
@@ -143,7 +151,7 @@
 		{
 			dependencies: ["4A691BB889286C89"]
 			description: ["Unfortunately no, the umbrella can't shoot."]
-			hide: true
+			hide_until_deps_visible: true
 			id: "708C10840E44F31C"
 			subtitle: "*insert lego batman penguin noises here*"
 			tasks: [
@@ -169,7 +177,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "30A29CE3FB50D11A"
 			subtitle: "Each of these are different, be sure to read what they do."
 			tasks: [
@@ -210,7 +218,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "16843D4A0FAE2266"
 			subtitle: "For all your offensive needs."
 			tasks: [
@@ -236,7 +244,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "2B46A38DAD1371DD"
 			subtitle: "For utility and the offensive."
 			tasks: [
@@ -257,7 +265,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "6464EA8843BF445D"
 			subtitle: "Become one with the earth."
 			tasks: [{
@@ -280,7 +288,7 @@
 				""
 				"With Netflix."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "43079D44FC265E21"
 			subtitle: "Hellsing Ultimate Abridged"
 			tasks: [{
@@ -294,7 +302,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "54A59D6E7B886CDB"
 			subtitle: "Do you really need this?"
 			tasks: [{
@@ -308,7 +316,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "6AEDE569DFBB9B2B"
 			subtitle: "*villager approval noises*"
 			tasks: [{
@@ -322,7 +330,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "27437880F4284297"
 			subtitle: "Running up that hill..."
 			tasks: [{
@@ -336,7 +344,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "2ECA162542EF1647"
 			subtitle: "Literally running on water."
 			tasks: [{
@@ -350,7 +358,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "1C29BDB0E6AE43E2"
 			subtitle: "Very interesting trinkets..."
 			tasks: [
@@ -381,6 +389,9 @@
 			y: 1.0d
 		}
 	]
-	subtitle: ["Collect them all!"]
+	subtitle: [
+		"Collect them all!"
+		"Modified by Relics."
+	]
 	title: "Artifacts"
 }

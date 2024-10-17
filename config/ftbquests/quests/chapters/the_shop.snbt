@@ -203,7 +203,7 @@
 			can_repeat: true
 			dependencies: ["464C6D59436C1B33"]
 			disable_toast: true
-			hide: true
+			hide_until_deps_visible: true
 			id: "46E204F9603B8D2D"
 			rewards: [{
 				count: 256

@@ -96,7 +96,7 @@
 				""
 				"Please note that it is not required to use a Depot with a Mechanical Press to press ingots into sheets! It's just to prevent items from spawning in case you forget about them."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "157C4AD3062BC31A"
 			rewards: [
 				{
@@ -511,7 +511,7 @@
 				""
 				"Hold [w] to Ponder to learn more!"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "23744C5D8A153163"
 			rewards: [
 				{
@@ -578,7 +578,7 @@
 				"1565E97748B8B342"
 				"400260FDC774443B"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3AF368FDC6BEC625"
 			rewards: [
 				{
@@ -675,7 +675,7 @@
 				""
 				"An Analog Lever is preferred for fine tuning while normal Levers are preferred for applying maximum adjustment."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "1006DEF6267D3741"
 			rewards: [
 				{
@@ -712,7 +712,7 @@
 				""
 				"They also can utilize &7List Filters&r and &6Attribute Filters&r and can use items as their item filter. Just right click their filter slot with a filter or item in your hand."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "068660484145BE87"
 			rewards: [
 				{
@@ -803,7 +803,7 @@
 				"67B3F409A2928F28"
 				"3AF368FDC6BEC625"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "054BC637EF86609C"
 			rewards: [
 				{
@@ -846,7 +846,7 @@
 				""
 				"They also can utilize &7List Filters&r and &6Attribute Filters&r and can use items as their item filter. Just right click their filter slot with a filter or item in your hand."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "42A8249377616678"
 			rewards: [
 				{
@@ -886,7 +886,7 @@
 				""
 				"If you saw kuantities previously, my Q key was broken."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "1D08D9144CE10BCA"
 			subtitle: "The smarter Chute."
 			tasks: [{
@@ -1031,7 +1031,7 @@
 				""
 				"- Use an &9Item Vault&r with the Brass Funnel's item filter set to only accept Incomplete Precision Mechanisms on the ending part of the sequence and an Andesite Funnel set to OUTPUT mode on the beginning part of the sequence. This method is instant item transportation."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "18B37484A6C7F37E"
 			rewards: [{
 				id: "3463FCB44760D9E4"
@@ -1230,7 +1230,7 @@
 				""
 				"They can also reach then take and deposit fuel for your Blaze Burners that sit under your boiler precisely. It's neat!"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "0352B65BF524BA37"
 			rewards: [
 				{
@@ -1319,7 +1319,7 @@
 				"054BC637EF86609C"
 			]
 			description: ["There is quite a bit to get into, so remember to <rainb>Hold [w] to Ponder to learn more!</rainb>"]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "create:railway_casing"
 			id: "1E0CDA1ED53FACEE"
 			rewards: [{
@@ -1418,7 +1418,7 @@
 				""
 				"Need to connect Mechanical Crafter inventories? Use a &6Wrench&r on the &lback&r of each Mechanical Crafter that needs to be connected and matches the same material needed for the shaped recipe."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "create:mechanical_crafter"
 			id: "2FF7795C03DDC67B"
 			rewards: [
@@ -1464,7 +1464,7 @@
 				"5526AF6D60A35374"
 				"4EBF56E85BA4465B"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "16FA2F3F79C9F5B3"
 			rewards: [{
 				id: "70497A27C2D4882C"
@@ -1791,7 +1791,7 @@
 				"0B28CEE35831A75F"
 			]
 			description: ["Time to get to polishing with your Sand Paper!"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "4946DBA60513DCE3"
 			rewards: [{
 				id: "59217051E1FD53C7"
@@ -1832,7 +1832,7 @@
 				"187E2B3FDE19DD4D"
 			]
 			description: ["Hold [Shift] for a summary on how to use."]
-			hide: true
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "create:sand_paper"
@@ -1869,7 +1869,7 @@
 				"78AB1F02F29D15E3"
 				"4968755DF97B9F34"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "0194851298AADB65"
 			rewards: [
 				{
@@ -2278,7 +2278,7 @@
 				""
 				"Zinc is renewable in this modpack. Go wild!"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "create:schematic_and_quill"
 			id: "187E2B3FDE19DD4D"
 			min_required_dependencies: 1
@@ -3378,7 +3378,7 @@
 				"32AD37AC33F00FD7"
 			]
 			description: ["Hold [w] to Ponder to learn more!"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "73F456AE957F4002"
 			rewards: [
 				{
@@ -3442,7 +3442,7 @@
 				""
 				"They can also be used with the Elevator Pulley to designate floors."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "205BAFFFECA72D1E"
 			rewards: [
 				{
@@ -3566,7 +3566,7 @@
 				""
 				"It is a perfect reflection of yourself, condensed into the form of a brass hand."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "7ECC22C059800186"
 			rewards: [
 				{
@@ -3607,7 +3607,7 @@
 				""
 				"Mostly used for decorative purposes."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "1BD09AD0A5B739CA"
 			rewards: [
 				{
@@ -3910,8 +3910,8 @@
 				"6D8C28D34ABF7636"
 				"1406D000426425FC"
 			]
-			hide: true
 			hide_dependent_lines: true
+			hide_until_deps_visible: true
 			id: "1BC189AE6AA14C57"
 			rewards: [
 				{
@@ -4166,8 +4166,8 @@
 		{
 			dependencies: ["1BC189AE6AA14C57"]
 			description: ["It might be a ticking time bomb, maaaaaybe."]
-			hide: true
 			hide_dependent_lines: true
+			hide_until_deps_visible: true
 			id: "38298E81AD5B2875"
 			subtitle: "Totally nothing wrong with it!"
 			tasks: [{

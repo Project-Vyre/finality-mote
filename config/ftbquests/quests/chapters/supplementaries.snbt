@@ -28,7 +28,7 @@
 				"- @decorative_blocks"
 				"- Dark Paintings adds new paintings, so you will have to make paintings to see them all."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "4A2CFDD09FF7A975"
 			rewards: [{
 				count: 16
@@ -293,7 +293,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "281A6A3463BB1060"
 			subtitle: "These make it significantly easier to place down walls and large amounts of blocks."
 			tasks: [{

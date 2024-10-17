@@ -10,7 +10,7 @@
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "farmersdelight:iron_knife"

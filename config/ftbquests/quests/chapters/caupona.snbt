@@ -17,7 +17,7 @@
 				""
 				"As usual, recipes can be seen via &7REI&r or &2JEI&r."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: {
 				Count: 1
 				id: "patchouli:guide_book"

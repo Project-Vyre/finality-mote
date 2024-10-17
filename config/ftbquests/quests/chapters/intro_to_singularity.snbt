@@ -127,7 +127,7 @@
 				""
 				"Also, if you didn't read the tooltip for &6Campfires&r like the majority of players who skim over &c<shake>everything</shake>&r, they can now regenerate your health. &6<wave>Cozy!</wave>&r"
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "minecraft:crafting_table"
 			id: "0AE06EB85B6E1CB6"
 			rewards: [
@@ -622,8 +622,8 @@
 				""
 				"Both Condensed Universal Entropy and Order are allowed to be bottomless fluids in addition to Shimmer and Lemonade."
 			]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			icon: "minecraft:coal_block"
 			id: "0B185A46D4C2A558"
 			rewards: [{
@@ -692,8 +692,8 @@
 		}
 		{
 			dependencies: ["2FF7795C03DDC67B"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "4843FF760BED67F6"
 			rewards: [
 				{

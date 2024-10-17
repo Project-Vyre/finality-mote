@@ -76,7 +76,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "0823CEAA341364B2"
 			subtitle: "An architect's best friend."
 			tasks: [{

@@ -79,7 +79,7 @@
 				""
 				"Ink is required to print more of the same written books, NOT enchantment books."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "27AB9AEF6FC1F0AA"
 			rewards: [{
 				count: 18

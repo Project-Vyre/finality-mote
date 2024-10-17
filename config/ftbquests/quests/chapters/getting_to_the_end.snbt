@@ -26,7 +26,7 @@
 				""
 				"Use the End Crystals to your advantage."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			icon: "minecraft:end_portal_frame"
 			id: "34BBD9B70AE0AAB1"
 			shape: "octagon"
@@ -44,7 +44,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "168D0120F150BC28"
 			subtitle: "Find me in buried treasure."
 			tasks: [{
@@ -64,7 +64,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "5AF53749F917D429"
 			subtitle: "Love."
 			tasks: [{
@@ -83,8 +83,8 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "2E2C02E5BD9E21F7"
 			subtitle: "Find me where I stalk villagers."
 			tasks: [{
@@ -103,8 +103,8 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "6C0BCC3A430B9FEB"
 			subtitle: "Find me in ancient mineshafts."
 			tasks: [{
@@ -123,7 +123,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "58C3EE597C33E90D"
 			subtitle: "Passion."
 			tasks: [{
@@ -142,7 +142,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "68BDA11046E98486"
 			subtitle: "Contracts."
 			tasks: [{
@@ -161,7 +161,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "685B2504CF4E9E26"
 			subtitle: "Wisdom."
 			tasks: [{
@@ -180,7 +180,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "65816DD85625C60E"
 			subtitle: "Eternity."
 			tasks: [{
@@ -199,7 +199,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3262C302262A1AAC"
 			subtitle: "Acquire me from a Master Cleric."
 			tasks: [{
@@ -219,7 +219,7 @@
 		{
 			dependencies: ["41ADDCD19E1253FF"]
 			description: ["Only acquired from Elder Guardians in Ocean Monuments."]
-			hide: true
+			hide_until_deps_visible: true
 			id: "1013541B6EC52CEF"
 			subtitle: "I am responsible for many deaths in the ocean ruins."
 			tasks: [{
@@ -238,8 +238,8 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "66725960700B2323"
 			subtitle: "Freedom."
 			tasks: [{
@@ -258,7 +258,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3FFB8D0ADC19BCA1"
 			subtitle: "I bring destruction to the world."
 			tasks: [{
@@ -278,7 +278,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "021DAFFB5B6C41D7"
 			subtitle: "I was once part of a master of potion brewing."
 			tasks: [{
@@ -299,7 +299,7 @@
 		{
 			dependencies: ["41ADDCD19E1253FF"]
 			description: ["Only obtainable from Skeletal Horses."]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3F991D3B86EFF9EE"
 			subtitle: "I am made from the soul of a horse turned skeletal."
 			tasks: [{
@@ -318,7 +318,7 @@
 		}
 		{
 			dependencies: ["41ADDCD19E1253FF"]
-			hide: true
+			hide_until_deps_visible: true
 			id: "3939C50171FAD48A"
 			subtitle: "Justice."
 			tasks: [{
@@ -345,7 +345,7 @@
 				""
 				"Alternatively you can mix it with some experience with a chaotic fluid."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "7E7D888C64FD0E69"
 			subtitle: "Origins unkown."
 			tasks: [{
@@ -368,11 +368,13 @@
 				"13186E7B0D6B6115"
 			]
 			description: [
+				"&dOutdated text is below. Will replace with something else later in the future.&r"
+				""
 				"Netherite gear is nowhere near enough for this fight."
 				""
 				"Taking down the Ender Dragon requires fast DPS and high mobility."
 			]
-			hide: true
+			hide_until_deps_visible: true
 			id: "4E9DB5E5DA145FB7"
 			min_required_dependencies: 2
 			subtitle: "You won't get to the End that easily, however."
