@@ -54,7 +54,7 @@ emojiful/
 fancymenu_data/
 fancymenu_instance_data/
 fancymenu_setups/
-local/
+local/*
 localconfigs/
 logs/
 mods/
@@ -71,8 +71,9 @@ debug/
 exposures/*
 .mixin.out/*
 
-# Don't ignore FTB Chunks client settings
+# Don't ignore certain local files
 !local/ftbchunks/client-config.snbt
+!local/ftbquests/client-config.snbt
 
 # Don't ignore default servers.dat
 servers.dat
