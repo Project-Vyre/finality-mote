@@ -71,6 +71,9 @@ debug/
 exposures/*
 .mixin.out/*
 
+# Don't ignore FTB Chunks client settings
+!local/ftbchunks/client-config.snbt
+
 # Don't ignore default servers.dat
 servers.dat
 !config/defaultoptions/servers.dat
