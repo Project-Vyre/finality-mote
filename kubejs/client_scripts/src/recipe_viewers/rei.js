@@ -602,6 +602,11 @@ REIEvents.information(event => {
       'Can only be acquired by chance using a Knife on leaf blocks.'
     ])
   }
+  if (Platform.isLoaded('dimdoors')) {
+    event.addItem('dimdoors:world_thread', 'Acquisition', [
+      'Can only be acquired outside the simulation.'
+    ])
+  }
   if (Platform.isLoaded('functionalstorage')) {
     event.addItem('functionalstorage:ender_drawer', 'Usage', [
       Component.join([
@@ -1248,7 +1253,7 @@ REIEvents.groupEntries(event => {
     event.groupItems('lilwings:rei_groups/spawn_eggs', "Lil' Wings Spawn Eggs", /^lilwings.*[_:\/]egg(?![a-zA-Z0-9]).*/)
   }
   if (!Platform.isLoaded('ad_astra')) {
-    event.groupItemsByTag('kubejs:rei_groups/wrenches', 'Wrenches', '#forge:tools/wrench')
+    event.groupItemsByTag('kubejs:rei_groups/wrenches', 'Wrenches', 'forge:tools/wrench')
   }
   if (Platform.isLoaded('ad_astra')) {
     event.groupItems('ad_astra:rei_groups/ad_astra_flags', 'All Ad Astra Flags', [/^(ad_astra:).*(_flag)$/])
