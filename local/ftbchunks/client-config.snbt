@@ -106,10 +106,6 @@
 		water_visibility: 220
 	}
 	minimap: {
-		# Show biome under minimap
-		# Default: true
-		biome: true
-		
 		# Blurs minimap
 		# Default: "auto"
 		# Valid values: "auto", "on", "off"
@@ -135,6 +131,23 @@
 		# Default: 0.5
 		# Range: 0.1 ~ 5.0
 		font_scale: 0.5d
+		
+		# Info hidden under minimap
+		# Default: ["ftbchunks:debug"]
+		info_hidden: ["ftbchunks:debug"]
+		
+		# Info displayed under minimap
+		# Default: ["ftbchunks:player_pos", "ftbchunks:biome", "ftbchunks:zone", "ftbchunks:fps", "ftbchunks:game_time", "ftbchunks:real_time", "ftbchunks:debug"]
+		info_order: [
+			"ftbchunks:player_pos"
+			"ftbchunks:biome"
+			"ftbchunks:zone"
+			"ftbchunks:fps"
+			"ftbchunks:game_time"
+			"ftbchunks:real_time"
+			"ftbchunks:debug"
+		]
+		info_settings: { }
 		
 		# Entities in minimap will be larger
 		# Default: false
@@ -194,14 +207,6 @@
 		# Show waypoints on minimap
 		# Default: true
 		waypoints: true
-		
-		# Show XYZ under minimap
-		# Default: true
-		xyz: true
-		
-		# Show zone (claimed chunk or wilderness) under minimap
-		# Default: true
-		zone: true
 		
 		# Zoom distance of the minimap
 		# Default: 1.0

@@ -43,6 +43,12 @@
 	// If set, fog start distance is multiplied by this option.
 	// DEFAULT: `1.0`
 	"fogStartMultiplier": 1.0,
+	// If enabled, light level 0 will render as pitch black.
+	// DEFAULT: `false`
+	"enablePureDarkness": false,
+	// Determines the minimum sky light level (0.2 in vanilla).
+	// DEFAULT: `0.2`
+	"minimumSkyLightLevel": 0.2,
 	// If enabled, a HUD will be drawn on the screen showing useful performance statistics.
 	// DEFAULT: `false`
 	"hudEnabled": false,
