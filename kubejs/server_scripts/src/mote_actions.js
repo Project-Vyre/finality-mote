@@ -3,6 +3,7 @@
 
 /**
  * @file Server handler for certain player actions...
+ * @version 1201-M
  * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
@@ -13,8 +14,7 @@ PlayerEvents.inventoryChanged(event => {
   const { x, y, z } = player
   if (item.hasTag('create:sandpaper') && !player.persistentData.struckBySandpaper) {
     if (item.hasEnchantment('minecraft:mending', 1) ||
-      item.hasEnchantment('minecraft:unbreaking', 1) ||
-      item.hasEnchantment('apotheosis:life_mending', 1)
+      item.hasEnchantment('minecraft:unbreaking', 1)
     ) {
       level.spawnLightning(x, y, z, false)
       player.tell([
@@ -33,8 +33,7 @@ PlayerEvents.inventoryChanged(event => {
     }
   } else if (item.hasTag('create:sandpaper') && player.persistentData.struckBySandpaper) {
     if (item.hasEnchantment('minecraft:mending', 1) ||
-      item.hasEnchantment('minecraft:unbreaking', 1) ||
-      item.hasEnchantment('apotheosis:life_mending', 1)
+      item.hasEnchantment('minecraft:unbreaking', 1)
     ) {
       player.setHealth(2)
       player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
@@ -51,8 +50,7 @@ PlayerEvents.inventoryChanged(event => {
   }
   if (item.getId() == 'create:super_glue' && !player.persistentData.struckBySuperglue) {
     if (item.hasEnchantment('minecraft:mending', 1) ||
-      item.hasEnchantment('minecraft:unbreaking', 1) ||
-      item.hasEnchantment('apotheosis:life_mending', 1)
+      item.hasEnchantment('minecraft:unbreaking', 1)
     ) {
       level.spawnLightning(x, y, z, false)
       player.tell([
@@ -71,8 +69,7 @@ PlayerEvents.inventoryChanged(event => {
     }
   } else if (item.getId() == 'create:super_glue' && player.persistentData.struckBySuperglue) {
     if (item.hasEnchantment('minecraft:mending', 1) ||
-      item.hasEnchantment('minecraft:unbreaking', 1) ||
-      item.hasEnchantment('apotheosis:life_mending', 1)
+      item.hasEnchantment('minecraft:unbreaking', 1)
     ) {
       player.setHealth(2)
       player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
