@@ -159,9 +159,10 @@ REIEvents.hide('item', event => {
     'create:netherite_backtank_placeable',
     'create:schematic'
   ])
-  REI_CREATE_COMPAT_ORES.forEach(ore => {
-    event.hide(`create:crushed_raw_${ore}`)
-  })
+  // Fix later.
+  // REI_CREATE_COMPAT_ORES.forEach(ore => {
+  //   event.hide(`create:crushed_raw_${ore}`)
+  // })
 
   if (Platform.isLoaded('ars_nouveau')) {
     event.hide('ars_nouveau:magic_fire')

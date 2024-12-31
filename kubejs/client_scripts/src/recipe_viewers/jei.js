@@ -321,6 +321,11 @@ if (!Platform.isLoaded('roughlyenoughitems')) {
       ])
     }
     if (Platform.isLoaded('endrem') && Platform.isLoaded('summoningrituals') && !Platform.isLoaded('extendedcrafting')) {
+      event.addItem(['minecraft:ender_eye', 'endrem:cryptic_eye'], [
+        'There is a certain cryptic eye that can only be acquired from enchanting this.',
+        'It is very rare, however.',
+        'If you do happen to be unlucky, you can mix an Ender Eye with 1x Block of Experience, 1x Ender Eye and 250mb of Condensed Universal Entropy.'
+      ])
       event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
       event.addItem('endrem:corrupted_eye', ['Found in Pillager Outposts.'])
       event.addItem('endrem:lost_eye', ['Usually found in Mineshafts.'])
@@ -461,6 +466,11 @@ if (!Platform.isLoaded('roughlyenoughitems')) {
     if (Platform.isLoaded('delightful')) {
       event.addItem('delightful:green_tea_leaf', [
         'Can only be acquired by chance using a Knife on leaf blocks.'
+      ])
+    }
+    if (Platform.isLoaded('dimdoors')) {
+      event.addItem('dimdoors:world_thread', [
+        'Can only be acquired outside the simulation.'
       ])
     }
     if (Platform.isLoaded('functionalstorage')) {
