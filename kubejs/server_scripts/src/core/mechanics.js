@@ -110,8 +110,8 @@ ItemEvents.firstRightClicked(event => {
     let motionZ = event.entity.lookAngle.z() * speed;
 
     let motionVec3 = new Vec3d(motionX, motionY, motionZ)
-    //tnt.persistentData.FinalPickaxeProjectile = true
-    tnt.setOwner(player)
+    // tnt.persistentData.FinalPickaxeProjectile = true
+    // tnt.setOwner(player)
     tnt.setDeltaMovement(motionVec3)
     tnt.spawn()
   }
