@@ -349,14 +349,12 @@ ServerEvents.recipes(event => {
     }).id('finality:mechanical_crafting/duplicator')
   } else {
     event.recipes.create.mechanical_crafting('kubejs:duplicator', [
-      '  F',
-      'NC ',
-      'SN '
+      'FC',
+      'SF'
     ], {
       C: 'create:clipboard',
       S: 'create:sturdy_sheet',
-      N: 'kubejs:high_entropy_alloy_nugget',
-      F: 'dimdoors:fabric_of_finality'
+      F: 'dimdoors:enduring_fibers'
     }).id('finality:mechanical_crafting/duplicator')
   }
   /**
@@ -545,9 +543,9 @@ ServerEvents.recipes(event => {
   event.recipes.create.item_application('minecraft:tinted_glass', [
     '#forge:glass/colorless', 'minecraft:amethyst_shard'
   ]).id('minecraft:tinted_glass')
-  event.recipes.create.item_application('minecraft:chest_minecart', [
-    '#forge:chests/wooden', 'minecraft:minecart'
-  ]).id('finality:item_application/chest_minecart')
+  // event.recipes.create.item_application('minecraft:chest_minecart', [
+  //   '#forge:chests/wooden', 'minecraft:minecart'
+  // ]).id('finality:item_application/chest_minecart')
   event.recipes.create.item_application('minecraft:sculk_sensor', [
     'minecraft:warped_roots',
     'minecraft:echo_shard'
