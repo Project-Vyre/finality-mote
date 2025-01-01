@@ -61,6 +61,12 @@
     "lightroom": true,
     "photograph_frame": true
   },
+  "reliquary": {
+    "pedestal": true,
+    "altar": true,
+    "mortar": true,
+    "cauldron": true
+  },
   "supplementaries": {
     "hat_stand": true
   },
