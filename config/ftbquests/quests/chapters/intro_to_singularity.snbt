@@ -423,32 +423,6 @@
 					}
 					type: "item"
 				}
-				{
-					id: "33BC2087E055FEFB"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							Parent: {
-								Items: [ ]
-								SelectedSlot: 0
-								Size: 6
-							}
-						}
-						id: "supplementaries:quiver"
-					}
-					type: "item"
-				}
-				{
-					id: "1DC954A059EFCE2E"
-					item: {
-						Count: 1
-						id: "minecraft:bow"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
 			]
 			shape: "rsquare"
 			subtitle: "I hope you have at least a base set up by now."
@@ -488,21 +462,6 @@
 						tag: {
 							Damage: 0
 						}
-					}
-					type: "item"
-				}
-				{
-					id: "1C93B0D8F5C66FF2"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							Parent: {
-								Items: [ ]
-								SelectedSlot: 0
-								Size: 6
-							}
-						}
-						id: "supplementaries:quiver"
 					}
 					type: "item"
 				}
