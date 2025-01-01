@@ -87,7 +87,7 @@
         "ExchangeButtons": [
           {
             "x": 27,
-            "y": 17,
+            "y": 21,
             "width": 122,
             "command": "exchangeAllUp",
             "icons": [
@@ -149,7 +149,7 @@
           },
           {
             "x": 27,
-            "y": 40,
+            "y": 42,
             "width": 122,
             "command": "exchangeAllDown",
             "icons": [
