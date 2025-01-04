@@ -54,5 +54,6 @@
   "string.kubejs.server.login.embeddium_cvf": "If you experience §oany§r form of §cZ-fighting§r or §cflickering§r on blocks go to §a[Video Settings]§r < §a[Performance]§r then §cdisable§r the setting the says §3§lUse Compact Vertex Format§r.\nPlease note that this is only applicable with §dEmbeddium 0.2+§r and does not work with §dOculus§r installed!",
   "string.kubejs.server.login.embeddium_cvf_issues.line_1": "If you encounter any bugs after disabling it, please report them here:\n",
   "string.kubejs.server.login.embeddium_cvf_issues.line_2": "Thank you!",
-  "string.kubejs.server.login.open_chat": "You may need to open chat to see the full message."
+  "string.kubejs.server.login.open_chat": "You may need to open chat to see the full message.",
+  "string.kubejs.duplicator.entity_duplication_failure": "<§dDuplicator§r> I am currently unable to duplicate this entity, or it intentionally can't be duplicated. Apologies for the inconvenience."
 }
