@@ -1115,6 +1115,14 @@ ServerEvents.recipes(event => {
     F: 'kubejs:final_singularity_stage_nulla',
     I: 'kubejs:high_entropy_alloy_rod'
   }).id('finality:mechanical_crafting/final_lance')
+  event.recipes.create.mechanical_crafting('kubejs:final_sand_paper', [
+    'EEE',
+    'ESE',
+    'EEE'
+  ], {
+    E: 'kubejs:stable_entropy_particles',
+    S: '#create:sandpaper'
+  }).id('finality:mechanical_crafting/final_sand_paper')
 
   // Cjbeards Music Discs
   event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_bad_deeds', [
