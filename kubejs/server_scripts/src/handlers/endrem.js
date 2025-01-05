@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
     ])
     .blockBelow('minecraft:chiseled_sandstone')
     .id('kubejs:endrem/altar/old_eye')
-  if (!Platform.isLoaded('aether') && !Platform.isLoaded('reliquary')) {
+  if (!(Platform.isLoaded('aether') && Platform.isLoaded('reliquary'))) {
     event.recipes.summoningrituals.altar('minecraft:ender_eye')
       .itemOutput('endrem:cursed_eye')
       .input([
@@ -67,7 +67,8 @@ ServerEvents.recipes(event => {
         '4x minecraft:amethyst_shard'
       ])
       .id('kubejs:endrem/altar/cursed_eye_fallback')
-  } else {
+  }
+  if (Platform.isLoaded('aether') && Platform.isLoaded('reliquary')) {
     event.recipes.summoningrituals.altar('minecraft:ender_eye')
       .itemOutput('endrem:cursed_eye')
       .input([
