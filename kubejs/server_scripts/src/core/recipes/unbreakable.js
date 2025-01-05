@@ -26,6 +26,12 @@ ServerEvents.recipes(event => {
     'minecraft:crossbow',
     'create:experience_block'
   ]).id('kubejs:unbreakable_crossbow')
+  if (Platform.isLoaded('kubejs_create')) {
+    event.recipes.kubejs.shapeless(Item.of('kubejs:final_sand_paper').withNBT({ Unbreakable: 1 }), [
+      'kubejs:final_sand_paper',
+      'create:experience_block'
+    ]).id('kubejs:unbreakable_final_sand_paper')
+  }
   for (let i = 0; i < tools.length; i++) {
     let element = tools[i];
     event.recipes.kubejs.shapeless(Item.of('minecraft:netherite_' + element).withNBT({ Unbreakable: 1 }), [

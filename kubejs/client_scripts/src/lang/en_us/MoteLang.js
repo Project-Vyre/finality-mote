@@ -145,6 +145,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll('kubejs', {
       "item.kubejs.dormant_singularity_core": "§dDormant Singularity Core",
       "item.kubejs.awakened_singularity_core": "§dAwakened Singularity Core",
+      "item.kubejs.final_sand_paper": "§dFinal Sand Paper",
       "item.kubejs.denied_result": "§dDenied Result",
       "item.kubejs.errored_result": "§4Errored Result",
       "item.kubejs.removed_item": "§4Removed Item",
@@ -273,6 +274,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll('kubejs', {
       "item.kubejs.dormant_singularity_core": "§d<shake>Dormant Singularity Core</shake>",
       "item.kubejs.awakened_singularity_core": "§d<shake><rainb>Awakened Singularity Core</rainb></shake>",
+      "item.kubejs.final_sand_paper": "§d<rainb>Final Sand Paper</rainb>",
       "item.kubejs.denied_result": "§d<shake>Denied Result</shake>",
       "item.kubejs.errored_result": "§4<shake>Errored Result</shake>",
       "item.kubejs.removed_item": "§4<shake>Removed Item</shake>",
