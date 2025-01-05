@@ -539,6 +539,10 @@ ClientEvents.lang('en_us', event => {
         'Depending on the block, it will essentially _[Ctrl] + [C]_ then _[Ctrl] + [V]_ if applicable.'
       ])
       .addBehaviour([
+        'On R-Click on an entity',
+        'Gives you the _spawn egg_ of that entity.'
+      ])
+      .addBehaviour([
         'Additional Info',
         'Does _not_ duplicate everything.'
       ])
