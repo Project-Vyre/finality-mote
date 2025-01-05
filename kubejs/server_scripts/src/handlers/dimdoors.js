@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
     ], {
       X: 'dimdoors:infrangible_fiber'
     }).id('dimdoors:tesselating/enduring_fibers')
-    event.shaped('dimdoors:fabric_of_reality', [
+    event.shaped('dimdoors:black_fabric', [
       'XX',
       'XO'
     ], {
@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
       'XOX'
     ], {
       X: 'dimdoors:stable_fabric',
-      O: 'dimdoors:infragnible_fiber'
+      O: 'dimdoors:infrangible_fiber'
     }).id('dimdoors:tesselating/garment_of_reality_boots')
     event.shaped('dimdoors:garment_of_reality_chestplate', [
       'XOX',
@@ -52,14 +52,14 @@ ServerEvents.recipes(event => {
       X: 'dimdoors:stable_fabric',
       O: 'dimdoors:infrangible_fiber'
     }).id('dimdoors:tesselating/garment_of_reality_chestplate')
-    event.shaped('dimdoors:garment_of_helmet', [
+    event.shaped('dimdoors:garment_of_reality_helmet', [
       'XXX',
       'XOX'
     ], {
       X: 'dimdoors:stable_fabric',
       O: 'dimdoors:infrangible_fiber'
     }).id('dimdoors:tesselating/garment_of_reality_helmet')
-    event.shaped('dimdoors:garment_of_leggings', [
+    event.shaped('dimdoors:garment_of_reality_leggings', [
       'XXX',
       'XOX',
       'X X'
@@ -115,14 +115,14 @@ ServerEvents.recipes(event => {
       'XXX',
       'X X'
     ], {
-      x: 'dimdoors:world_thread'
+      X: 'dimdoors:world_thread'
     }).id('dimdoors:tesselating/world_thread_helmet')
     event.shaped('dimdoors:world_thread_leggings', [
       'XXX',
       'X X',
       'X X'
     ], {
-      x: 'dimdoors:world_thread_leggings'
+      X: 'dimdoors:world_thread'
     }).id('dimdoors:tesselating/world_thread_leggings')
   }
   for (let i = 0; i < dim_dupe.length; i++) {
