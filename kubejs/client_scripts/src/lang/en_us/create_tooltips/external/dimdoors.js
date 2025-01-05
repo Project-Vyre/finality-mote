@@ -2,6 +2,12 @@
 // requires: create
 
 ClientEvents.lang('en_us', event => {
+  if (!Platform.isLoaded('roughlyenoughitems')) {
+    event.addAll('dimdoors',
+      createTooltip('dimdoors:tesselating_loom')
+        .addSummary('Due to Dimensional Doors _not_ having JEI support, recipes have been _transferred_ over to the Crafting Table.')
+    )
+  }
   event.addAll('dimdoors',
     createTooltip('dimdoors:world_thread')
       .addSummary('The power of the Loom of Fate.')

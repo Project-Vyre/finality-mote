@@ -16,6 +16,115 @@ ServerEvents.recipes(event => {
   event.remove([
     { id: 'dimdoors:tesselating/fabric_of_finality' }
   ])
+  if (!Platform.isLoaded('roughlyenoughitems')) {
+    event.shaped('dimdoors:enduring_fibers', [
+      'XX',
+      'XX'
+    ], {
+      X: 'dimdoors:infrangible_fiber'
+    }).id('dimdoors:tesselating/enduring_fibers')
+    event.shaped('dimdoors:fabric_of_reality', [
+      'XX',
+      'XO'
+    ], {
+      X: 'dimdoors:world_thread',
+      O: 'dimdoors:stable_fabric'
+    }).id('dimdoors:tesselating/fabric_of_reality')
+    event.shaped('dimdoors:fuzzy_fireball', [
+      'XOX'
+    ], {
+      X: 'dimdoors:liminal_lint',
+      O: 'minecraft:fire_charge'
+    }).id('dimdoors:tesselating/fuzzy_fireball')
+    // GARMENT OF REALITY ARMOR SET
+    event.shaped('dimdoors:garment_of_reality_boots', [
+      'X X',
+      'XOX'
+    ], {
+      X: 'dimdoors:stable_fabric',
+      O: 'dimdoors:infragnible_fiber'
+    }).id('dimdoors:tesselating/garment_of_reality_boots')
+    event.shaped('dimdoors:garment_of_reality_chestplate', [
+      'XOX',
+      'XXX',
+      'XXX'
+    ], {
+      X: 'dimdoors:stable_fabric',
+      O: 'dimdoors:infrangible_fiber'
+    }).id('dimdoors:tesselating/garment_of_reality_chestplate')
+    event.shaped('dimdoors:garment_of_helmet', [
+      'XXX',
+      'XOX'
+    ], {
+      X: 'dimdoors:stable_fabric',
+      O: 'dimdoors:infrangible_fiber'
+    }).id('dimdoors:tesselating/garment_of_reality_helmet')
+    event.shaped('dimdoors:garment_of_leggings', [
+      'XXX',
+      'XOX',
+      'X X'
+    ], {
+      X: 'dimdoors:stable_fabric',
+      O: 'dimdoors:infrangible_fiber'
+    }).id('dimdoors:tesselating/garment_of_reality_leggings')
+    event.shaped('dimdoors:liminal_lint', [
+      'XX',
+      'XX'
+    ], {
+      X: 'dimdoors:frayed_filament'
+    }).id('dimdoors:tesselating/liminal_lint')
+    event.shaped('dimdoors:reality_sponge', [
+      'XOX',
+      'OXO',
+      'XOX'
+    ], {
+      X: 'dimdoors:stable_fabric',
+      O: 'dimdoors:infrangible_fiber'
+    }).id('dimdoors:tesselating/reality_sponge')
+    event.shapeless('dimdoors:rift_blade', [
+      'minecraft:iron_sword',
+      '2x minecraft:ender_pearl'
+    ]).id('dimdoors:tesselating/rift_blade')
+    event.shaped('dimdoors:rift_pearl', [
+      'XO'
+    ], {
+      X: 'dimdoors:stable_fabric',
+      O: 'minecraft:ender_pearl'
+    }).id('dimdoors:tesselating/rift_pearl')
+    event.shaped('dimdoors:stable_fabric', [
+      'XX',
+      'XX'
+    ], {
+      X: 'dimdoors:stable_fabric'
+    }).id('dimdoors:tesselating/stable_fabric')
+    // WORLD THREAD ARMOR SET
+    event.shaped('dimdoors:world_thread_boots', [
+      'X X',
+      'X X'
+    ], {
+      X: 'dimdoors:world_thread'
+    }).id('dimdoors:tesselating/world_thread_boots')
+    event.shaped('dimdoors:world_thread_chestplate', [
+      'X X',
+      'XXX',
+      'XXX'
+    ], {
+      X: 'dimdoors:world_thread'
+    }).id('dimdoors:tesselating/world_thread_chestplate')
+    event.shaped('dimdoors:world_thread_helmet', [
+      'XXX',
+      'X X'
+    ], {
+      x: 'dimdoors:world_thread'
+    }).id('dimdoors:tesselating/world_thread_helmet')
+    event.shaped('dimdoors:world_thread_leggings', [
+      'XXX',
+      'X X',
+      'X X'
+    ], {
+      x: 'dimdoors:world_thread_leggings'
+    }).id('dimdoors:tesselating/world_thread_leggings')
+  }
   for (let i = 0; i < dim_dupe.length; i++) {
     let element = dim_dupe[i];
     event.recipes.create.deploying('2x dimdoors:' + element, [
